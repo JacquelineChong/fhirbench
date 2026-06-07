@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FHIRBench — Agentic AI Research Architecture</title>
+<style>
+:root {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f4f5f7;
+  --color-text: #172b4d;
+  --color-text-secondary: #44546f;
+  --color-text-muted: #8993a4;
+  --color-border: #dfe1e6;
+  --color-border-light: #ebecf0;
+  --color-surface: #ffffff;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+body { background: #fff; margin: 0; padding: 32px; font-family: var(--font-sans); color: var(--color-text); }
+h1 { font-size: 18px; font-weight: 700; margin: 0 0 4px 0; }
+.subtitle { color: var(--color-text-muted); font-size: 12px; margin-bottom: 24px; }
+.arch { max-width: 900px; margin: 0 auto; }
+.layer { border: 2px solid; border-radius: 10px; padding: 16px 20px; margin-bottom: 14px; position: relative; }
+.layer-label { position: absolute; top: -10px; left: 14px; background: #fff; padding: 0 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.layer.research { border-color: #0052CC; } .layer.research .layer-label { color: #0052CC; }
+.layer.code { border-color: #36b37e; } .layer.code .layer-label { color: #36b37e; }
+.layer.inference { border-color: #ff991f; } .layer.inference .layer-label { color: #ff991f; }
+.layer.infra { border-color: #6554C0; } .layer.infra .layer-label { color: #6554C0; }
+.nodes { display: flex; flex-wrap: wrap; gap: 8px; }
+.node { background: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 6px; padding: 8px 12px; font-size: 11px; min-width: 130px; }
+.node .name { font-weight: 600; font-size: 11px; }
+.node .detail { font-size: 9px; color: #8993a4; margin-top: 2px; }
+.connector { text-align: center; padding: 4px 0; color: #8993a4; font-size: 10px; font-weight: 500; }
+.legend { display: flex; gap: 16px; margin-top: 16px; font-size: 10px; color: #44546f; }
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+.caption { text-align: center; font-size: 11px; color: #44546f; margin-top: 16px; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="arch">
+<h1>Figure 1: FHIRBench Multi-Agent Research Architecture</h1>
+<p class="subtitle">Agentic AI system for systematic evaluation of clinical data serialization strategies</p>
+
+<div class="layer research">
+<span class="layer-label">Research & Writing — Amazon Quick Desktop</span>
+<div class="nodes">
+<div class="node"><div class="name">📚 Literature Review Agent</div><div class="detail">Skill: lit-review-search</div></div>
+<div class="node"><div class="name">✍️ Writing Agent</div><div class="detail">Skill: academic-writer</div></div>
+<div class="node"><div class="name">📄 arXiv Formatter</div><div class="detail">Skill: arxiv-formatter</div></div>
+<div class="node"><div class="name">📖 Bibliography Agent</div><div class="detail">MCP: Zotero (7 tools)</div></div>
+</div>
+</div>
+
+<div class="connector">▼ Delegates coding tasks via Agent Client Protocol (ACP) ▼</div>
+
+<div class="layer code">
+<span class="layer-label">Code Development — Kiro (ACP Coding Agent)</span>
+<div class="nodes">
+<div class="node"><div class="name">🗂️ Data Engineering</div><div class="detail">Synthea → 1000 FHIR R4 patients</div></div>
+<div class="node"><div class="name">🔄 Serialization Pipeline</div><div class="detail">6 strategies × terminology modes</div></div>
+<div class="node"><div class="name">⚡ Benchmark Runner</div><div class="detail">72 conditions (6×4×3)</div></div>
+<div class="node"><div class="name">📊 Analysis & Visualization</div><div class="detail">ANOVA, Pareto, decision matrix</div></div>
+</div>
+</div>
+
+<div class="connector">▼ Invokes models via AWS SDK + External APIs ▼</div>
+
+<div class="layer inference">
+<span class="layer-label">Model Inference — Amazon Bedrock + External</span>
+<div class="nodes">
+<div class="node"><div class="name">🟣 Claude 3.5 Sonnet</div><div class="detail">Amazon Bedrock</div></div>
+<div class="node"><div class="name">🦙 Llama 3 70B</div><div class="detail">Amazon Bedrock</div></div>
+<div class="node"><div class="name">🟢 GPT-4o</div><div class="detail">OpenAI API</div></div>
+<div class="node"><div class="name">🔵 Gemini 1.5 Pro</div><div class="detail">Google AI API</div></div>
+</div>
+</div>
+
+<div class="connector">▼ Persistent storage & version control ▼</div>
+
+<div class="layer infra">
+<span class="layer-label">Infrastructure — MCP Servers + Services</span>
+<div class="nodes">
+<div class="node"><div class="name">📚 Zotero MCP Server</div><div class="detail">Search, add, cite, export BibTeX</div></div>
+<div class="node"><div class="name">🐙 GitHub MCP Server</div><div class="detail">Create, read, commit, issues</div></div>
+<div class="node"><div class="name">📦 GitHub Repository</div><div class="detail">JacquelineChong/fhirbench</div></div>
+<div class="node"><div class="name">📝 Kiro Spec Files</div><div class="detail">/specs/ (requirements, design, stories)</div></div>
+</div>
+</div>
+
+<div class="legend">
+<div class="legend-item"><div class="legend-dot" style="background:#0052CC;"></div>Quick Desktop (orchestrator)</div>
+<div class="legend-item"><div class="legend-dot" style="background:#36b37e;"></div>Kiro (coding agent)</div>
+<div class="legend-item"><div class="legend-dot" style="background:#ff991f;"></div>LLM inference</div>
+<div class="legend-item"><div class="legend-dot" style="background:#6554C0;"></div>MCP infrastructure</div>
+</div>
+<p class="caption">Figure 1. Multi-agent architecture for FHIRBench. The system uses 4 layers: research orchestration (Quick Desktop), code development (Kiro via ACP), model inference (Bedrock + external APIs), and infrastructure (MCP servers for Zotero and GitHub).</p>
+</div>
+</body>
+</html>
