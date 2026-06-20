@@ -221,6 +221,8 @@ The evaluation proceeds sequentially by condition, with results checkpointed aft
 
 ### 3.4.4 Infrastructure
 
+The benchmark infrastructure follows the four-layer multi-agent architecture illustrated in Figure 1.
+
 All model inference is conducted through the Amazon Bedrock Converse API, which provides a unified request/response interface across all five models regardless of their underlying architecture. This design choice ensures:
 
 - **Consistent tokenization reporting** — Bedrock returns input and output token counts for every request
