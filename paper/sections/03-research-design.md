@@ -11,7 +11,7 @@ The evaluation follows a fully crossed factorial design:
 | Factor | Levels | Values |
 |--------|--------|--------|
 | **Serialization strategy** (independent variable) | 6 | Raw JSON, Flattened KV, Natural Language Narrative, Structured Markdown, Clinical Summary Template, Hybrid Adaptive |
-| **Foundation model** | 5 | Claude 3.5 Sonnet, GPT-5.4, Llama 3 70B, DeepSeek V3.2, Qwen3 32B |
+| **Foundation model** | 5 | Claude Sonnet 4.5, GPT-5.4, Llama 3 70B, DeepSeek V3.2, Qwen3 32B |
 | **Clinical task type** | 3 | Clinical QA, Clinical Reasoning, Clinical Summarization |
 | **Total experimental conditions** | 90 | 6 × 5 × 3 |
 | **Samples per condition** | 50 | Drawn from 1,000-patient benchmark dataset |
