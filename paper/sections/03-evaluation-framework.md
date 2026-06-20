@@ -60,14 +60,38 @@ We employ Claude Sonnet 4.5 as an evaluator model (separate from the models bein
 
 ### The 4-Dimension Clinical Evaluation Rubric
 
-| Dimension | Weight | What It Evaluates | Scale |
-|-----------|--------|-------------------|-------|
-| **Clinical Accuracy** | 30% | Are the clinical facts correct? Does the response contain errors that could affect patient care? | 0–5 |
-| **Relevance** | 20% | Does the response directly address the clinical question? Is extraneous information minimized? | 0–5 |
-| **Completeness** | 30% | Are all clinically significant findings addressed? Are important items missing? | 0–5 |
-| **Safety** | 20% | Does the response avoid potentially harmful recommendations? Would a clinician find this response safe? | 0–5 |
+#### Dimension Selection Rationale
 
-**Weighted Total:** `(accuracy×0.3 + relevance×0.2 + completeness×0.3 + safety×0.2) / 5`
+The four evaluation dimensions are derived from established clinical AI evaluation frameworks. The Elsevier ClinicalKey AI framework [CITE:EV9IX9DF] defines five dimensions for healthcare generative AI evaluation: query comprehension, helpfulness, correctness, completeness, and potential for clinical harm. The GAPS framework [CITE:C833E6XG] proposes Grounding, Adequacy, Perturbation, and Safety as orthogonal quality axes. A narrative review of qualitative metrics for clinical LLM evaluation [CITE:WF7W2VJ9] identifies accuracy, completeness, safety, and relevance as recurring dimensions across 15+ evaluation studies.
+
+Our 4-dimension rubric synthesizes these frameworks into the minimal set covering both clinical correctness and practical utility:
+
+| Dimension | Weight (Default) | Derived From | What It Evaluates | Scale |
+|-----------|-----------------|--------------|-------------------|-------|
+| **Clinical Accuracy** | 30% | Elsevier "correctness" [CITE:EV9IX9DF]; GAPS "Grounding" [CITE:C833E6XG] | Are the clinical facts correct? Does the response contain errors? | 0–5 |
+| **Completeness** | 30% | Elsevier "completeness"; GAPS "Adequacy" | Are all clinically significant findings addressed? | 0–5 |
+| **Safety** | 20% | Elsevier "clinical harm"; GAPS "Safety" | Does the response avoid potentially harmful recommendations? | 0–5 |
+| **Relevance** | 20% | Elsevier "helpfulness"; HealthBench "instruction following" | Does the response directly address the clinical question? | 0–5 |
+
+#### Weight Assignment: Configurable Defaults with Clinical Rationale
+
+Dimension weights are implemented as **configurable parameters** — not fixed constants. The defaults (30/30/20/20) reflect an initial clinical prioritization:
+
+- **Accuracy + Completeness weighted higher (60% combined):** Factual errors and omissions in clinical AI responses directly impact patient safety; these dimensions represent correctness of content.
+- **Safety + Relevance weighted lower (40% combined):** These dimensions represent quality of delivery — important but secondary to content correctness.
+
+**Dynamic calibration for deployment context:**
+
+| Clinical Context | Accuracy | Completeness | Safety | Relevance | Rationale |
+|-----------------|----------|--------------|--------|-----------|-----------|
+| Medication dosing | 25% | 25% | **40%** | 10% | Safety-critical: harmful dosage errors must be penalized heavily |
+| Screening triage | 20% | **40%** | 20% | 20% | Completeness-critical: missed findings = missed diagnoses |
+| Patient communication | 20% | 20% | 20% | **40%** | Relevance-critical: information must be accessible and on-topic |
+| **Default (benchmark)** | **30%** | **30%** | **20%** | **20%** | Balanced for general clinical task evaluation |
+
+This configurable design enables practitioners to adapt the evaluation framework to their specific deployment requirements. Section 4 reports sensitivity analysis demonstrating that serialization strategy rankings remain stable across weight perturbations of ±10%, confirming that primary findings are robust to practitioner-specific calibration.
+
+**Weighted Total:** `(accuracy × w_a + completeness × w_c + safety × w_s + relevance × w_r) / (w_a + w_c + w_s + w_r)` where weights default to (0.3, 0.3, 0.2, 0.2)
 
 ### LLM-as-Judge Prompt Template
 
