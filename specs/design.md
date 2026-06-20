@@ -24,7 +24,7 @@
 │  ┌───────────────────────────────────────────────────────┐      │
 │  │                Model Inference Layer                    │      │
 │  │  ┌─────────┐  ┌─────────┐  ┌──────┐  ┌───────────┐  │      │
-│  │  │ Claude  │  │ Llama 3 │  │GPT-4o│  │Gemini 1.5 │  │      │
+│  │  │ Claude  │  │ Llama 3 │  │GPT-5.4│  │Qwen3 1.5 │  │      │
 │  │  │(Bedrock)│  │(Bedrock)│  │(OAI) │  │ (Google)  │  │      │
 │  │  └─────────┘  └─────────┘  └──────┘  └───────────┘  │      │
 │  └───────────────────────────┬───────────────────────────┘      │
@@ -91,8 +91,8 @@ class BaseTask(ABC):
 
 ### 4. Model Layer (`models/`)
 - **bedrock_client.py** — Unified Bedrock client (Claude, Llama 3)
-- **openai_client.py** — GPT-4o client
-- **google_client.py** — Gemini 1.5 Pro client
+- **openai_client.py** — GPT-5.4 client
+- **google_client.py** — DeepSeek V3.2 client
 - **model_registry.py** — Model configuration and routing
 
 ### 5. Evaluation (`evaluation/`)
@@ -136,12 +136,12 @@ models:
   - id: llama-3-70b
     provider: bedrock
     model_id: meta.llama3-70b-instruct-v1:0
-  - id: gpt-4o
-    provider: openai
-    model_id: gpt-4o
-  - id: gemini-1.5-pro
+  - id: gpt-5.4
+    provider: bedrock
+    model_id: openai.gpt-5-4
+  - id: deepseek-v3.2
     provider: google
-    model_id: gemini-1.5-pro
+    model_id: deepseek-v3.2
 
 tasks:
   - clinical_qa
