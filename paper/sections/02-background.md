@@ -43,3 +43,43 @@ A growing body of research investigates how data representation format affects L
 **Synthetic Data for Evaluation.** The use of synthetic patient data for clinical AI evaluation is well-established. Synthea generates realistic FHIR patient records using disease progression state machines seeded with US Census demographics, producing over one million synthetic patients with longitudinal clinical histories [CITE:DM8RNZGT]. SM3-Text-to-Query demonstrates Synthea's suitability for multi-model medical benchmarking with SNOMED CT-coded data across multiple query paradigms [CITE:2MV7H8T6]. SimSUM creates 10,000 synthetic records linking structured and unstructured modalities for extraction model evaluation [CITE:4HSNVBCA]. Recent work further shows that LLMs can enhance Synthea module quality through progressive refinement [CITE:TH7NPVEX]. These precedents validate our choice of Synthea-generated FHIR data as a reproducible, distributable, and clinically realistic foundation for benchmark construction.
 
 **Summary and Research Gap.** The literature establishes three key findings: (1) serialization format significantly affects LLM performance on structured data tasks; (2) the optimal format depends on model architecture, scale, and task characteristics; and (3) FHIR's nested, reference-heavy structure creates unique challenges not captured by general tabular or clinical text benchmarks. Despite this growing body of work, no systematic benchmark exists that evaluates multiple serialization strategies across diverse model architectures on standardized clinical reasoning tasks using reproducible synthetic data. FHIRBench addresses this gap.
+
+
+## 2.4 Positioning Within the LLM Data Pipeline
+
+The clinical AI data pipeline comprises four sequential stages: (1) retrieval/chunking, which selects relevant resources from a patient's full EHR; (2) serialization, which transforms selected resources into LLM-consumable text; (3) prompt construction, which assembles the system prompt, serialized data, and query; and (4) inference, where the LLM generates a response. FHIRBench specifically targets Stage 2 — serialization — which operates downstream of retrieval.
+
+This positioning is important because serialization is frequently conflated with the more widely studied RAG chunking problem. The two stages address fundamentally different questions and produce different performance characteristics:
+
+| Stage | Question | Impact | Research Maturity |
+|-------|----------|--------|-------------------|
+| Retrieval/Chunking | "What data is relevant?" | 5–10% accuracy variance [typical RAG literature] | Well-studied (LangChain, LlamaIndex ecosystem) |
+| **Serialization** | **"How should data be formatted?"** | **Up to 23% accuracy variance** [CITE:TGZ97SRN] | **Systematically unexplored** |
+
+The clinical data pipeline can be represented as:
+
+```
+Patient EHR (10,000+ FHIR resources)
+    │
+    ▼ Stage 1: Retrieval/Chunking
+    │ "Which resources are relevant?" [CITE:V4M8Q6TN, CITE:WV9N648K]
+    │
+    ▼ Stage 2: SERIALIZATION ◄── FHIRBench
+    │ "How to format for the LLM?" (6 strategies, up to 16× token variance)
+    │
+    ▼ Stage 3: Prompt Construction
+    │ System prompt + serialized data + query
+    │
+    ▼ Stage 4: LLM Inference
+      Model generates clinical response
+```
+
+Three properties distinguish serialization from chunking as a research problem:
+
+1. **Vocabulary transformation** — Unlike chunking (which splits text at boundaries without altering it), serialization must resolve coded terminology (SNOMED CT code `73211009` → "Diabetes mellitus"), a transformation that fundamentally changes what the LLM "sees" [CITE:X85QMVCU].
+
+2. **Model-dependent optimality** — Chunking strategies are largely model-agnostic, whereas serialization exhibits strong model × format interactions. Pator [CITE:TGZ97SRN] demonstrates that the optimal serialization format reverses between 7B and 70B parameter scales — a property with no parallel in chunking research.
+
+3. **Multi-dimensional design space** — While chunking operates along a single axis (chunk size), serialization spans four orthogonal dimensions: format, terminology resolution, granularity, and context window strategy (detailed in Section 3.3). This larger design space has been navigated ad hoc by practitioners with no systematic guidance.
+
+These properties establish serialization as an independent, underexplored optimization problem within the clinical AI pipeline — one that FHIRBench is specifically designed to address.
