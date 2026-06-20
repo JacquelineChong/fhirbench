@@ -61,7 +61,7 @@ The interactive HTML version is at `docs/figures/architecture-diagram.html`.
 |-------|----------|-----------|
 | Research & Writing | Amazon Quick Desktop | Literature Review Agent, Writing Agent, arXiv Formatter, Bibliography Agent |
 | Code Development | Kiro (ACP Agent) | Data Engineering, Serialization Pipeline, Benchmark Runner, Analysis & Viz |
-| Model Inference | Amazon Bedrock | Claude 3.5 Sonnet, GPT-5.4, Llama 3 70B, DeepSeek V3.2, Qwen3 32B |
+| Model Inference | Amazon Bedrock | Claude Sonnet 4.5, GPT-5.4, Llama 3 70B, DeepSeek V3.2, Qwen3 32B |
 | Infrastructure | MCP Servers + Services | Zotero MCP (7 tools), GitHub MCP (6 tools), GitHub Repo, Kiro Specs |
 
 *Figure 1. Multi-agent architecture for FHIRBench. The system uses four layers: research orchestration (Quick Desktop), code development (Kiro via ACP), model inference (Bedrock), and infrastructure (MCP servers for Zotero and GitHub). All layers communicate through standardized protocols (ACP for agent delegation, MCP for tool access, Bedrock Converse API for model inference).*
