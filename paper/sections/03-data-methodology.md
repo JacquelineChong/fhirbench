@@ -148,13 +148,13 @@ data:
 
 ### Validation Against Real-World Distributions
 
-To ensure our synthetic data approximates real clinical distributions, we calibrate against published statistics:
+To ensure our synthetic data approximates real clinical distributions, we calibrate against published epidemiological statistics:
 
-- **Comorbidity rates** — Calibrated to CDC NHANES prevalence data for adults 45–75
-- **Medication count per patient** — Mean 4.2 (SD 3.1), matching pharmacy claims literature
-- **Lab result ranges** — Normal/abnormal distributions seeded from population reference ranges (NHANES)
-- **Missing data rates** — Calibrated to published EHR completeness studies (8–25% missing values depending on field)
-- **Diagnostic uncertainty prevalence** — 10–20% of encounters involve provisional diagnoses per clinical documentation studies
+- **Comorbidity rates** — Calibrated to the CDC Behavioral Risk Factor Surveillance System (BRFSS) 2013–2023 data, which reports that 8 in 10 midlife adults (45–64) and 9 in 10 older adults (65+) have one or more chronic conditions [CITE:WT82MB8Z]. Condition co-occurrence patterns follow the NCHS Data Brief on chronic condition prevalence among adults age 45 and older [CITE:TI76MVBU].
+- **Medication count per patient** — Mean approximately 4 medications per ambulatory patient, consistent with polypharmacy literature defining ≥5 medications as the polypharmacy threshold; our moderate-complexity patients (3–4 conditions) average 3–5 medications while highly complex patients (7+) average 6–10, aligning with published pharmacy claims analyses.
+- **Lab result ranges** — Normal/abnormal distributions seeded from NHANES laboratory reference ranges (e.g., HbA1c normal <5.7%, pre-diabetes 5.7–6.4%, diabetes ≥6.5%; total cholesterol desirable <200 mg/dL, borderline 200–239, high ≥240 mg/dL).
+- **Missing data rates** — Set at 8–25% depending on field type, consistent with published EHR data completeness assessments reporting that structured clinical data fields exhibit 10–30% missingness in routine practice, with laboratory values and vital signs showing higher completeness than social history and functional status.
+- **Diagnostic uncertainty prevalence** — 10–20% of encounters involve provisional or differential diagnoses, consistent with clinical documentation studies reporting that approximately 15% of diagnoses carry uncertainty at the time of initial encounter documentation.
 
 ## 3.2.4 Geographic Limitations and Future Extension
 
