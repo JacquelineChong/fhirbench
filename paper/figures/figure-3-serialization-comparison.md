@@ -236,6 +236,8 @@ The hybrid strategy dynamically selects the optimal serialization format based o
 | Validation (e.g., "Is this bundle conformant?") | Raw JSON | Schema-level fidelity required |
 | Multi-step QA (e.g., "Summarize and recommend") | Narrative + Markdown | Combines reasoning substrate with structured facts |
 
+**Note:** The FHIRBench benchmark evaluates three task types (Clinical QA, Clinical Reasoning, Clinical Summarization) as defined in §3.4. The routing table above illustrates the full range of task-format mappings the Hybrid Adaptive strategy supports; additional task types (code extraction, data aggregation, validation, documentation) represent potential extensions beyond the current benchmark scope.
+
 The hybrid router is implemented as a lightweight classifier (§4.2) that maps task intent to format selection prior to prompt construction. When task type is ambiguous, it defaults to Structured Markdown as the balanced middle-ground representation.
 
 **Approximate tokens:** Variable (155–420, depending on routing decision)
@@ -258,6 +260,8 @@ The six serialization strategies were selected to span the complete representati
 | Structured Markdown | ~175 | 0.42× | Structural (references, URIs) | Comparison, enumeration, QA |
 | Clinical Summary Template | ~160 | 0.38× | Structural + inferred fields | Documentation, clinical decision support |
 | Hybrid Adaptive | ~155–420 | 0.37–1.00× | Task-dependent | Multi-task benchmarks |
+
+**Note:** Token counts above are for a **minimal-complexity illustrative patient** (1 condition, 1 medication, 2 observations). For typical patient bundles with 15–20 resources, token ratios shift toward higher values (see §3.3 for general efficiency ranges). The relative ordering between strategies is preserved regardless of record complexity.
 
 **Key observation:** All non-JSON strategies achieve 56–63% token reduction relative to the raw FHIR representation while preserving the clinical facts necessary for downstream tasks. The efficiency–fidelity tradeoff is not monotonic: Structured Markdown retains more queryable structure than Narrative at comparable token cost, while the SOAP Template introduces inferred clinical reasoning (e.g., "inadequately controlled") absent from the source data.
 
