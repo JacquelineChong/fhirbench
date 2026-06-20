@@ -158,8 +158,8 @@
 
 **Acceptance Criteria:**
 - [ ] `bedrock_client.py` handles Claude + Llama 3 via `boto3`
-- [ ] `openai_client.py` handles GPT-4o via `openai` SDK
-- [ ] `google_client.py` handles Gemini via `google-generativeai` SDK
+- [ ] `openai_client.py` handles GPT-5.4 via `openai` SDK
+- [ ] `google_client.py` handles Qwen3 via `google-generativeai` SDK
 - [ ] All clients implement `generate(prompt, config) -> ModelResponse`
 - [ ] Retry logic with exponential backoff for rate limits
 
