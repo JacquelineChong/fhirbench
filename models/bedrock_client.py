@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # Supported models with their Bedrock model IDs
 MODEL_REGISTRY: Dict[str, str] = {
-    "claude-3.5-sonnet": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+    "claude-sonnet-4.5": "anthropic.claude-sonnet-4-5-20260301-v1:0",
     "gpt-5.4": "openai.gpt-5-4",
     "llama-3-70b": "meta.llama3-70b-instruct-v1:0",
     "deepseek-v3.2": "deepseek.deepseek-v3-2",
