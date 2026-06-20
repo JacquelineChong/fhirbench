@@ -47,7 +47,7 @@ A growing body of research investigates how data representation format affects L
 
 ## 2.4 Positioning Within the LLM Data Pipeline
 
-The clinical AI data pipeline comprises four sequential stages: (1) retrieval/chunking, which selects relevant resources from a patient's full EHR; (2) serialization, which transforms selected resources into LLM-consumable text; (3) prompt construction, which assembles the system prompt, serialized data, and query; and (4) inference, where the LLM generates a response. FHIRBench specifically targets Stage 2 — serialization — which operates downstream of retrieval.
+The clinical AI data pipeline comprises four sequential stages (Figure 2): (1) retrieval/chunking, which selects relevant resources from a patient's full EHR; (2) serialization, which transforms selected resources into LLM-consumable text; (3) prompt construction, which assembles the system prompt, serialized data, and query; and (4) inference, where the LLM generates a response. FHIRBench specifically targets Stage 2 — serialization — which operates downstream of retrieval.
 
 This positioning is important because serialization is frequently conflated with the more widely studied RAG chunking problem. The two stages address fundamentally different questions and produce different performance characteristics:
 
