@@ -171,6 +171,8 @@ When expert scores are collected, the following validation metrics will be compu
 
 ## 3.5.5 Pareto Efficiency Analysis
 
+Multi-objective optimization via Pareto frontier identification is well-established in machine learning for characterizing accuracy-cost tradeoffs — notably in neural architecture search and model scaling analysis. We adopt this approach because practitioners face heterogeneous constraints: cost-limited deployments prioritize token efficiency while safety-critical applications prioritize accuracy. A single "best strategy" recommendation is therefore insufficient; the Pareto frontier reveals the full set of non-dominated options from which practitioners select based on their specific constraints.
+
 The primary analytical contribution: **identifying the Pareto frontier of serialization strategies** across the accuracy-cost tradeoff space.
 
 ### Definition
