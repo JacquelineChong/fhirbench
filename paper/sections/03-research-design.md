@@ -39,3 +39,6 @@ The full methodology is organized as follows:
 ### Reproducibility
 
 All experimental materials — data generation scripts, serialization implementations, task generators, evaluation harnesses, model configuration, and analysis code — are publicly available at https://github.com/JacquelineChong/fhirbench under MIT license. The use of Synthea-generated synthetic data and Amazon Bedrock's versioned model IDs ensures that any researcher with an AWS account can fully replicate our results.
+
+The system architecture is illustrated in Figure 1 (see `docs/figures/architecture-diagram.html`), depicting the four-layer multi-agent design: research orchestration (Quick Desktop), code development (Kiro), model inference (Amazon Bedrock), and infrastructure services (Zotero MCP, GitHub MCP). Full technical design specifications, including module interfaces and configuration schemas, are provided in Appendix A. Development user stories with acceptance criteria for reproducibility are provided in Appendix B.
+
