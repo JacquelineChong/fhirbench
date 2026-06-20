@@ -12,6 +12,8 @@ This creates a paradox: regulators mandate structured data (FHIR) for exchange, 
 
 Our empirical findings inform three possible futures for health data interoperability:
 
+**The multi-agent architecture (Figure 1) demonstrates three possible production deployment paths:
+
 **Path A: Persistent Serialization Middleware (Near-Term).** FHIR remains the exchange standard; serialization constitutes a permanent optimization layer between storage and AI consumption. FHIRBench directly serves this path by providing evidence-based strategy selection. The finding that optimal format varies by model scale [CITE:TGZ97SRN] and task type implies this middleware must be adaptive rather than static.
 
 **Path B: Write-Only Structured Data (Medium-Term).** Clinicians capture information via natural language (voice, chat); AI generates structured FHIR representations for storage, billing, and public health reporting, but the primary clinical workflow bypasses structured formats entirely. In this model, serialization reverses direction — the problem becomes FHIR *generation* from text rather than FHIR *consumption* by text models. Recent work on clinical note-to-FHIR synthesis [CITE:FXBKDFFQ] [CITE:ABED59UH] suggests this path is technically feasible.
