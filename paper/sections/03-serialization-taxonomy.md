@@ -152,15 +152,57 @@ Hybrid Adaptive serialization implements a task-aware routing mechanism that sel
 The six strategies span a design space from maximal structural fidelity (Raw JSON) to maximal cognitive alignment (Narrative, Template) to maximal adaptability (Hybrid). No single strategy dominates across all evaluation criteria — a finding consistent with the broader structured data serialization literature [CITE:DJ6CWECQ] — motivating the systematic empirical comparison that FHIRBench provides.
 
 
+
+
+### 3.3.9 Strategy Selection Rationale and Preliminary Hypotheses
+
+The six strategies described above were selected to span the complete design space of clinical data serialization along the format dimension. They range from lossless structural preservation (Raw JSON) through progressive abstraction to domain-specific clinical representation (Clinical Template), with an adaptive meta-strategy (Hybrid) representing the theoretical optimum. This selection is grounded in prior work: JSON's structural fidelity validated by Neveditsin et al. [CITE:X85QMVCU], the narrative-versus-structured comparison established by Pator [CITE:TGZ97SRN], tabular format advantages demonstrated in structured data prompting research [CITE:R9P2FJS3], clinical template conventions derived from EHR documentation standards [CITE:7FJFJU5M], and task-dependent format effects identified by Yuan et al. [CITE:8S3QCXCC]. Any additional serialization strategy would represent a variant or combination of these six fundamental approaches.
+
+A preliminary analysis using a single illustrative patient record (Figure 3) suggests that non-JSON strategies achieve approximately 56–63% token reduction while preserving the clinical facts required for downstream tasks. This observation motivates three formal hypotheses tested in Section 4:
+
+1. **H1 (Token Efficiency):** Non-JSON strategies achieve 40–65% token reduction across the full dataset while maintaining acceptable accuracy.
+2. **H2 (Pareto Frontier):** A non-linear accuracy-cost tradeoff exists, with certain strategies achieving disproportionately high accuracy relative to token cost.
+3. **H3 (Model-Format Interaction):** Optimal strategy varies by model scale, with reversals between small and frontier models.
+
+These hypotheses are directly testable through the 90-condition experimental matrix described in Section 3.4.
+
 ## 3.4 Benchmark Design
 
-### 3.4.1 Experimental Matrix
+#
+
+### 3.3.9 Strategy Selection Rationale and Preliminary Hypotheses
+
+The six strategies described above were selected to span the complete design space of clinical data serialization along the format dimension. They range from lossless structural preservation (Raw JSON) through progressive abstraction to domain-specific clinical representation (Clinical Template), with an adaptive meta-strategy (Hybrid) representing the theoretical optimum. This selection is grounded in prior work: JSON's structural fidelity validated by Neveditsin et al. [CITE:X85QMVCU], the narrative-versus-structured comparison established by Pator [CITE:TGZ97SRN], tabular format advantages demonstrated in structured data prompting research [CITE:R9P2FJS3], clinical template conventions derived from EHR documentation standards [CITE:7FJFJU5M], and task-dependent format effects identified by Yuan et al. [CITE:8S3QCXCC]. Any additional serialization strategy would represent a variant or combination of these six fundamental approaches.
+
+A preliminary analysis using a single illustrative patient record (Figure 3) suggests that non-JSON strategies achieve approximately 56–63% token reduction while preserving the clinical facts required for downstream tasks. This observation motivates three formal hypotheses tested in Section 4:
+
+1. **H1 (Token Efficiency):** Non-JSON strategies achieve 40–65% token reduction across the full dataset while maintaining acceptable accuracy.
+2. **H2 (Pareto Frontier):** A non-linear accuracy-cost tradeoff exists, with certain strategies achieving disproportionately high accuracy relative to token cost.
+3. **H3 (Model-Format Interaction):** Optimal strategy varies by model scale, with reversals between small and frontier models.
+
+These hypotheses are directly testable through the 90-condition experimental matrix described in Section 3.4.
+
+## 3.4.1 Experimental Matrix
 
 FHIRBench employs a fully crossed factorial design with three factors: serialization strategy (6 levels), language model (5 levels), and clinical task type (3 levels). This yields 6 × 5 × 3 = 90 unique experimental conditions. Each condition is evaluated on 50 independent patient samples drawn from the Synthea-generated corpus [CITE:DM8RNZGT], producing a total of 4,500 model inference calls across the complete benchmark.
 
 The factorial structure enables analysis of both main effects (does serialization strategy matter overall?) and interaction effects (does the optimal strategy differ by model or task?), addressing the critical finding from prior work that format advantages reverse across model scales [CITE:TGZ97SRN].
 
-### 3.4.2 Model Selection
+#
+
+### 3.3.9 Strategy Selection Rationale and Preliminary Hypotheses
+
+The six strategies described above were selected to span the complete design space of clinical data serialization along the format dimension. They range from lossless structural preservation (Raw JSON) through progressive abstraction to domain-specific clinical representation (Clinical Template), with an adaptive meta-strategy (Hybrid) representing the theoretical optimum. This selection is grounded in prior work: JSON's structural fidelity validated by Neveditsin et al. [CITE:X85QMVCU], the narrative-versus-structured comparison established by Pator [CITE:TGZ97SRN], tabular format advantages demonstrated in structured data prompting research [CITE:R9P2FJS3], clinical template conventions derived from EHR documentation standards [CITE:7FJFJU5M], and task-dependent format effects identified by Yuan et al. [CITE:8S3QCXCC]. Any additional serialization strategy would represent a variant or combination of these six fundamental approaches.
+
+A preliminary analysis using a single illustrative patient record (Figure 3) suggests that non-JSON strategies achieve approximately 56–63% token reduction while preserving the clinical facts required for downstream tasks. This observation motivates three formal hypotheses tested in Section 4:
+
+1. **H1 (Token Efficiency):** Non-JSON strategies achieve 40–65% token reduction across the full dataset while maintaining acceptable accuracy.
+2. **H2 (Pareto Frontier):** A non-linear accuracy-cost tradeoff exists, with certain strategies achieving disproportionately high accuracy relative to token cost.
+3. **H3 (Model-Format Interaction):** Optimal strategy varies by model scale, with reversals between small and frontier models.
+
+These hypotheses are directly testable through the 90-condition experimental matrix described in Section 3.4.
+
+## 3.4.2 Model Selection
 
 Five foundation models are selected to span the axes of architectural diversity, parameter scale, training paradigm, and deployment prevalence in healthcare settings. All models are accessed through Amazon Bedrock's unified Converse API (InvokeModel), ensuring identical invocation semantics, authentication, and response handling across models.
 
@@ -176,7 +218,21 @@ Five foundation models are selected to span the axes of architectural diversity,
 
 The selection ensures representation of proprietary and open-weight models, dense and mixture-of-experts architectures, and parameter counts spanning 32B to 671B (effective). This diversity enables analysis of whether serialization effects generalize across model families or exhibit architecture-specific interactions, as suggested by recent causal analyses [CITE:8S3QCXCC].
 
-### 3.4.3 Task Definitions
+#
+
+### 3.3.9 Strategy Selection Rationale and Preliminary Hypotheses
+
+The six strategies described above were selected to span the complete design space of clinical data serialization along the format dimension. They range from lossless structural preservation (Raw JSON) through progressive abstraction to domain-specific clinical representation (Clinical Template), with an adaptive meta-strategy (Hybrid) representing the theoretical optimum. This selection is grounded in prior work: JSON's structural fidelity validated by Neveditsin et al. [CITE:X85QMVCU], the narrative-versus-structured comparison established by Pator [CITE:TGZ97SRN], tabular format advantages demonstrated in structured data prompting research [CITE:R9P2FJS3], clinical template conventions derived from EHR documentation standards [CITE:7FJFJU5M], and task-dependent format effects identified by Yuan et al. [CITE:8S3QCXCC]. Any additional serialization strategy would represent a variant or combination of these six fundamental approaches.
+
+A preliminary analysis using a single illustrative patient record (Figure 3) suggests that non-JSON strategies achieve approximately 56–63% token reduction while preserving the clinical facts required for downstream tasks. This observation motivates three formal hypotheses tested in Section 4:
+
+1. **H1 (Token Efficiency):** Non-JSON strategies achieve 40–65% token reduction across the full dataset while maintaining acceptable accuracy.
+2. **H2 (Pareto Frontier):** A non-linear accuracy-cost tradeoff exists, with certain strategies achieving disproportionately high accuracy relative to token cost.
+3. **H3 (Model-Format Interaction):** Optimal strategy varies by model scale, with reversals between small and frontier models.
+
+These hypotheses are directly testable through the 90-condition experimental matrix described in Section 3.4.
+
+## 3.4.3 Task Definitions
 
 Three clinical task types are defined to span the cognitive complexity spectrum from factual retrieval through multi-step inference to abstractive synthesis:
 
@@ -186,7 +242,21 @@ Three clinical task types are defined to span the cognitive complexity spectrum 
 
 **Task 3: Clinical Summarization.** Given a serialized patient record and a summarization directive, the model generates a structured clinical summary (care plan, handoff note, or problem-oriented summary). This task evaluates how serialization affects abstractive generation quality when the model must reorganize and synthesize information. Evaluation employs ROUGE-L, BERTScore, and domain-adapted clinical accuracy metrics comparing generated summaries against reference summaries authored by clinical informaticists.
 
-### 3.4.4 Inference Configuration
+#
+
+### 3.3.9 Strategy Selection Rationale and Preliminary Hypotheses
+
+The six strategies described above were selected to span the complete design space of clinical data serialization along the format dimension. They range from lossless structural preservation (Raw JSON) through progressive abstraction to domain-specific clinical representation (Clinical Template), with an adaptive meta-strategy (Hybrid) representing the theoretical optimum. This selection is grounded in prior work: JSON's structural fidelity validated by Neveditsin et al. [CITE:X85QMVCU], the narrative-versus-structured comparison established by Pator [CITE:TGZ97SRN], tabular format advantages demonstrated in structured data prompting research [CITE:R9P2FJS3], clinical template conventions derived from EHR documentation standards [CITE:7FJFJU5M], and task-dependent format effects identified by Yuan et al. [CITE:8S3QCXCC]. Any additional serialization strategy would represent a variant or combination of these six fundamental approaches.
+
+A preliminary analysis using a single illustrative patient record (Figure 3) suggests that non-JSON strategies achieve approximately 56–63% token reduction while preserving the clinical facts required for downstream tasks. This observation motivates three formal hypotheses tested in Section 4:
+
+1. **H1 (Token Efficiency):** Non-JSON strategies achieve 40–65% token reduction across the full dataset while maintaining acceptable accuracy.
+2. **H2 (Pareto Frontier):** A non-linear accuracy-cost tradeoff exists, with certain strategies achieving disproportionately high accuracy relative to token cost.
+3. **H3 (Model-Format Interaction):** Optimal strategy varies by model scale, with reversals between small and frontier models.
+
+These hypotheses are directly testable through the 90-condition experimental matrix described in Section 3.4.
+
+## 3.4.4 Inference Configuration
 
 All model calls use deterministic inference parameters to ensure reproducibility:
 
@@ -197,7 +267,21 @@ All model calls use deterministic inference parameters to ensure reproducibility
 
 The deterministic configuration eliminates sampling noise as a confound, enabling direct attribution of performance differences to the independent variables (serialization strategy, model, and task type). Each of the 4,500 inference calls is logged with full request/response payloads, latency measurements, and token consumption metadata to support post-hoc efficiency analyses.
 
-### 3.4.5 Statistical Analysis Plan
+#
+
+### 3.3.9 Strategy Selection Rationale and Preliminary Hypotheses
+
+The six strategies described above were selected to span the complete design space of clinical data serialization along the format dimension. They range from lossless structural preservation (Raw JSON) through progressive abstraction to domain-specific clinical representation (Clinical Template), with an adaptive meta-strategy (Hybrid) representing the theoretical optimum. This selection is grounded in prior work: JSON's structural fidelity validated by Neveditsin et al. [CITE:X85QMVCU], the narrative-versus-structured comparison established by Pator [CITE:TGZ97SRN], tabular format advantages demonstrated in structured data prompting research [CITE:R9P2FJS3], clinical template conventions derived from EHR documentation standards [CITE:7FJFJU5M], and task-dependent format effects identified by Yuan et al. [CITE:8S3QCXCC]. Any additional serialization strategy would represent a variant or combination of these six fundamental approaches.
+
+A preliminary analysis using a single illustrative patient record (Figure 3) suggests that non-JSON strategies achieve approximately 56–63% token reduction while preserving the clinical facts required for downstream tasks. This observation motivates three formal hypotheses tested in Section 4:
+
+1. **H1 (Token Efficiency):** Non-JSON strategies achieve 40–65% token reduction across the full dataset while maintaining acceptable accuracy.
+2. **H2 (Pareto Frontier):** A non-linear accuracy-cost tradeoff exists, with certain strategies achieving disproportionately high accuracy relative to token cost.
+3. **H3 (Model-Format Interaction):** Optimal strategy varies by model scale, with reversals between small and frontier models.
+
+These hypotheses are directly testable through the 90-condition experimental matrix described in Section 3.4.
+
+## 3.4.5 Statistical Analysis Plan
 
 The primary analysis employs a two-way analysis of variance (ANOVA) with serialization strategy and model as factors, conducted independently for each of the three task types. This yields three separate ANOVA models, each testing the main effects of serialization (H₁: at least one strategy differs from the others) and model (H₂: at least one model differs), plus the serialization × model interaction (H₃: the effect of strategy depends on model choice).
 
