@@ -12,6 +12,7 @@ The framework uses **three evaluation layers** of increasing rigor:
 | **Layer 2: LLM-as-Judge** | Claude Sonnet 4.5 evaluator | All 4,500 samples | Rubric-based quality scoring robust to paraphrasing |
 | **Layer 3: Human Evaluation** | Clinical expert review | 150 stratified samples (5%) | Ground truth calibration + inter-rater reliability |
 
+
 ## 3.5.2 Layer 1: Automated Metrics (Programmatic)
 
 ### Per-Task Primary Metrics
@@ -21,22 +22,8 @@ The framework uses **three evaluation layers** of increasing rigor:
 | Clinical QA | **Exact-Match Accuracy** | `correct / total` (case-insensitive, stripped) | 0–1 |
 | Clinical QA | **Token F1** | `2 × precision × recall / (precision + recall)` over word tokens | 0–1 |
 | Clinical Reasoning | **Finding Coverage** | `found_findings / expected_findings` | 0–1 |
-| Clinical Summarization | **ROUGE-L** | Longest common subsequence F-measure [CITE:ESPJCVEP] [CITE:ESPJCVEP] | 0–1 |
+| Clinical Summarization | **ROUGE-L** | Longest common subsequence F-measure [CITE:ESPJCVEP] | 0–1 |
 | Clinical Summarization | **ROUGE-1, ROUGE-2** | Unigram and bigram overlap | 0–1 |
-
-### Cross-Cutting: Token Efficiency (Cost Proxy)
-
-Token efficiency is critical for practitioners making deployment decisions. We measure:
-
-| Metric | What It Captures | Formula |
-|--------|-----------------|---------|
-| **Input Tokens** | Serialization cost — how many tokens each format consumes | Approximate: `word_count × 1.33` (validated against tiktoken for GPT, Anthropic tokenizer for Claude) |
-| **Output Tokens** | Response generation cost | Actual Bedrock usage metadata |
-| **Total Cost** | Dollar cost per evaluation | `(input_tokens × input_price + output_tokens × output_price)` per model |
-| **Accuracy-per-Dollar** | Pareto efficiency | `accuracy / total_cost` |
-| **Accuracy-per-Token** | Format efficiency independent of pricing | `accuracy / input_tokens` |
-
-**Why this matters:** A serialization strategy achieving 95% accuracy at 2,000 tokens may be preferable to one achieving 97% accuracy at 8,000 tokens — the Pareto frontier reveals these tradeoffs for practitioners with different cost/accuracy priorities.
 
 ### Cross-Cutting: Safety Score
 
@@ -46,6 +33,54 @@ Token efficiency is critical for practitioners making deployment decisions. We m
 | Recommends ignoring symptoms | Keyword matching | Score = 0.0 |
 | Provides dose without appropriate caveats | Pattern matching | Score = 0.5 |
 | None detected | — | Score = 1.0 |
+
+### Cross-Cutting: Token Efficiency & Cost-Performance Analysis
+
+Token efficiency is critical for practitioners making deployment decisions. Unlike accuracy metrics which evaluate output quality, token efficiency evaluates the *input cost* of each serialization strategy — directly determining API expenditure and latency.
+
+#### Token Measurement Methodology
+
+| Metric | What It Captures | Formula |
+|--------|-----------------|---------|
+| **Input Tokens** | Serialization cost — how many tokens each format consumes | Approximate: `word_count × 1.33` (validated against tiktoken for GPT, Anthropic tokenizer for Claude) |
+| **Output Tokens** | Response generation cost | Actual Bedrock usage metadata |
+| **Total Cost** | Dollar cost per evaluation | `(input_tokens × input_price + output_tokens × output_price)` per model |
+
+#### Cost Computation Per Model
+
+| Model | Input ($/1M tokens) | Output ($/1M tokens) |
+|-------|---------------------|---------------------|
+| Claude Sonnet 4.5 | ~$3.00 | ~$15.00 |
+| GPT-5.4 | ~$5.00 | ~$15.00 |
+| Llama 3 70B | ~$0.72 | ~$0.72 |
+| DeepSeek V3.2 | ~$1.00 | ~$2.00 |
+| Qwen3 32B | ~$0.50 | ~$1.00 |
+
+#### Pareto Frontier Analysis
+
+Multi-objective optimization via Pareto frontier identification is well-established in machine learning for characterizing accuracy-cost tradeoffs — notably in neural architecture search and model scaling analysis. We adopt this approach because practitioners face heterogeneous constraints: cost-limited deployments prioritize token efficiency while safety-critical applications prioritize accuracy. A single "best strategy" recommendation is therefore insufficient; the Pareto frontier reveals the full set of non-dominated options from which practitioners select based on their specific constraints.
+
+**Definition.** A serialization strategy S is **Pareto-optimal** if no other strategy achieves:
+- Higher accuracy at equal or lower token cost, OR
+- Lower token cost at equal or higher accuracy
+
+**Computation.** For each (serializer, model, task) condition:
+1. Compute accuracy metric (Layer 2 weighted rubric score)
+2. Compute input token count (serialized FHIR data)
+3. Plot all 90 conditions on accuracy (y) vs. tokens (x) scatter
+4. Identify Pareto frontier (non-dominated points)
+5. Report per-model and per-task Pareto frontiers
+
+**Output: Practitioner Decision Matrix.** The Pareto analysis produces a decision matrix mapping practitioner priorities (accuracy-first, cost-first, balanced) × model choice → recommended serialization strategy. This matrix constitutes the primary practical output of FHIRBench (Figure 4, §4).
+
+**Derived Metrics:**
+
+| Metric | Formula | Purpose |
+|--------|---------|---------|
+| **Accuracy-per-Dollar** | `accuracy / total_cost` | Cost-efficiency ranking |
+| **Accuracy-per-Token** | `accuracy / input_tokens` | Format efficiency independent of pricing |
+| **Pareto Distance** | Euclidean distance from frontier | How far a strategy is from optimal |
+
 
 ## 3.5.3 Layer 2: LLM-as-Judge (Rubric-Based)
 
@@ -125,6 +160,7 @@ Provide scores as JSON: {"accuracy": N, "relevance": N, "completeness": N, "safe
 
 **Note:** Claude Sonnet 4.5 IS one of the 5 benchmarked models. For evaluations where Claude is the subject model, we use GPT-5.4 as the judge instead (cross-evaluation to prevent self-bias).
 
+
 ## 3.5.4 Layer 3: Human Evaluation (Clinical Expert Review)
 
 ### Scope Clarification
@@ -169,37 +205,52 @@ When expert scores are collected, the following validation metrics will be compu
 3. **Methodological contribution** — The evaluation protocol itself (instrument design, stratification strategy, validation metrics) is a contribution independent of its execution
 4. **Community enablement** — Publishing the review package enables multiple clinical teams to validate independently, producing more robust inter-rater data than a single expert
 
-## 3.5.5 Pareto Efficiency Analysis
 
-Multi-objective optimization via Pareto frontier identification is well-established in machine learning for characterizing accuracy-cost tradeoffs — notably in neural architecture search and model scaling analysis. We adopt this approach because practitioners face heterogeneous constraints: cost-limited deployments prioritize token efficiency while safety-critical applications prioritize accuracy. A single "best strategy" recommendation is therefore insufficient; the Pareto frontier reveals the full set of non-dominated options from which practitioners select based on their specific constraints.
+## 3.5.5 Sensitivity & Robustness Analysis
 
-The primary analytical contribution: **identifying the Pareto frontier of serialization strategies** across the accuracy-cost tradeoff space.
+To ensure that primary findings are not artifacts of specific parameter choices, we conduct three sensitivity analyses:
 
-### Definition
+### A. Rubric Weight Sensitivity
 
-A serialization strategy S is **Pareto-optimal** if no other strategy achieves:
-- Higher accuracy at equal or lower token cost, OR
-- Lower token cost at equal or higher accuracy
+The 4-dimension rubric weights (default: accuracy 30%, completeness 30%, safety 20%, relevance 20%) are perturbed across a ±10% range:
 
-### Computation
+| Perturbation | Accuracy | Completeness | Safety | Relevance |
+|-------------|----------|--------------|--------|-----------|
+| Default | 30% | 30% | 20% | 20% |
+| Safety-heavy | 20% | 25% | **35%** | 20% |
+| Accuracy-heavy | **40%** | 25% | 15% | 20% |
+| Completeness-heavy | 25% | **40%** | 15% | 20% |
+| Equal weights | 25% | 25% | 25% | 25% |
 
-For each (serializer, model, task) condition:
-1. Compute accuracy metric (Layer 2 weighted rubric score)
-2. Compute input token count (serialized FHIR data)
-3. Plot all 90 conditions on accuracy (y) vs. tokens (x) scatter
-4. Identify Pareto frontier (non-dominated points)
-5. Report per-model and per-task Pareto frontiers
+**Criterion:** Main findings are considered robust if the top-2 serialization strategy ranking remains unchanged across all weight configurations.
 
-### Decision Framework Output
+### B. Sample Size Sensitivity
 
-The Pareto analysis produces a **practitioner decision matrix**:
+Results computed at n=50 samples per condition are compared against subsampled estimates at n=25 (half the data) using bootstrap resampling:
 
-| If your priority is... | And your model is... | Recommended serialization | Expected accuracy | Token cost |
-|----------------------|---------------------|--------------------------|-------------------|-----------|
-| Maximum accuracy | Frontier (Claude/GPT) | [TBD from results] | [TBD] | [TBD] |
-| Cost efficiency | Open-weight (Llama/Qwen) | [TBD from results] | [TBD] | [TBD] |
-| Balance (Pareto-optimal) | Any | [TBD from results] | [TBD] | [TBD] |
-| Safety-first | Any | [TBD from results] | [TBD] | [TBD] |
+- Compute metric at n=50 (full sample)
+- Resample n=25 (1,000 bootstrap iterations)
+- Report 95% CI width and strategy ranking stability
+
+**Criterion:** Rankings are stable if all pairwise differences that are significant at n=50 remain directionally consistent at n=25.
+
+### C. Model-Specific Robustness
+
+Strategy rankings may differ across models (as prior work suggests [CITE:TGZ97SRN]). We report:
+
+- Aggregate ranking (pooled across all 5 models)
+- Per-model ranking (does the best strategy change between frontier vs. open-weight models?)
+- Interaction effects (serializer × model interaction from ANOVA)
+
+**Criterion:** If rankings differ substantially across models, the decision framework (§4) reports model-conditional recommendations rather than a single universal ranking.
+
+### Reporting Standard
+
+Sensitivity analysis results are reported in §4 as a robustness check following the primary findings. Findings are categorized as:
+- **Robust:** Top-2 ranking unchanged across all perturbations
+- **Conditionally robust:** Ranking stable within model classes but differs between classes
+- **Sensitive:** Ranking changes with perturbation — reported with appropriate caveats
+
 
 ## 3.5.6 Contribution Positioning
 
