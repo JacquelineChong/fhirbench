@@ -77,7 +77,7 @@ recorded on 2024-01-15, indicating suboptimal glycemic control.
 
 **Disadvantages.** The conversion process itself introduces potential information loss — decisions about which elements to include, how to resolve coded values, and how to order information reflect editorial choices that may inadvertently omit clinically relevant details. Narrative generation incurs the highest preprocessing computational cost among all strategies. Furthermore, the conversion introduces a potential source of error prior to model inference, and numerical precision may degrade (e.g., laboratory values rounded or contextualized rather than reported exactly) [CITE:HTTUDR8U].
 
-**Token efficiency.** Approximately 0.5–0.8× baseline. Token count varies substantially depending on the verbosity of the narrative generation algorithm; however, the elimination of structural markup generally yields net compression despite the addition of natural language connectives.
+**Token efficiency.** Approximately 0.4–0.8× baseline, varying significantly with record complexity. For minimal patient records (1–3 resources), narrative achieves as low as 0.37× due to the elimination of JSON structural overhead dominating the token budget. For complex records (15–20 resources), the ratio increases toward 0.7–0.8× as natural language connectives accumulate. The elimination of structural markup generally yields net compression despite the addition of prose elements.
 
 ### 3.3.5 Strategy 4: Structured Markdown
 
