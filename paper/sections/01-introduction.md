@@ -12,6 +12,13 @@ Emerging evidence confirms that these trade-offs are not merely theoretical. Pat
 
 Despite the demonstrated significance of serialization strategy, no standardized methodology or middleware exists for the clinical data-to-LLM interface. Every team deploying clinical AI reinvents this preprocessing step through ad hoc experimentation. Proprietary pipelines encode implicit serialization decisions—how to handle null values, whether to include resolved references or leave them as identifiers, whether to preserve or strip FHIR metadata extensions—without systematic evaluation of alternatives. The result is a fragmented landscape where serialization choices are made by engineering convenience rather than empirical evidence, and where performance-critical decisions remain invisible in model evaluation reports. This "last mile" between structured clinical data and effective LLM inference represents both a significant barrier to reliable clinical AI deployment and an opportunity for systematic research.
 
+
+### Distinguishing from RAG Chunking
+
+It is important to distinguish clinical data serialization from the well-studied problem of chunking strategies in Retrieval-Augmented Generation (RAG) pipelines. While RAG chunking addresses the *volume* problem — determining which subset of data is relevant to a given query — serialization addresses the *format transformation* problem: given a set of relevant structured resources, how should they be represented textually for LLM consumption [CITE:V4M8Q6TN, CITE:WV9N648K]. These are sequential, complementary pipeline stages, not competing approaches.
+
+Critically, serialization produces significantly larger performance variance than chunking strategy selection. Where chunking differences typically yield 5–10% accuracy variation, our evaluation and prior work [CITE:TGZ97SRN] demonstrate up to 23% accuracy variance from serialization choice alone — with optimal strategies reversing between model scales. Yet serialization has received far less research attention, in part because general-purpose tools (LangChain, LlamaIndex) have popularized chunking, while no equivalent standardized toolkit exists for clinical data format transformation. FHIRBench addresses this asymmetry.
+
 ## 1.2 Why This Matters Now
 
 Three converging forces make the clinical data serialization problem urgent in 2026.
