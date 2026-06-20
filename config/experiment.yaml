@@ -33,9 +33,9 @@ terminology_resolution: codes_with_display
 
 # Models (all via Bedrock Converse API)
 models:
-  - id: claude-3.5-sonnet
+  - id: claude-sonnet-4.5
     provider: bedrock
-    model_id: "anthropic.claude-3-5-sonnet-20241022-v2:0"
+    model_id: "anthropic.claude-sonnet-4-5-20260301-v1:0"
     max_tokens: 2048
     temperature: 0.0
 
