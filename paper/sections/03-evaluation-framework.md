@@ -21,7 +21,7 @@ The framework uses **three evaluation layers** of increasing rigor:
 | Clinical QA | **Exact-Match Accuracy** | `correct / total` (case-insensitive, stripped) | 0–1 |
 | Clinical QA | **Token F1** | `2 × precision × recall / (precision + recall)` over word tokens | 0–1 |
 | Clinical Reasoning | **Finding Coverage** | `found_findings / expected_findings` | 0–1 |
-| Clinical Summarization | **ROUGE-L** | Longest common subsequence F-measure [CITE:NEW_ROUGE] | 0–1 |
+| Clinical Summarization | **ROUGE-L** | Longest common subsequence F-measure [CITE:ESPJCVEP] [CITE:ESPJCVEP] | 0–1 |
 | Clinical Summarization | **ROUGE-1, ROUGE-2** | Unigram and bigram overlap | 0–1 |
 
 ### Cross-Cutting: Token Efficiency (Cost Proxy)
@@ -48,6 +48,8 @@ Token efficiency is critical for practitioners making deployment decisions. We m
 | None detected | — | Score = 1.0 |
 
 ## 3.5.3 Layer 2: LLM-as-Judge (Rubric-Based)
+
+The LLM-as-judge paradigm has been extensively validated for NLG evaluation [CITE:BHDVGNJD], with recent work specifically demonstrating its applicability to healthcare AI text generation [CITE:TP9TXXCF].
 
 Automated string-matching metrics (Layer 1) are insufficient for clinical evaluation because:
 - Correct clinical answers can be phrased in many ways
@@ -123,7 +125,7 @@ Human evaluation serves three functions:
 
 | Metric | Target | If Met |
 |--------|--------|--------|
-| Spearman ρ (human vs. LLM-judge) | ≥ 0.75 | Validates LLM-as-judge for full-scale evaluation |
+| Spearman ρ (human vs. LLM-judge) | ≥ 0.75 | Validates LLM-as-judge [CITE:BHDVGNJD]; prior healthcare studies report ρ = 0.78 [CITE:TK3UEM43] |
 | Cohen's κ | ≥ 0.65 | Substantial agreement — automated scores are trustworthy |
 | If < target | — | Report as limitation; weight human scores higher in discussion |
 
