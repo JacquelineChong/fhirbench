@@ -15,7 +15,7 @@ No external API credentials required — single AWS account enables full reprodu
 
 | # | Model | Provider | Bedrock Model ID | Category |
 |---|-------|----------|-----------------|----------|
-| 1 | Claude 3.5 Sonnet | Anthropic | `anthropic.claude-3-5-sonnet-20241022-v2:0` | Frontier proprietary |
+| 1 | Claude Sonnet 4.5 | Anthropic | `anthropic.claude-sonnet-4-5-20260301-v1:0` | Frontier proprietary |
 | 2 | GPT-5.4 | OpenAI | `openai.gpt-5-4` | Frontier proprietary |
 | 3 | Llama 3 70B | Meta | `meta.llama3-70b-instruct-v1:0` | Open-weight (large) |
 | 4 | DeepSeek V3.2 | DeepSeek | `deepseek.deepseek-v3-2` | Open-weight (reasoning) |
@@ -51,9 +51,9 @@ Models chosen based on:
 
 ```yaml
 models:
-  - id: claude-3.5-sonnet
+  - id: claude-sonnet-4.5
     provider: bedrock
-    model_id: anthropic.claude-3-5-sonnet-20241022-v2:0
+    model_id: anthropic.claude-sonnet-4-5-20260301-v1:0
     max_tokens: 2048
     temperature: 0.0
 
@@ -86,7 +86,7 @@ models:
 
 | Model | Est. Input $/1M tokens | Est. Output $/1M tokens |
 |-------|----------------------|------------------------|
-| Claude 3.5 Sonnet | $3.00 | $15.00 |
+| Claude Sonnet 4.5 | $3.00 | $15.00 |
 | GPT-5.4 | $5.00 | $15.00 |
 | Llama 3 70B | $0.72 | $0.72 |
 | DeepSeek V3.2 | $1.00 | $2.00 |
