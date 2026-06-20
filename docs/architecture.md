@@ -79,7 +79,7 @@ This research project uses a multi-agent architecture to systematically evaluate
 
 ## Evaluation Matrix
 
-- **Models (4):** Claude 3.5 Sonnet, Llama 3 70B, GPT-4o, Gemini 1.5 Pro
+- **Models (4):** Claude Sonnet 4.5, Llama 3 70B, GPT-4o, Gemini 1.5 Pro
 - **Tasks (3):** Clinical QA, Clinical Reasoning, Clinical Summarization
 - **Metrics:** Accuracy, Clinical Correctness Score, ROUGE-L, Token Efficiency
 - **Total conditions:** 6 × 4 × 3 = 72
