@@ -13,7 +13,7 @@ FHIRBench is an open-source benchmark framework that systematically evaluates ho
 
 ## Target Models (All via Amazon Bedrock — unified API)
 
-- Claude 3.5 Sonnet (Bedrock: `anthropic.claude-3-5-sonnet-20241022-v2:0`)
+- Claude Sonnet 4.5 (Bedrock: `anthropic.claude-sonnet-4-5-20260301-v1:0`)
 - GPT-5.4 (Bedrock: `openai.gpt-5-4`)
 - Llama 3 70B (Bedrock: `meta.llama3-70b-instruct-v1:0`)
 - DeepSeek V3.2 (Bedrock: `deepseek.deepseek-v3-2`)
