@@ -175,7 +175,7 @@ Five foundation models are evaluated, all accessed through Amazon Bedrock's unif
 
 | # | Model | Provider | Bedrock Model ID | Architecture | Parameters |
 |---|-------|----------|-----------------|--------------|-----------|
-| 1 | Claude 3.5 Sonnet | Anthropic | `anthropic.claude-3-5-sonnet-20241022-v2:0` | Proprietary (transformer) | Frontier-scale |
+| 1 | Claude Sonnet 4.5 | Anthropic | `anthropic.claude-sonnet-4-5-20260301-v1:0` | Proprietary (transformer) | Frontier-scale |
 | 2 | GPT-5.4 | OpenAI | `openai.gpt-5-4` | Proprietary (transformer) | Frontier-scale |
 | 3 | Llama 3 70B | Meta | `meta.llama3-70b-instruct-v1:0` | Open-weight (dense) | 70B |
 | 4 | DeepSeek V3.2 | DeepSeek | `deepseek.deepseek-v3-2` | Open-weight (MoE) | Frontier-scale |
