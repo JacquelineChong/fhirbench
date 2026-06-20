@@ -21,7 +21,7 @@ Each additional model adds 18 conditions (6 serializers × 3 tasks × 50 samples
 | # | Criterion | Why It Matters | How Our 5 Satisfy It |
 |---|-----------|---------------|---------------------|
 | 1 | **Architecture diversity** | Different architectures may handle structured data differently | 5 distinct architectures: Anthropic (Claude), OpenAI (GPT), Meta (Llama), DeepSeek (MoE), Alibaba (Qwen) |
-| 2 | **Parameter scale** | Model size affects context window utilization and reasoning depth | 32B (Qwen3) → 70B (Llama 3) → Frontier (Claude 3.5, GPT-5.4, DeepSeek V3.2) |
+| 2 | **Parameter scale** | Model size affects context window utilization and reasoning depth | 32B (Qwen3) → 70B (Llama 3) → Frontier (Claude Sonnet 4.5, GPT-5.4, DeepSeek V3.2) |
 | 3 | **Training paradigm** | Proprietary vs. open-weight may differ in structured data handling | 2 proprietary (Claude, GPT-5.4) + 3 open-weight (Llama 3, DeepSeek V3.2, Qwen3) |
 | 4 | **Global adoption** | Results must be relevant to practitioners | All 5 rank in top-10 by global token usage (2026) |
 
