@@ -1,6 +1,6 @@
 ## 3.3 Serialization Taxonomy
 
-The representation of clinical data presented to a large language model constitutes a critical design decision that mediates between the structural fidelity of the source record and the model's capacity to extract, reason over, and summarize clinical information. This section introduces a taxonomy of six serialization strategies for transforming FHIR R4 bundles into LLM-consumable input, organized along four orthogonal dimensions.
+The representation of clinical data presented to a large language model constitutes a critical design decision that mediates between the structural fidelity of the source record and the model's capacity to extract, reason over, and summarize clinical information. This section introduces a taxonomy of six serialization strategies for transforming FHIR R4 bundles into LLM-consumable input, organized along four orthogonal dimensions. Figure 3 provides a concrete illustration of all six strategies applied to a single representative patient record, enabling direct visual comparison of format, token efficiency, and information preservation.
 
 ### 3.3.1 Taxonomy Dimensions
 
@@ -151,9 +151,6 @@ Hybrid Adaptive serialization implements a task-aware routing mechanism that sel
 
 The six strategies span a design space from maximal structural fidelity (Raw JSON) to maximal cognitive alignment (Narrative, Template) to maximal adaptability (Hybrid). No single strategy dominates across all evaluation criteria — a finding consistent with the broader structured data serialization literature [CITE:DJ6CWECQ] — motivating the systematic empirical comparison that FHIRBench provides.
 
-
-
-
 ### 3.3.9 Strategy Selection Rationale and Preliminary Hypotheses
 
 The six strategies described above were selected to span the complete design space of clinical data serialization along the format dimension. They range from lossless structural preservation (Raw JSON) through progressive abstraction to domain-specific clinical representation (Clinical Template), with an adaptive meta-strategy (Hybrid) representing the theoretical optimum. This selection is grounded in prior work: JSON's structural fidelity validated by Neveditsin et al. [CITE:X85QMVCU], the narrative-versus-structured comparison established by Pator [CITE:TGZ97SRN], tabular format advantages demonstrated in structured data prompting research [CITE:R9P2FJS3], clinical template conventions derived from EHR documentation standards [CITE:7FJFJU5M], and task-dependent format effects identified by Yuan et al. [CITE:8S3QCXCC]. Any additional serialization strategy would represent a variant or combination of these six fundamental approaches.
@@ -166,7 +163,74 @@ A preliminary analysis using a single illustrative patient record (Figure 3) sug
 
 These hypotheses are directly testable through the 90-condition experimental matrix described in Section 3.4.
 
-## 3.4.5 Statistical Analysis Plan
+## 3.4 Benchmark Design
+
+This section describes the experimental configuration of the FHIRBench evaluation, including model selection, task definitions, protocol specification, and infrastructure.
+
+### 3.4.1 Model Selection
+
+Five foundation models are evaluated, all accessed through Amazon Bedrock's unified Converse API to ensure consistent inference parameters and eliminate confounding from heterogeneous API implementations.
+
+**Table 2.** Models evaluated in FHIRBench.
+
+| # | Model | Provider | Bedrock Model ID | Architecture | Parameters |
+|---|-------|----------|-----------------|--------------|-----------|
+| 1 | Claude 3.5 Sonnet | Anthropic | `anthropic.claude-3-5-sonnet-20241022-v2:0` | Proprietary (transformer) | Frontier-scale |
+| 2 | GPT-5.4 | OpenAI | `openai.gpt-5-4` | Proprietary (transformer) | Frontier-scale |
+| 3 | Llama 3 70B | Meta | `meta.llama3-70b-instruct-v1:0` | Open-weight (dense) | 70B |
+| 4 | DeepSeek V3.2 | DeepSeek | `deepseek.deepseek-v3-2` | Open-weight (MoE) | Frontier-scale |
+| 5 | Qwen3 32B | Qwen (Alibaba) | `qwen.qwen3-32b` | Open-weight (dense) | 32B |
+
+Models were selected to maximize diversity along four orthogonal dimensions: (1) architecture family (5 distinct architectures), (2) parameter scale (32B to frontier), (3) training paradigm (2 proprietary, 3 open-weight), and (4) global adoption (all rank in top-10 by token usage in 2026). Full selection justification and exclusion rationale (including Gemini's absence from Bedrock) is documented in the supplementary materials.
+
+### 3.4.2 Task Definitions
+
+Three clinical task types are evaluated, each targeting a distinct cognitive operation over serialized FHIR data:
+
+**Clinical QA (Factual Retrieval).** Questions requiring extraction of specific clinical facts from the patient record. Examples: "What medications is this patient currently taking?", "What was the most recent HbA1c result?", "List all active conditions." Ground truth answers are programmatically extracted from the FHIR bundle, enabling automated exact-match and token F1 scoring.
+
+- *Primary metric:* Exact-match accuracy
+- *Secondary metric:* Token-level F1
+
+**Clinical Reasoning (Multi-Step Inference).** Tasks requiring synthesis across multiple resources to reach a clinical conclusion. Examples: "Is this patient at risk for a drug-drug interaction?", "Based on the available data, is the patient's diabetes adequately controlled?", "Identify any preventive care gaps." Ground truth comprises a set of expected clinical findings that a correct response should identify.
+
+- *Primary metric:* Clinical correctness (finding coverage)
+- *Secondary metric:* 4-dimension rubric score (LLM-as-judge)
+
+**Clinical Summarization (Generative Documentation).** Tasks requiring coherent synthesis of patient data into clinical documentation formats. Examples: "Generate a discharge summary for this patient", "Write an SBAR handoff note", "Create a diabetes care plan." Reference summaries are generated following clinical documentation guidelines.
+
+- *Primary metric:* ROUGE-L [CITE:ESPJCVEP]
+- *Secondary metric:* 4-dimension rubric score (LLM-as-judge)
+
+### 3.4.3 Experimental Protocol
+
+The full evaluation follows a stratified experimental design:
+
+| Parameter | Value |
+|-----------|-------|
+| Total conditions | 90 (6 serializers × 5 models × 3 tasks) |
+| Samples per condition | 50 |
+| Total API calls | 4,500 |
+| Sampling strategy | Stratified across 4 clinical domains (~12–13 patients per domain per condition) |
+| Randomization | Fixed seed (42) for reproducibility |
+| Inference temperature | 0.0 (deterministic) |
+| Top-p | 1.0 |
+| Max output tokens | 2,048 |
+
+The evaluation proceeds sequentially by condition, with results checkpointed after each condition completes. This enables resumption without data loss in the event of API failures or rate limiting. Within each condition, the 50 patient bundles are processed in fixed random order to eliminate ordering effects.
+
+### 3.4.4 Infrastructure
+
+All model inference is conducted through the Amazon Bedrock Converse API, which provides a unified request/response interface across all five models regardless of their underlying architecture. This design choice ensures:
+
+- **Consistent tokenization reporting** — Bedrock returns input and output token counts for every request
+- **Unified rate limiting** — A single retry policy (exponential backoff, 3 attempts, initial delay 1s) handles all transient failures
+- **Cost tracking** — Per-request cost computed from Bedrock's published pricing and token metadata
+- **Model version pinning** — Bedrock model IDs specify exact model versions, ensuring reproducibility
+
+Results are persisted in JSON format with one file per condition (`results/{serializer}_{model}_{task}.json`), containing per-sample prompts, responses, scores, token counts, and latency measurements. A consolidated CSV summary enables downstream statistical analysis.
+
+### 3.4.5 Statistical Analysis Plan
 
 The primary analysis employs a two-way analysis of variance (ANOVA) with serialization strategy and model as factors, conducted independently for each of the three task types. This yields three separate ANOVA models, each testing the main effects of serialization (H₁: at least one strategy differs from the others) and model (H₂: at least one model differs), plus the serialization × model interaction (H₃: the effect of strategy depends on model choice).
 
