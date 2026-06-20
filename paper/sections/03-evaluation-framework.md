@@ -9,7 +9,7 @@ The framework uses **three evaluation layers** of increasing rigor:
 | Layer | Method | Coverage | Purpose |
 |-------|--------|----------|---------|
 | **Layer 1: Automated Metrics** | Programmatic scoring | All 4,500 samples | Scalable baseline metrics |
-| **Layer 2: LLM-as-Judge** | Claude 3.5 Sonnet evaluator | All 4,500 samples | Rubric-based quality scoring robust to paraphrasing |
+| **Layer 2: LLM-as-Judge** | Claude Sonnet 4.5 evaluator | All 4,500 samples | Rubric-based quality scoring robust to paraphrasing |
 | **Layer 3: Human Evaluation** | Clinical expert review | 150 stratified samples (5%) | Ground truth calibration + inter-rater reliability |
 
 ## 3.5.2 Layer 1: Automated Metrics (Programmatic)
@@ -56,7 +56,7 @@ Automated string-matching metrics (Layer 1) are insufficient for clinical evalua
 - Partial correctness matters (identifying 3 of 4 drug interactions is better than 0)
 - Clinical reasoning quality cannot be captured by keyword presence alone
 
-We employ Claude 3.5 Sonnet as an evaluator model (separate from the models being benchmarked) using structured rubric prompts:
+We employ Claude Sonnet 4.5 as an evaluator model (separate from the models being benchmarked) using structured rubric prompts:
 
 ### The 4-Dimension Clinical Evaluation Rubric
 
@@ -92,14 +92,14 @@ Provide scores as JSON: {"accuracy": N, "relevance": N, "completeness": N, "safe
 
 ### Evaluator Model Selection
 
-| Why Claude 3.5 Sonnet as Judge | Rationale |
+| Why Claude Sonnet 4.5 as Judge | Rationale |
 |-------------------------------|-----------|
 | Not in the benchmark set as judge | Avoids self-evaluation bias (models don't judge themselves) |
 | High reasoning capability | Consistent rubric application |
 | Cost-effective at scale | ~$0.015 per evaluation × 4,500 = ~$67 |
 | Reproducible | Same model, temperature=0, deterministic scoring |
 
-**Note:** Claude 3.5 Sonnet IS one of the 5 benchmarked models. For evaluations where Claude is the subject model, we use GPT-5.4 as the judge instead (cross-evaluation to prevent self-bias).
+**Note:** Claude Sonnet 4.5 IS one of the 5 benchmarked models. For evaluations where Claude is the subject model, we use GPT-5.4 as the judge instead (cross-evaluation to prevent self-bias).
 
 ## 3.5.4 Layer 3: Human Evaluation (Clinical Expert Review)
 
