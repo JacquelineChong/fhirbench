@@ -103,31 +103,47 @@ Provide scores as JSON: {"accuracy": N, "relevance": N, "completeness": N, "safe
 
 ## 3.5.4 Layer 3: Human Evaluation (Clinical Expert Review)
 
-### Design
+### Scope Clarification
+
+Layer 3 is **designed but not executed** within the scope of the current study. We produce a standardized clinical review package enabling subsequent expert validation, while Layers 1 (Automated) and 2 (LLM-as-Judge) constitute the paper's empirical findings. This deliberate separation allows benchmark results to be published and reproduced immediately while expert review proceeds independently.
+
+### Evaluation Instrument Design
 
 | Parameter | Value |
 |-----------|-------|
 | Sample size | 150 evaluations (50 per task type) |
 | Sampling strategy | Stratified: 5 per serializer × 2 per model × 3 tasks (balanced coverage) |
 | Focus | Cases where Layer 1 and Layer 2 disagree (high-uncertainty samples) |
-| Evaluator | Clinical informatics specialist (author) |
+| Evaluator | Clinical informatics specialist (to be recruited) |
 | Instrument | Same 4-dimension rubric (0–5 scale per dimension) |
 
-### Purpose
+### Deliverable: Clinical Review Package
 
-Human evaluation serves three functions:
+The benchmark pipeline produces a standardized review package in machine-readable format:
 
-1. **Calibration** — Establish correlation between LLM-as-judge scores and expert scores (report Spearman ρ)
-2. **Failure analysis** — Identify systematic errors in automated evaluation (false positives/negatives in scoring)
-3. **Inter-rater reliability** — Report Cohen's κ between human and LLM-as-judge to validate automated approach
+| Artifact | Format | Content |
+|----------|--------|---------|
+| Stratified evaluation samples | XLSX/CSV | 150 pre-selected cases with stratification metadata |
+| 4-dimension scoring rubric | XLSX with instructions | Scoring sheet (0–5 per dimension) with anchor definitions |
+| Ground truth + model responses | Side-by-side XLSX | Clinical context, question, expected answer, model output |
+| LLM-judge scores (for comparison) | JSON/CSV | Layer 2 scores for inter-rater computation |
 
-### Expected Outcomes
+### Intended Analysis (Future Work)
 
-| Metric | Target | If Met |
-|--------|--------|--------|
-| Spearman ρ (human vs. LLM-judge) | ≥ 0.75 | Validates LLM-as-judge [CITE:BHDVGNJD]; prior healthcare studies report ρ = 0.78 [CITE:TK3UEM43] |
+When expert scores are collected, the following validation metrics will be computed:
+
+| Metric | Target | Interpretation |
+|--------|--------|----------------|
+| Spearman ρ (human vs. LLM-judge) | ≥ 0.75 | Validates LLM-as-judge for full-scale evaluation |
 | Cohen's κ | ≥ 0.65 | Substantial agreement — automated scores are trustworthy |
-| If < target | — | Report as limitation; weight human scores higher in discussion |
+| Dimension-level correlation | Report per dimension | Identifies which rubric dimensions LLM-judge scores reliably |
+
+### Rationale for Deferred Execution
+
+1. **Immediate reproducibility** — Layers 1+2 are fully automated and reproducible by any researcher with Bedrock access; Layer 3 requires domain expertise that introduces variability
+2. **Publication timeline** — Expert recruitment and scoring requires 4–8 weeks; deferring allows timely benchmark publication
+3. **Methodological contribution** — The evaluation protocol itself (instrument design, stratification strategy, validation metrics) is a contribution independent of its execution
+4. **Community enablement** — Publishing the review package enables multiple clinical teams to validate independently, producing more robust inter-rater data than a single expert
 
 ## 3.5.5 Pareto Efficiency Analysis
 
