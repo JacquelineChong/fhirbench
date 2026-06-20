@@ -67,7 +67,7 @@ class BenchmarkRunner:
         return {
             "experiment": {"name": "fhirbench-v1", "seed": 42},
             "models": [
-                {"id": "claude-3.5-sonnet", "model_id": "anthropic.claude-3-5-sonnet-20241022-v2:0"},
+                {"id": "claude-sonnet-4.5", "model_id": "anthropic.claude-sonnet-4-5-20260301-v1:0"},
                 {"id": "gpt-5.4", "model_id": "openai.gpt-5-4"},
                 {"id": "llama-3-70b", "model_id": "meta.llama3-70b-instruct-v1:0"},
                 {"id": "deepseek-v3.2", "model_id": "deepseek.deepseek-v3-2"},
