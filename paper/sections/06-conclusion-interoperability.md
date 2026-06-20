@@ -1,0 +1,4 @@
+
+### Toward LLM-Aware Interoperability
+
+Finally, our findings contribute to an emerging architectural debate in health informatics: whether interoperability standards designed for machine-to-machine exchange remain optimal in an era where AI language models are the primary data consumers. The persistent need for a serialization layer — with its associated token overhead, information loss risks, and model-dependent optimization — suggests that future interoperability standards may need to consider LLM comprehensibility as a first-class design requirement alongside programmatic parseability. FHIRBench provides the empirical grounding for this conversation, demonstrating both the magnitude of the serialization problem (up to 23% accuracy variance) and the characteristics of formats that best serve AI consumption (structured yet readable, clinically organized, terminology-resolved).
