@@ -130,9 +130,9 @@ serializers:
 terminology_resolution: codes_with_display
 
 models:
-  - id: claude-3.5-sonnet
+  - id: claude-sonnet-4.5
     provider: bedrock
-    model_id: anthropic.claude-3-5-sonnet-20241022-v2:0
+    model_id: anthropic.claude-sonnet-4-5-20260301-v1:0
   - id: llama-3-70b
     provider: bedrock
     model_id: meta.llama3-70b-instruct-v1:0
@@ -159,7 +159,7 @@ evaluation:
 ### Bedrock Configuration
 - Region: `us-east-1` (or user-configured)
 - IAM role with `bedrock:InvokeModel` permission
-- Model access pre-approved for Claude 3.5 Sonnet + Llama 3 70B
+- Model access pre-approved for Claude Sonnet 4.5 + Llama 3 70B
 
 ### Cost Estimation
 - ~72 experiment conditions (6 serializers × 4 models × 3 tasks)
