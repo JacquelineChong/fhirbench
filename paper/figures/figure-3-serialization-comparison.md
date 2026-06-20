@@ -264,3 +264,16 @@ The six serialization strategies were selected to span the complete representati
 ---
 
 *Figure 3 accompanies §3.3 (Serialization Strategy Design) of the FHIRBench paper.*
+
+
+## Preliminary Observation and Hypothesis
+
+The token efficiency data presented in Table 2 constitutes a **preliminary observation from a single illustrative patient record** — not a statistically validated finding. This example serves to motivate the following testable hypothesis that guides our benchmark evaluation:
+
+> **Hypothesis H1 (Token Efficiency):** Non-JSON serialization strategies will achieve 40–65% token reduction relative to raw FHIR JSON across the full benchmark dataset (n=1,000), while preserving sufficient clinical information to maintain task accuracy within acceptable margins.
+
+> **Hypothesis H2 (Accuracy-Cost Tradeoff):** The relationship between token reduction and accuracy loss is non-linear — a Pareto frontier exists where certain strategies (predicted: Structured Markdown, Clinical Template) achieve disproportionately high accuracy relative to their token cost.
+
+> **Hypothesis H3 (Model-Format Interaction):** The optimal serialization strategy varies by model architecture and scale, with narrative formats favoring smaller open-weight models and structured formats favoring frontier proprietary models [CITE:TGZ97SRN].
+
+These hypotheses are formally tested in Section 4 (Results) using the full 1,000-patient benchmark dataset across 90 experimental conditions. The illustrative example above demonstrates the *mechanism* of token reduction — the benchmark quantifies its *statistical significance and practical impact*.
