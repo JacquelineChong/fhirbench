@@ -1,6 +1,6 @@
 # Figure 3: Same Patient Record, Six Serialization Strategies
 
-## 3.1 Source FHIR Patient Record
+## Source FHIR Patient Record
 
 The following FHIR R4 Bundle represents a single diabetic patient encounter, comprising five resources. This bundle serves as the canonical input from which all six serialization strategies are derived.
 
@@ -81,7 +81,7 @@ The following FHIR R4 Bundle represents a single diabetic patient encounter, com
 
 ---
 
-## 3.2 Six Serialization Strategies Applied
+## Six Serialization Strategies Applied
 
 ### Strategy 1: Raw JSON
 
@@ -244,13 +244,13 @@ The hybrid router is implemented as a lightweight classifier (§4.2) that maps t
 
 ---
 
-## 3.3 Strategy Selection Rationale
+## Strategy Selection Rationale
 
 The six serialization strategies were selected to span the complete representational spectrum from lossless machine-readable formats to lossy but cognitively intuitive human-oriented prose. Raw JSON preserves the full FHIR structure including coding system URIs, reference pointers, and nested arrays, consistent with findings by Neveditsin et al. demonstrating that direct JSON input can support extraction tasks when models possess sufficient schema knowledge [CITE:X85QMVCU]. At the opposite pole, the Natural Language Narrative sacrifices structural precision for contextual fluency, reflecting the finding by Pator et al. that narrative representations can outperform structured formats on clinical reasoning tasks by aligning with the training distribution of language models [CITE:TGZ97SRN]. Between these extremes, the Flattened Key-Value and Structured Markdown strategies occupy intermediate positions in the format complexity–comprehension tradeoff, drawing on table serialization research demonstrating that linearized tabular representations influence LLM performance on structured data tasks [CITE:R9P2FJS3]. The Clinical Summary Template leverages the SOAP documentation conventions deeply embedded in EHR systems, representing a domain-specific structural prior. Finally, the Hybrid Adaptive strategy operationalizes the empirical finding that optimal serialization is task-dependent [CITE:8S3QCXCC], implementing dynamic format routing rather than committing to a single representation. Together, these six strategies form a complete basis for the format dimension of the benchmark: any alternative serialization approach would constitute a variant or interpolation of these canonical points rather than a genuinely novel representational category.
 
 ---
 
-## 3.4 Token Efficiency Summary
+## Token Efficiency Summary
 
 | Strategy | Approx. Tokens | Relative to Baseline | Information Loss | Best Suited For |
 |----------|---------------|---------------------|------------------|-----------------|
