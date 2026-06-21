@@ -14,6 +14,33 @@ Modern electronic health records encode clinical information through a layered a
 
 **Regulatory Drivers.** The regulatory landscape has accelerated FHIR adoption beyond voluntary standards adoption. The 21st Century Cures Act (2016) and its implementing regulations from the Office of the National Coordinator for Health IT (ONC) mandate that certified health IT systems expose patient data through standardized FHIR APIs. The Trusted Exchange Framework and Common Agreement (TEFCA) establishes a nationwide network for FHIR-based data exchange among Qualified Health Information Networks. The CMS Interoperability and Patient Access Final Rule requires payers to expose claims and clinical data via FHIR APIs. Together, these regulations ensure that FHIR is not merely an aspirational standard but the mandated format for health data exchange in the United States, making the question of how LLMs process FHIR data practically significant for any AI system deployed in healthcare settings [CITE:S36AFFXP] [CITE:FE5NNKMI].
 
+
+
+### FHIR Bundle Structure (For Non-FHIR Readers)
+
+For readers unfamiliar with FHIR, a brief structural overview clarifies why serialization is non-trivial. A FHIR **Bundle** is a JSON container holding multiple interconnected **Resources**, each representing a discrete clinical concept:
+
+```json
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {"resource": {"resourceType": "Patient", "name": [{"given": ["John"], "family": "Smith"}], "birthDate": "1978-03-15"}},
+    {"resource": {"resourceType": "Condition", "code": {"coding": [{"system": "http://snomed.info/sct", "code": "44054006", "display": "Type 2 diabetes"}]}, "clinicalStatus": {"coding": [{"code": "active"}]}}},
+    {"resource": {"resourceType": "MedicationRequest", "medicationCodeableConcept": {"coding": [{"system": "http://www.nlm.nih.gov/research/umls/rxnorm", "code": "861004", "display": "Metformin 500 MG"}]}}},
+    {"resource": {"resourceType": "Observation", "code": {"coding": [{"system": "http://loinc.org", "code": "4548-4", "display": "HbA1c"}]}, "valueQuantity": {"value": 8.2, "unit": "%"}}}
+  ]
+}
+```
+
+Key structural properties relevant to serialization:
+- **Nested JSON** — Clinical facts are buried 3–5 levels deep (e.g., `entry[0].resource.code.coding[0].display`)
+- **Coded values** — Diagnoses, medications, and labs are encoded as numeric codes (SNOMED: `44054006`, LOINC: `4548-4`) that are meaningless without terminology resolution
+- **Cross-resource references** — Resources link to each other via `reference` fields (e.g., a Condition references the Patient it belongs to)
+- **Metadata overhead** — System URLs, profile declarations, and extension fields consume tokens without contributing clinical meaning
+
+This structure is optimized for machine interoperability but creates the serialization challenge addressed by FHIRBench: how to transform this nested, coded representation into a format that maximizes LLM comprehension. Figure 3 provides a complete worked example showing the same patient record serialized into all six strategies evaluated in this benchmark.
+
+
 ## 2.2 Large Language Models in Clinical Applications
 
 The deployment of large language models in healthcare has accelerated rapidly, yet evaluation methodologies have not kept pace with the structural realities of clinical data.
