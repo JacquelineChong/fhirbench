@@ -1,0 +1,252 @@
+{
+  "resourceType": "Bundle",
+  "id": "0d98aa2e-4dd3-4d40-a094-abec02345430",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e74ef60b-d4d2-4017-9364-43a134d3bc6d",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "e74ef60b-d4d2-4017-9364-43a134d3bc6d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Thompson",
+            "given": [
+              "Richard"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1953-09-16",
+        "address": [
+          {
+            "city": "Boston",
+            "state": "MA",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9f018080-ba3b-4bf7-b391-cc34fdab348f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9f018080-ba3b-4bf7-b391-cc34fdab348f",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/e74ef60b-d4d2-4017-9364-43a134d3bc6d"
+        },
+        "period": {
+          "start": "2025-06-22"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e48df7cf-d18a-4922-84b9-4a092bb8168b",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "e48df7cf-d18a-4922-84b9-4a092bb8168b",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "36971009",
+              "display": "Sinusitis"
+            }
+          ],
+          "text": "Sinusitis"
+        },
+        "subject": {
+          "reference": "Patient/e74ef60b-d4d2-4017-9364-43a134d3bc6d"
+        },
+        "onsetDateTime": "2021-09-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0ccd034c-38e8-4536-85c6-3372e7263ae0",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0ccd034c-38e8-4536-85c6-3372e7263ae0",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "35489007",
+              "display": "Depression"
+            }
+          ],
+          "text": "Depression"
+        },
+        "subject": {
+          "reference": "Patient/e74ef60b-d4d2-4017-9364-43a134d3bc6d"
+        },
+        "onsetDateTime": "2021-10-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1fd9cf14-af90-4f99-b44d-97c212c2f4ee",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "1fd9cf14-af90-4f99-b44d-97c212c2f4ee",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "312938",
+              "display": "Sertraline 50 MG"
+            }
+          ],
+          "text": "Sertraline 50 MG"
+        },
+        "subject": {
+          "reference": "Patient/e74ef60b-d4d2-4017-9364-43a134d3bc6d"
+        },
+        "authoredOn": "2025-10-23"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5c5be71d-e3e9-4ace-8005-f7c8328131d9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "5c5be71d-e3e9-4ace-8005-f7c8328131d9",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198240",
+              "display": "Amiodarone 200 MG"
+            }
+          ],
+          "text": "Amiodarone 200 MG"
+        },
+        "subject": {
+          "reference": "Patient/e74ef60b-d4d2-4017-9364-43a134d3bc6d"
+        },
+        "authoredOn": "2025-11-18"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:50cd8d4d-81dc-435a-80fd-55f2e93ed221",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "50cd8d4d-81dc-435a-80fd-55f2e93ed221",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6",
+              "display": "INR"
+            }
+          ],
+          "text": "INR"
+        },
+        "subject": {
+          "reference": "Patient/e74ef60b-d4d2-4017-9364-43a134d3bc6d"
+        },
+        "effectiveDateTime": "2026-04-26",
+        "valueQuantity": {
+          "value": 1.2,
+          "unit": "{ratio}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{ratio}"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:de290cb7-31e9-41d7-b2d3-35da7e590385",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "de290cb7-31e9-41d7-b2d3-35da7e590385",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "eGFR"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "subject": {
+          "reference": "Patient/e74ef60b-d4d2-4017-9364-43a134d3bc6d"
+        },
+        "effectiveDateTime": "2026-04-05",
+        "valueQuantity": {
+          "value": 65.1,
+          "unit": "mL/min/1.73m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL/min/1.73m2"
+        }
+      }
+    }
+  ]
+}
