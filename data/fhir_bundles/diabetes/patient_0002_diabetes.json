@@ -1,0 +1,252 @@
+{
+  "resourceType": "Bundle",
+  "id": "7766cc33-a4c9-42d3-87e9-f0fcb9fd3791",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:c1c7bc36-15be-4636-bc0e-0e0ad80717e8",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "c1c7bc36-15be-4636-bc0e-0e0ad80717e8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Miller",
+            "given": [
+              "Sarah"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1998-04-21",
+        "address": [
+          {
+            "city": "Boston",
+            "state": "MA",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a3dcce24-1b10-43b2-a40a-ad82bcc13668",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "a3dcce24-1b10-43b2-a40a-ad82bcc13668",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/c1c7bc36-15be-4636-bc0e-0e0ad80717e8"
+        },
+        "period": {
+          "start": "2025-06-24"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44d4356c-7857-4d36-9d1b-53fc458a5174",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "44d4356c-7857-4d36-9d1b-53fc458a5174",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "237627000",
+              "display": "Gestational diabetes"
+            }
+          ],
+          "text": "Gestational diabetes"
+        },
+        "subject": {
+          "reference": "Patient/c1c7bc36-15be-4636-bc0e-0e0ad80717e8"
+        },
+        "onsetDateTime": "2023-11-30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d9b4f21-0a9f-4012-b302-ace19b24aeb8",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "7d9b4f21-0a9f-4012-b302-ace19b24aeb8",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "46635009",
+              "display": "Diabetes mellitus type 1"
+            }
+          ],
+          "text": "Diabetes mellitus type 1"
+        },
+        "subject": {
+          "reference": "Patient/c1c7bc36-15be-4636-bc0e-0e0ad80717e8"
+        },
+        "onsetDateTime": "2021-05-07"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2e417706-e254-4553-8818-02ff00d70bfe",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "2e417706-e254-4553-8818-02ff00d70bfe",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "861007",
+              "display": "Glipizide 5 MG"
+            }
+          ],
+          "text": "Glipizide 5 MG"
+        },
+        "subject": {
+          "reference": "Patient/c1c7bc36-15be-4636-bc0e-0e0ad80717e8"
+        },
+        "authoredOn": "2026-06-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6178ffad-d5c2-4e38-aa5e-e0c0727c2a04",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "6178ffad-d5c2-4e38-aa5e-e0c0727c2a04",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "897122",
+              "display": "Insulin glargine 100 UNT/ML"
+            }
+          ],
+          "text": "Insulin glargine 100 UNT/ML"
+        },
+        "subject": {
+          "reference": "Patient/c1c7bc36-15be-4636-bc0e-0e0ad80717e8"
+        },
+        "authoredOn": "2026-03-29"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0dc8f65e-09a6-457a-9c1a-d8d98ec0babc",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0dc8f65e-09a6-457a-9c1a-d8d98ec0babc",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "Hemoglobin A1c"
+            }
+          ],
+          "text": "Hemoglobin A1c"
+        },
+        "subject": {
+          "reference": "Patient/c1c7bc36-15be-4636-bc0e-0e0ad80717e8"
+        },
+        "effectiveDateTime": "2026-05-06",
+        "valueQuantity": {
+          "value": 10.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c49c7539-e8c5-4e55-bd2a-2d93f3514fd5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "c49c7539-e8c5-4e55-bd2a-2d93f3514fd5",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Glucose"
+            }
+          ],
+          "text": "Glucose"
+        },
+        "subject": {
+          "reference": "Patient/c1c7bc36-15be-4636-bc0e-0e0ad80717e8"
+        },
+        "effectiveDateTime": "2026-05-22",
+        "valueQuantity": {
+          "value": 133.9,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      }
+    }
+  ]
+}
