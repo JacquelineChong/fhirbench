@@ -1,0 +1,2702 @@
+[
+  {
+    "patient_id": "patient_0014_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0014_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0014_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0014_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0014_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Atorvastatin 20 mg and Metoprolol 50 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0014_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "The patient is currently taking:\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0015_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0015_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0015_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 mg\n- Lisinopril 10 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0015_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n\n- Atorvastatin 20 mg\n- Lisinopril 10 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0015_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n- Atorvastatin 20 mg\n- Lisinopril 10 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0015_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n- Atorvastatin 20 mg\n- Lisinopril 10 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0016_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0016_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0016_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0016_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0016_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Lisinopril 10 MG and Metoprolol 50 MG.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0016_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "The patient is currently taking:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0017_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0017_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0017_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0017_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "The patient is currently taking:\n\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0017_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "Metoprolol 50 mg and Atorvastatin 20 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0017_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "Metoprolol 50 MG and Atorvastatin 20 MG.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0018_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0018_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0018_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n- Metoprolol 50 mg\n- Lisinopril 10 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0018_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0018_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Metoprolol 50 mg and Lisinopril 10 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0018_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Current medications:\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0019_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0019_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0019_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "The patient is currently taking:\n- Atorvastatin 20 mg\n- Metoprolol 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0019_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "The patient is currently taking:\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0019_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 mg\n- Metoprolol 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0019_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "The patient is currently taking:\n\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0020_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0020_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0020_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0020_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0020_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Metoprolol 50 mg and Lisinopril 10 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0020_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0021_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0021_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0021_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0021_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "The patient is currently taking:\n\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0021_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "Metoprolol 50 mg and Atorvastatin 20 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0021_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Atorvastatin 20 MG",
+    "model_response": "The patient is currently taking:\n\n- Metoprolol 50 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0022_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0022_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Current active medications:\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0022_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n- Metoprolol 50 mg\n- Lisinopril 10 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0022_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n\n- Metoprolol 50 MG\n- Lisinopril 10 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0022_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "Metoprolol 50 mg and Lisinopril 10 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0022_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metoprolol 50 MG; Lisinopril 10 MG",
+    "model_response": "The patient is currently taking:\n- Metoprolol 50 mg\n- Lisinopril 10 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0023_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0023_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0023_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "Currently active medications:\n- Lisinopril 10 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0023_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "Current medications:\n- Lisinopril 10 mg\n- Atorvastatin 20 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0023_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "The patient is currently taking:\n- Lisinopril 10 mg\n- Atorvastatin 20 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0023_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "The patient is currently taking:\n- Lisinopril 10 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0024_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 mg\n- Atorvastatin 20 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0024_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0024_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 mg\n- Atorvastatin 20 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0024_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "The patient is currently taking:\n\n- Lisinopril 10 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0024_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "Lisinopril 10 mg and Atorvastatin 20 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0024_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Atorvastatin 20 MG",
+    "model_response": "The patient is currently taking:\n\n- Lisinopril 10 MG\n- Atorvastatin 20 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0025_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 mg\n- Metoprolol 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0025_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0025_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0025_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Currently active medications:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0025_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "The patient is currently taking:\n- Lisinopril 10 mg\n- Metoprolol 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0025_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Lisinopril 10 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Lisinopril 10 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0026_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 mg\n- Metoprolol 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0026_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0026_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current active medications:\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0026_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "The patient is currently taking:\n- Atorvastatin 20 mg\n- Metoprolol 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0026_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "Current medications:\n- Atorvastatin 20 mg\n- Metoprolol 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0026_cardiovascular",
+    "domain": "cardiovascular",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Atorvastatin 20 MG; Metoprolol 50 MG",
+    "model_response": "The patient is currently taking:\n\n- Atorvastatin 20 MG\n- Metoprolol 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0001_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0001_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0001_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0001_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0001_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Metformin 500 MG",
+    "model_response": "Glipizide 5 MG and Metformin 500 MG.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0001_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0002_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0002_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0002_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0002_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0002_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current medications:\n- Glipizide 5 mg\n- Insulin glargine 100 units/mL",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0002_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Glipizide 5 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Glipizide 5 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0003_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0003_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0003_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0003_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "The patient is currently taking:\n\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0003_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Metformin 500 MG and Insulin glargine 100 UNT/ML.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0003_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0004_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0004_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0004_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0004_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "The patient is currently taking:\n\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0004_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "Metformin 500 mg and Glipizide 5 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0004_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "The patient is currently taking:\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0005_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0005_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0005_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "The patient is currently taking:\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0005_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "The patient is currently taking:\n\n- Metformin 500 mg\n- Glipizide 5 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0005_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "- Metformin 500 mg\n- Glipizide 5 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0005_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Glipizide 5 MG",
+    "model_response": "The patient is currently taking:\n\n- Metformin 500 MG\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0006_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0006_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0006_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0006_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "The patient is currently taking:\n\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0006_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Metformin 500 MG and Insulin glargine 100 UNT/ML.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0006_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0007_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0007_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0007_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0007_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0007_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0007_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0008_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0008_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Glipizide 5 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Insulin glargine 100 UNT/ML\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0008_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0008_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Glipizide 5 MG",
+    "model_response": "The patient is currently taking:\n\n- Insulin glargine 100 UNT/ML\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0008_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0008_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Glipizide 5 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Glipizide 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0009_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0009_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "The patient currently has 2 active medications:\n\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0009_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "Current active medications:\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0009_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "The patient is currently taking:\n\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0009_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0009_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Metformin 500 MG; Insulin glargine 100 UNT/ML",
+    "model_response": "The patient is currently taking:\n\n- Metformin 500 MG\n- Insulin glargine 100 UNT/ML",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0010_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications in the record:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0010_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0010_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0010_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0010_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Insulin glargine 100 UNT/ML and Metformin 500 MG.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0010_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0011_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0011_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0011_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0011_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0011_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0011_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0012_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0012_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0012_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0012_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0012_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0012_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0013_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0013_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0013_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0013_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "The patient is currently taking:\n\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0013_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0013_diabetes",
+    "domain": "diabetes",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Insulin glargine 100 UNT/ML; Metformin 500 MG",
+    "model_response": "Current active medications:\n- Insulin glargine 100 UNT/ML\n- Metformin 500 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0027_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Sertraline 50 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0027_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Sertraline 50 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0027_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Sertraline 50 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0027_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "The patient is currently taking:\n\n- Sertraline 50 mg\n- Warfarin 5 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0027_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "Sertraline 50 mg and Warfarin 5 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0027_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "Current medications:\n- Sertraline 50 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0028_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Amiodarone 200 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Ibuprofen 400 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0028_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 mg\n- Amiodarone 200 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0028_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Amiodarone 200 MG",
+    "model_response": "The patient is currently taking:\n- Ibuprofen 400 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0028_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Amiodarone 200 MG",
+    "model_response": "The patient is currently taking:\n\n- Ibuprofen 400 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0028_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 mg\n- Amiodarone 200 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0028_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Amiodarone 200 MG",
+    "model_response": "The patient is currently taking:\n\n- Ibuprofen 400 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0029_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0029_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0029_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0029_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Sertraline 50 MG",
+    "model_response": "- Warfarin 5 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0029_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Sertraline 50 MG",
+    "model_response": "- Warfarin 5 mg\n- Sertraline 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0029_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Sertraline 50 MG",
+    "model_response": "- Warfarin 5 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0030_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 mg\n- Sertraline 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0030_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0030_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0030_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current medications:\n- Ibuprofen 400 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0030_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Ibuprofen 400 mg and Sertraline 50 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0030_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0031_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 mg\n- Sertraline 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0031_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0031_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0031_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "The patient is currently taking:\n\n- Ibuprofen 400 mg\n- Sertraline 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0031_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Ibuprofen 400 MG and Sertraline 50 MG.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0031_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Ibuprofen 400 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Ibuprofen 400 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0032_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0032_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0032_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 mg\n- Amiodarone 200 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0032_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0032_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Warfarin 5 MG and Amiodarone 200 MG.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0032_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Warfarin 5 MG and Amiodarone 200 MG.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0033_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0033_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Warfarin 5 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0033_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Warfarin 5 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0033_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "The patient is currently taking:\n- Warfarin 5 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0033_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "Warfarin 5 MG and Amiodarone 200 MG.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0033_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Warfarin 5 MG; Amiodarone 200 MG",
+    "model_response": "The patient is currently taking:\n\n- Warfarin 5 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0034_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0034_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0034_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Sertraline 50 MG",
+    "model_response": "The patient is currently taking:\n- Amiodarone 200 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0034_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Sertraline 50 MG",
+    "model_response": "The patient is currently taking:\n\n- Amiodarone 200 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0034_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Sertraline 50 MG",
+    "model_response": "- Amiodarone 200 mg\n- Sertraline 50 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0034_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Sertraline 50 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Sertraline 50 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0035_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Sertraline 50 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0035_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Sertraline 50 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0035_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Sertraline 50 mg\n- Warfarin 5 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0035_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "- Sertraline 50 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0035_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Sertraline 50 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0035_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Sertraline 50 mg\n- Warfarin 5 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0036_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Amiodarone 200 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Sertraline 50 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0036_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Amiodarone 200 MG",
+    "model_response": "The patient currently has 2 active medications on record:\n\n- Sertraline 50 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0036_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Amiodarone 200 MG",
+    "model_response": "Current active medications:\n- Sertraline 50 mg\n- Amiodarone 200 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0036_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Amiodarone 200 MG",
+    "model_response": "The patient is currently taking:\n\n- Sertraline 50 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0036_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Amiodarone 200 MG",
+    "model_response": "Sertraline 50 mg and Amiodarone 200 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0036_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Sertraline 50 MG; Amiodarone 200 MG",
+    "model_response": "The patient is currently taking:\n- Sertraline 50 MG\n- Amiodarone 200 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0037_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Ibuprofen 400 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0037_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "The patient currently has 2 active medications:\n\n- Amiodarone 200 MG\n- Ibuprofen 400 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0037_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 mg\n- Ibuprofen 400 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0037_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Ibuprofen 400 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0037_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Amiodarone 200 mg and Ibuprofen 400 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0037_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Ibuprofen 400 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0038_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0038_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0038_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Warfarin 5 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 mg\n- Warfarin 5 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0038_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Warfarin 5 MG",
+    "model_response": "The patient is currently taking:\n- Amiodarone 200 mg\n- Warfarin 5 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0038_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Warfarin 5 MG",
+    "model_response": "Amiodarone 200 mg and Warfarin 5 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0038_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Warfarin 5 MG",
+    "model_response": "The patient is currently taking:\n\n- Amiodarone 200 MG\n- Warfarin 5 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0039_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Ibuprofen 400 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0039_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Ibuprofen 400 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0039_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Current active medications:\n- Amiodarone 200 MG\n- Ibuprofen 400 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0039_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "The patient is currently taking:\n\n- Amiodarone 200 MG\n- Ibuprofen 400 MG",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0039_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "Amiodarone 200 mg and Ibuprofen 400 mg.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0039_medication_interactions",
+    "domain": "medication_interactions",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Amiodarone 200 MG; Ibuprofen 400 MG",
+    "model_response": "The patient is currently taking:\n\n- Amiodarone 200 mg\n- Ibuprofen 400 mg",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0040_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "The patient has 2 active medication orders:\n\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0040_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other active medications are listed.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0040_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine \u2014 prescribed 2026-06-03\n- Tetanus vaccine \u2014 prescribed 2026-02-12",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0040_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0040_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0040_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0041_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Tetanus vaccine\n- Influenza vaccine\n\nNo other current medications are listed.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0041_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Tetanus vaccine\n- Influenza vaccine\n\nNo other current medications are listed.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0041_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine \u2014 prescribed 2025-08-12\n- Influenza vaccine \u2014 prescribed 2025-08-12",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0041_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0041_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current medications listed in the plan:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0041_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current medications:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0042_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "The patient has 2 active medication orders:\n\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0042_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0042_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine \u2014 prescribed 2025-08-19\n- Tetanus vaccine \u2014 prescribed 2025-06-30",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0042_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0042_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0042_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0043_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other current medications are listed.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0043_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medication orders:\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0043_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine \u2014 prescribed 2026-06-12\n- Tetanus vaccine \u2014 prescribed 2025-11-15",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0043_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0043_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0043_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0044_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Tetanus vaccine\n- Influenza vaccine\n\nNo other current medications are listed.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0044_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Tetanus vaccine\n- Influenza vaccine\n\nNo other medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0044_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine \u2014 prescribed 2025-11-07\n- Influenza vaccine \u2014 prescribed 2025-08-19",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0044_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0044_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications listed are:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0044_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications listed are:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0045_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the data:\n- Tetanus vaccine\n- Influenza vaccine\n\nNo other current medications are listed.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0045_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0045_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine \u2014 prescribed 2026-03-17\n- Influenza vaccine \u2014 prescribed 2025-10-12",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0045_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0045_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current medications listed are:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0045_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0046_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Tetanus vaccine\n- Influenza vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0046_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the record:\n- Tetanus vaccine\n- Influenza vaccine\n\nThese are listed as active MedicationRequest entries.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0046_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine \u2014 prescribed 2025-06-30\n- Influenza vaccine \u2014 prescribed 2025-10-18",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0046_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current medications listed as active:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0046_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current medications listed are:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0046_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0047_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders in the record are:\n- Tetanus vaccine\n- Influenza vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0047_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications/orders:\n- Tetanus vaccine \u2014 active (authored 2025-09-08)\n- Influenza vaccine \u2014 active (authored 2025-09-20)\n\nNo other medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0047_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current active medications:\n- Tetanus vaccine \u2014 prescribed 2025-09-08\n- Influenza vaccine \u2014 prescribed 2025-09-20",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0047_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current medications listed are:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0047_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current medications listed are:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0047_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Tetanus vaccine; Influenza vaccine",
+    "model_response": "Current medications listed as active:\n- Tetanus vaccine\n- Influenza vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0048_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications on record:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0048_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications/orders:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0048_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine \u2014 prescribed 2026-02-28\n- Tetanus vaccine \u2014 prescribed 2025-10-14",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0048_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0048_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0048_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0049_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications/orders:\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0049_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medication orders:\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0049_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine \u2014 prescribed 2026-05-26\n- Tetanus vaccine \u2014 prescribed 2026-05-22",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0049_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0049_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0049_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0050_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "The patient has 2 active medication orders:\n\n- Influenza vaccine\n- Tetanus vaccine\n\nNo other current medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0050_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications/orders:\n- Influenza vaccine \u2014 active, ordered on 2026-02-09\n- Tetanus vaccine \u2014 active, ordered on 2025-10-17\n\nNo other medications are listed in the provided data.",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0050_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine \u2014 prescribed 2026-02-09\n- Tetanus vaccine \u2014 prescribed 2025-10-17",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0050_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current active medications:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0050_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current medications listed are:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  },
+  {
+    "patient_id": "patient_0050_preventive_care",
+    "domain": "preventive_care",
+    "category": "medications",
+    "question": "What medications is this patient currently taking?",
+    "ground_truth": "Influenza vaccine; Tetanus vaccine",
+    "model_response": "Current medications listed as active:\n- Influenza vaccine\n- Tetanus vaccine",
+    "status": "success"
+  }
+]
