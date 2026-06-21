@@ -1,0 +1,252 @@
+{
+  "resourceType": "Bundle",
+  "id": "f5dd5d79-0116-484f-adfc-69bc7b83a664",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:395b18cb-f5a1-4a9e-9b3f-a7597a9991e3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "395b18cb-f5a1-4a9e-9b3f-a7597a9991e3",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Smith",
+            "given": [
+              "Sarah"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1986-05-07",
+        "address": [
+          {
+            "city": "Boston",
+            "state": "MA",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aa795f40-0c2e-44b6-bb90-7e794e332c34",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "aa795f40-0c2e-44b6-bb90-7e794e332c34",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/395b18cb-f5a1-4a9e-9b3f-a7597a9991e3"
+        },
+        "period": {
+          "start": "2026-03-13"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:284a033b-d968-485e-b016-4a43db59a344",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "284a033b-d968-485e-b016-4a43db59a344",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "160903007",
+              "display": "Full-time employment"
+            }
+          ],
+          "text": "Full-time employment"
+        },
+        "subject": {
+          "reference": "Patient/395b18cb-f5a1-4a9e-9b3f-a7597a9991e3"
+        },
+        "onsetDateTime": "2018-04-23"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:749a7f42-5e48-4a4e-b2d2-70aaa4a9066b",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "749a7f42-5e48-4a4e-b2d2-70aaa4a9066b",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "266948004",
+              "display": "Hypertension screening"
+            }
+          ],
+          "text": "Hypertension screening"
+        },
+        "subject": {
+          "reference": "Patient/395b18cb-f5a1-4a9e-9b3f-a7597a9991e3"
+        },
+        "onsetDateTime": "2021-10-29"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a398605d-3d7f-460c-9cdd-e5959d843fb1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "a398605d-3d7f-460c-9cdd-e5959d843fb1",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "140004",
+              "display": "Tetanus vaccine"
+            }
+          ],
+          "text": "Tetanus vaccine"
+        },
+        "subject": {
+          "reference": "Patient/395b18cb-f5a1-4a9e-9b3f-a7597a9991e3"
+        },
+        "authoredOn": "2025-06-30"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b4c14033-5469-452d-88f5-0e9687b5480b",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "b4c14033-5469-452d-88f5-0e9687b5480b",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "316672",
+              "display": "Influenza vaccine"
+            }
+          ],
+          "text": "Influenza vaccine"
+        },
+        "subject": {
+          "reference": "Patient/395b18cb-f5a1-4a9e-9b3f-a7597a9991e3"
+        },
+        "authoredOn": "2025-10-18"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:49fe8a28-aa8a-41b8-9310-587c6911fe79",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "49fe8a28-aa8a-41b8-9310-587c6911fe79",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "BMI"
+            }
+          ],
+          "text": "BMI"
+        },
+        "subject": {
+          "reference": "Patient/395b18cb-f5a1-4a9e-9b3f-a7597a9991e3"
+        },
+        "effectiveDateTime": "2026-04-17",
+        "valueQuantity": {
+          "value": 32.4,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1ac17569-b6b6-4396-a485-584bd9adac50",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1ac17569-b6b6-4396-a485-584bd9adac50",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+            }
+          ],
+          "text": "Body height"
+        },
+        "subject": {
+          "reference": "Patient/395b18cb-f5a1-4a9e-9b3f-a7597a9991e3"
+        },
+        "effectiveDateTime": "2026-06-16",
+        "valueQuantity": {
+          "value": 170.2,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      }
+    }
+  ]
+}
