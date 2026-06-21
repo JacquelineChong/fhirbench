@@ -1,0 +1,252 @@
+{
+  "resourceType": "Bundle",
+  "id": "85c3f2e8-e01d-467f-af4f-a3cdeba86969",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e48c0d26-220e-42a3-9cae-6ff1a126360c",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "e48c0d26-220e-42a3-9cae-6ff1a126360c",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Jones",
+            "given": [
+              "Mark"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1963-09-23",
+        "address": [
+          {
+            "city": "Boston",
+            "state": "MA",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:828cec10-3e4b-43ae-b336-23ea95354f09",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "828cec10-3e4b-43ae-b336-23ea95354f09",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/e48c0d26-220e-42a3-9cae-6ff1a126360c"
+        },
+        "period": {
+          "start": "2026-04-20"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:871460e6-5e71-4bba-92a7-45b03c78a98d",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "871460e6-5e71-4bba-92a7-45b03c78a98d",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "53741008",
+              "display": "Coronary arteriosclerosis"
+            }
+          ],
+          "text": "Coronary arteriosclerosis"
+        },
+        "subject": {
+          "reference": "Patient/e48c0d26-220e-42a3-9cae-6ff1a126360c"
+        },
+        "onsetDateTime": "2023-05-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:968ff613-0410-43ef-afdf-2bbcde0c75d7",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "968ff613-0410-43ef-afdf-2bbcde0c75d7",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003",
+              "display": "Hypertensive disorder"
+            }
+          ],
+          "text": "Hypertensive disorder"
+        },
+        "subject": {
+          "reference": "Patient/e48c0d26-220e-42a3-9cae-6ff1a126360c"
+        },
+        "onsetDateTime": "2023-03-23"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:173d5794-15b1-493e-8e31-6bbe29d8b2fa",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "173d5794-15b1-493e-8e31-6bbe29d8b2fa",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "833036",
+              "display": "Metoprolol 50 MG"
+            }
+          ],
+          "text": "Metoprolol 50 MG"
+        },
+        "subject": {
+          "reference": "Patient/e48c0d26-220e-42a3-9cae-6ff1a126360c"
+        },
+        "authoredOn": "2025-12-25"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:463620e1-eef4-4dac-8a3f-dbd48ca60771",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "463620e1-eef4-4dac-8a3f-dbd48ca60771",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197361",
+              "display": "Lisinopril 10 MG"
+            }
+          ],
+          "text": "Lisinopril 10 MG"
+        },
+        "subject": {
+          "reference": "Patient/e48c0d26-220e-42a3-9cae-6ff1a126360c"
+        },
+        "authoredOn": "2026-03-06"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:152b8b8c-971f-441d-b26e-a1e3856ea5c2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "152b8b8c-971f-441d-b26e-a1e3856ea5c2",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Total Cholesterol"
+            }
+          ],
+          "text": "Total Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/e48c0d26-220e-42a3-9cae-6ff1a126360c"
+        },
+        "effectiveDateTime": "2026-05-16",
+        "valueQuantity": {
+          "value": 253.1,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:538da3ac-fe9c-417e-9d68-942fa3adefa0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "538da3ac-fe9c-417e-9d68-942fa3adefa0",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/e48c0d26-220e-42a3-9cae-6ff1a126360c"
+        },
+        "effectiveDateTime": "2026-05-17",
+        "valueQuantity": {
+          "value": 140.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        }
+      }
+    }
+  ]
+}
