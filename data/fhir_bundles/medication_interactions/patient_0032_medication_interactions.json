@@ -1,0 +1,252 @@
+{
+  "resourceType": "Bundle",
+  "id": "9a29af84-51bf-4202-8dd6-95a3b86b2f26",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:40a6719b-aa86-46fd-93bf-032ead17eaf6",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "40a6719b-aa86-46fd-93bf-032ead17eaf6",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Davis",
+            "given": [
+              "John"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2000-05-11",
+        "address": [
+          {
+            "city": "Boston",
+            "state": "MA",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2a5014ff-10d9-47e8-a1e0-e63a8c2d9aca",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "2a5014ff-10d9-47e8-a1e0-e63a8c2d9aca",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/40a6719b-aa86-46fd-93bf-032ead17eaf6"
+        },
+        "period": {
+          "start": "2026-01-11"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b63343cc-423a-4fd1-acc5-ab2359029467",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b63343cc-423a-4fd1-acc5-ab2359029467",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "36971009",
+              "display": "Sinusitis"
+            }
+          ],
+          "text": "Sinusitis"
+        },
+        "subject": {
+          "reference": "Patient/40a6719b-aa86-46fd-93bf-032ead17eaf6"
+        },
+        "onsetDateTime": "2024-09-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e382c183-387a-4e0e-aa1f-b296b9b1640c",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "e382c183-387a-4e0e-aa1f-b296b9b1640c",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "35489007",
+              "display": "Depression"
+            }
+          ],
+          "text": "Depression"
+        },
+        "subject": {
+          "reference": "Patient/40a6719b-aa86-46fd-93bf-032ead17eaf6"
+        },
+        "onsetDateTime": "2026-02-09"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:33402fa4-b510-4dad-8bf7-fe797b126f36",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "33402fa4-b510-4dad-8bf7-fe797b126f36",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "849574",
+              "display": "Warfarin 5 MG"
+            }
+          ],
+          "text": "Warfarin 5 MG"
+        },
+        "subject": {
+          "reference": "Patient/40a6719b-aa86-46fd-93bf-032ead17eaf6"
+        },
+        "authoredOn": "2025-10-18"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d066cb94-69ca-4017-bc19-ae2d13314b1a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "d066cb94-69ca-4017-bc19-ae2d13314b1a",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198240",
+              "display": "Amiodarone 200 MG"
+            }
+          ],
+          "text": "Amiodarone 200 MG"
+        },
+        "subject": {
+          "reference": "Patient/40a6719b-aa86-46fd-93bf-032ead17eaf6"
+        },
+        "authoredOn": "2025-08-10"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:39c005f9-ac7c-48bf-83be-e61d28e39f8e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "39c005f9-ac7c-48bf-83be-e61d28e39f8e",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6",
+              "display": "INR"
+            }
+          ],
+          "text": "INR"
+        },
+        "subject": {
+          "reference": "Patient/40a6719b-aa86-46fd-93bf-032ead17eaf6"
+        },
+        "effectiveDateTime": "2026-06-09",
+        "valueQuantity": {
+          "value": 4.0,
+          "unit": "{ratio}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{ratio}"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ce40a722-4ae9-43e2-bc0f-75840f797033",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ce40a722-4ae9-43e2-bc0f-75840f797033",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "eGFR"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "subject": {
+          "reference": "Patient/40a6719b-aa86-46fd-93bf-032ead17eaf6"
+        },
+        "effectiveDateTime": "2026-03-30",
+        "valueQuantity": {
+          "value": 71.0,
+          "unit": "mL/min/1.73m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL/min/1.73m2"
+        }
+      }
+    }
+  ]
+}
