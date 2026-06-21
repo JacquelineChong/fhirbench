@@ -1,0 +1,252 @@
+{
+  "resourceType": "Bundle",
+  "id": "3d8bf786-d6ce-4eed-949f-0c9009ec31bf",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:1d55d803-2ba2-427d-a36a-e895902ee5f7",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1d55d803-2ba2-427d-a36a-e895902ee5f7",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Jackson",
+            "given": [
+              "Margaret"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1974-02-15",
+        "address": [
+          {
+            "city": "Boston",
+            "state": "MA",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:084aaabb-f17f-4e22-8150-ad538867fa2d",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "084aaabb-f17f-4e22-8150-ad538867fa2d",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/1d55d803-2ba2-427d-a36a-e895902ee5f7"
+        },
+        "period": {
+          "start": "2025-10-17"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:899e9704-7dc8-431b-a343-e04d6eec1936",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "899e9704-7dc8-431b-a343-e04d6eec1936",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "36971009",
+              "display": "Sinusitis"
+            }
+          ],
+          "text": "Sinusitis"
+        },
+        "subject": {
+          "reference": "Patient/1d55d803-2ba2-427d-a36a-e895902ee5f7"
+        },
+        "onsetDateTime": "2023-01-13"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e238c7a8-a244-4546-85fe-d62524ab19ec",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "e238c7a8-a244-4546-85fe-d62524ab19ec",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "82423001",
+              "display": "Chronic pain"
+            }
+          ],
+          "text": "Chronic pain"
+        },
+        "subject": {
+          "reference": "Patient/1d55d803-2ba2-427d-a36a-e895902ee5f7"
+        },
+        "onsetDateTime": "2017-12-07"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8b08ee1c-cb56-4a07-87cd-e8c81e5cb868",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "8b08ee1c-cb56-4a07-87cd-e8c81e5cb868",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198240",
+              "display": "Amiodarone 200 MG"
+            }
+          ],
+          "text": "Amiodarone 200 MG"
+        },
+        "subject": {
+          "reference": "Patient/1d55d803-2ba2-427d-a36a-e895902ee5f7"
+        },
+        "authoredOn": "2025-09-16"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e34727d5-a7a8-48fe-ba7d-228dfdc3532d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "e34727d5-a7a8-48fe-ba7d-228dfdc3532d",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197591",
+              "display": "Ibuprofen 400 MG"
+            }
+          ],
+          "text": "Ibuprofen 400 MG"
+        },
+        "subject": {
+          "reference": "Patient/1d55d803-2ba2-427d-a36a-e895902ee5f7"
+        },
+        "authoredOn": "2025-09-12"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:383f27e1-7bf7-4eac-bcf4-7a52682bdf62",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "383f27e1-7bf7-4eac-bcf4-7a52682bdf62",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6",
+              "display": "INR"
+            }
+          ],
+          "text": "INR"
+        },
+        "subject": {
+          "reference": "Patient/1d55d803-2ba2-427d-a36a-e895902ee5f7"
+        },
+        "effectiveDateTime": "2026-05-21",
+        "valueQuantity": {
+          "value": 3.8,
+          "unit": "{ratio}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{ratio}"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f122e1cc-56c8-446c-8477-e85560286757",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f122e1cc-56c8-446c-8477-e85560286757",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "eGFR"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "subject": {
+          "reference": "Patient/1d55d803-2ba2-427d-a36a-e895902ee5f7"
+        },
+        "effectiveDateTime": "2026-05-15",
+        "valueQuantity": {
+          "value": 73.9,
+          "unit": "mL/min/1.73m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL/min/1.73m2"
+        }
+      }
+    }
+  ]
+}
