@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-21T09:46:47.996209",
+    "total_patients": 50,
+    "total_prompts": 300,
+    "serializers": [
+      "raw_json",
+      "flattened_kv",
+      "narrative",
+      "structured_markdown",
+      "clinical_template",
+      "hybrid_adaptive"
+    ],
+    "task": "clinical_qa",
+    "model": "qwen.qwen3-32b",
+    "bedrock_status": "UNAVAILABLE - no credentials"
+  },
+  "token_statistics": {
+    "raw_json": {
+      "mean": 555.5,
+      "min": 546.6,
+      "max": 567.9,
+      "std": 5.4,
+      "compression_vs_raw": 1.0,
+      "count": 50
+    },
+    "flattened_kv": {
+      "mean": 338.7,
+      "min": 329.8,
+      "max": 351.1,
+      "std": 5.4,
+      "compression_vs_raw": 0.61,
+      "count": 50
+    },
+    "narrative": {
+      "mean": 110.8,
+      "min": 106.4,
+      "max": 117.0,
+      "std": 2.7,
+      "compression_vs_raw": 0.2,
+      "count": 50
+    },
+    "structured_markdown": {
+      "mean": 132.1,
+      "min": 127.7,
+      "max": 138.3,
+      "std": 2.7,
+      "compression_vs_raw": 0.238,
+      "count": 50
+    },
+    "clinical_template": {
+      "mean": 102.3,
+      "min": 94.4,
+      "max": 113.1,
+      "std": 4.4,
+      "compression_vs_raw": 0.184,
+      "count": 50
+    },
+    "hybrid_adaptive": {
+      "mean": 132.1,
+      "min": 127.7,
+      "max": 138.3,
+      "std": 2.7,
+      "compression_vs_raw": 0.238,
+      "count": 50
+    }
+  },
+  "qa_by_domain": {
+    "cardiovascular": 39,
+    "diabetes": 52,
+    "medication_interactions": 39,
+    "preventive_care": 33
+  },
+  "qa_by_category": {
+    "medications": 50,
+    "conditions": 50,
+    "demographics": 50,
+    "labs": 13
+  },
+  "errors": []
+}
