@@ -14,6 +14,22 @@ Synthetic data offers three key advantages for serialization benchmarking:
 
 Recent work by Kramer et al. [CITE:TH7NPVEX] demonstrates that LLM-assisted refinement of Synthea modules can further improve the clinical realism of generated data, while methods for creating realistic synthetic medication data [CITE:7R3TAG3G] provide domain-specific enhancement techniques applicable to our polypharmacy scenarios.
 
+
+### Beyond Off-the-Shelf Generation: Custom Realism Engineering
+
+While Synthea [CITE:DM8RNZGT] provides a validated foundation for synthetic clinical data generation, its default output produces *idealized* patient records — clean coding, complete observations, single-path diagnoses, and uniform documentation quality. Real-world EHR data, by contrast, exhibits systematic noise patterns that directly impact serialization quality: diagnostic ambiguity (15–20% provisional diagnoses), data incompleteness (10–25% missing values), coding heterogeneity (dual-coded conditions, specificity variation), and clinical complexity distributions that follow a long-tailed pattern.
+
+FHIRBench addresses this gap through a **custom data generation pipeline** (`generate_realistic_1000.py`) that extends Synthea's design principles with five configurable realism dimensions (§3.2.3 A–E). This approach offers three advantages over vanilla Synthea:
+
+1. **Parameterized noise injection** — Each realism dimension (diagnostic ambiguity, missing data, complexity, coding variability, geography) is configurable via YAML parameters, enabling researchers to systematically vary data quality and study its interaction with serialization strategy.
+
+2. **Complexity-stratified output** — Patients are generated across a defined complexity distribution (Simple 25%, Moderate 40%, Complex 25%, Highly Complex 10%), enabling subgroup analysis that off-the-shelf generators do not support.
+
+3. **Reproducibility with realism** — Fixed seed (42) ensures exact reproduction while the realism parameters ensure the data challenges serializers in ways that idealized data cannot.
+
+This methodology contributes a reusable framework for future clinical AI benchmarks: researchers using off-the-shelf generators like Synthea should consider augmenting their output with noise injection parameters calibrated to published EHR quality statistics [CITE:WT82MB8Z, CITE:TI76MVBU] to avoid overstating model performance on unrealistically clean data.
+
+
 ## 3.2.2 Pipeline Validation Dataset (n=50)
 
 Prior to executing the full benchmark (4,500 Bedrock API calls, estimated cost $75–200), we constructed a minimal validation dataset of 50 idealized FHIR R4 patient bundles (approximately 12–13 per clinical domain) to verify end-to-end pipeline correctness.
