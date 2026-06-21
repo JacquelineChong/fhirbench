@@ -204,20 +204,63 @@ Three clinical task types are evaluated, each targeting a distinct cognitive ope
 
 ### 3.4.3 Experimental Protocol
 
-The full evaluation follows a stratified experimental design:
+The full evaluation follows a stratified experimental design with complexity-aware sampling:
 
 | Parameter | Value |
 |-----------|-------|
 | Total conditions | 90 (6 serializers × 5 models × 3 tasks) |
-| Samples per condition | 50 |
-| Total API calls | 4,500 |
-| Sampling strategy | Stratified across 4 clinical domains (~12–13 patients per domain per condition) |
+| **Samples per task** | **100 patients** |
+| Total unique patients evaluated | 300 (100 per task type, may overlap) |
+| **Total API calls (Layer 1)** | **9,000** |
+| **Total API calls (Layer 2 judge)** | **9,000** |
+| **Grand total evaluations** | **~18,000** |
 | Randomization | Fixed seed (42) for reproducibility |
 | Inference temperature | 0.0 (deterministic) |
 | Top-p | 1.0 |
 | Max output tokens | 2,048 |
+| Rate limiting | 0.5s sleep between calls |
+| Checkpointing | Results saved per condition (resume on failure) |
 
-The evaluation proceeds sequentially by condition, with results checkpointed after each condition completes. This enables resumption without data loss in the event of API failures or rate limiting. Within each condition, the 50 patient bundles are processed in fixed random order to eliminate ordering effects.
+#### Stratified Sampling by Clinical Complexity
+
+Rather than purely random selection from the 1,000-patient pool, patients are stratified by clinical complexity to enable subgroup analysis and directly test hypothesis H6 (whether format unanimity breaks with increasing complexity):
+
+| Complexity Level | % | Count (per task) | Characteristics | Purpose |
+|-----------------|---|-----------------|-----------------|---------|
+| Simple | 25% | 25 | 1–2 conditions, 1 medication | Baseline (similar to validation set) |
+| Moderate | 40% | 40 | 3–4 conditions, 3–5 medications | Typical clinical encounter |
+| Complex | 25% | 25 | 5+ conditions, 6+ medications (polypharmacy) | Tests format robustness under data density |
+| Highly Complex | 10% | 10 | 7+ conditions, 10+ medications, drug interactions | Stress test — maximum serialization challenge |
+| **Total** | 100% | **100** | | |
+
+This stratification mirrors the §3.2.3 complexity distribution in the generated data, ensuring each subgroup has sufficient representation for statistical comparison.
+
+#### Domain Coverage
+
+Within each complexity stratum, patients are drawn proportionally from all 4 clinical domains:
+
+| Domain | % of Pool | Patients per Task |
+|--------|-----------|-------------------|
+| Diabetes | 25% | ~25 |
+| Cardiovascular | 25% | ~25 |
+| Medication Interactions | 25% | ~25 |
+| Preventive Care | 25% | ~25 |
+
+#### Task-Specific Patient Selection
+
+| Task | Selection Criteria | Rationale |
+|------|-------------------|-----------|
+| Clinical QA | All patients (random stratified) | Factual questions applicable to any patient |
+| Clinical Reasoning | Prioritize moderate–complex patients | Reasoning tasks require clinical complexity to be meaningful |
+| Clinical Summarization | All patients (random stratified) | Summarization quality tested across all complexity levels |
+
+#### Cost Estimation
+
+| Component | Calls | Est. Cost |
+|-----------|-------|-----------|
+| Layer 1 inference (5 models × 6 serializers × 3 tasks × 100 patients) | 9,000 | ~$100 |
+| Layer 2 judge (same volume) | 9,000 | ~$67 |
+| **Total** | **18,000** | **~$167** |
 
 ### 3.4.4 Infrastructure
 
