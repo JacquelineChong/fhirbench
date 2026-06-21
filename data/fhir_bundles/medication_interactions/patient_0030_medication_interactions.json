@@ -1,0 +1,252 @@
+{
+  "resourceType": "Bundle",
+  "id": "532a6c17-9eae-475f-89ba-00e1b6261d1f",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:6348788b-0094-4b14-8717-2f8e07e6fafc",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "6348788b-0094-4b14-8717-2f8e07e6fafc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Jones",
+            "given": [
+              "Sarah"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1957-03-18",
+        "address": [
+          {
+            "city": "Boston",
+            "state": "MA",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c522da8-4f2c-4283-82b8-cae64810f34e",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "2c522da8-4f2c-4283-82b8-cae64810f34e",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/6348788b-0094-4b14-8717-2f8e07e6fafc"
+        },
+        "period": {
+          "start": "2025-11-15"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9abeb07c-aa0e-4149-8318-1391fcc63817",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "9abeb07c-aa0e-4149-8318-1391fcc63817",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "35489007",
+              "display": "Depression"
+            }
+          ],
+          "text": "Depression"
+        },
+        "subject": {
+          "reference": "Patient/6348788b-0094-4b14-8717-2f8e07e6fafc"
+        },
+        "onsetDateTime": "2018-10-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1a245247-c752-4f23-abfb-bc0da5ef9e15",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1a245247-c752-4f23-abfb-bc0da5ef9e15",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "82423001",
+              "display": "Chronic pain"
+            }
+          ],
+          "text": "Chronic pain"
+        },
+        "subject": {
+          "reference": "Patient/6348788b-0094-4b14-8717-2f8e07e6fafc"
+        },
+        "onsetDateTime": "2017-12-29"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:67a1fd22-fd44-406b-9585-76e792f6501a",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "67a1fd22-fd44-406b-9585-76e792f6501a",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197591",
+              "display": "Ibuprofen 400 MG"
+            }
+          ],
+          "text": "Ibuprofen 400 MG"
+        },
+        "subject": {
+          "reference": "Patient/6348788b-0094-4b14-8717-2f8e07e6fafc"
+        },
+        "authoredOn": "2025-08-31"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9839462f-c5b6-453d-9f22-d4735b79c1e4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "9839462f-c5b6-453d-9f22-d4735b79c1e4",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "312938",
+              "display": "Sertraline 50 MG"
+            }
+          ],
+          "text": "Sertraline 50 MG"
+        },
+        "subject": {
+          "reference": "Patient/6348788b-0094-4b14-8717-2f8e07e6fafc"
+        },
+        "authoredOn": "2026-01-15"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4e41388f-1ace-4479-859b-cefc75eca2c0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "4e41388f-1ace-4479-859b-cefc75eca2c0",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6301-6",
+              "display": "INR"
+            }
+          ],
+          "text": "INR"
+        },
+        "subject": {
+          "reference": "Patient/6348788b-0094-4b14-8717-2f8e07e6fafc"
+        },
+        "effectiveDateTime": "2026-06-18",
+        "valueQuantity": {
+          "value": 2.4,
+          "unit": "{ratio}",
+          "system": "http://unitsofmeasure.org",
+          "code": "{ratio}"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:215c9085-06fb-44a2-8dfd-728c592213a9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "215c9085-06fb-44a2-8dfd-728c592213a9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "eGFR"
+            }
+          ],
+          "text": "eGFR"
+        },
+        "subject": {
+          "reference": "Patient/6348788b-0094-4b14-8717-2f8e07e6fafc"
+        },
+        "effectiveDateTime": "2026-05-23",
+        "valueQuantity": {
+          "value": 57.3,
+          "unit": "mL/min/1.73m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL/min/1.73m2"
+        }
+      }
+    }
+  ]
+}
