@@ -1,0 +1,1156 @@
+{
+  "resourceType": "Bundle",
+  "id": "c06a2d24-f462-4276-8ea8-29bcaa1c8437",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2025-11-19T05:44:00+00:00"
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:f0e2e16c-8efd-49c0-9d38-d84a6049557d",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "f0e2e16c-8efd-49c0-9d38-d84a6049557d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/patient",
+            "value": "f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Clark",
+            "given": [
+              "Stephanie"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1987-03-18",
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (US)"
+                }
+              ]
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(979) 356-1631",
+            "use": "home"
+          }
+        ],
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "8999 Washington St"
+            ],
+            "city": "Oklahoma City",
+            "state": "AK",
+            "postalCode": "28268",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:66a7308b-1ea0-4c83-9c9b-7af77314e1b9",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "66a7308b-1ea0-4c83-9c9b-7af77314e1b9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office or other outpatient visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "period": {
+          "start": "2020-03-26T22:44:00+00:00",
+          "end": "2020-03-26T22:44:00+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:22f046be-bb10-4d9c-8582-5820c99f674d",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "22f046be-bb10-4d9c-8582-5820c99f674d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office or other outpatient visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "period": {
+          "start": "2021-02-15T07:54:00+00:00",
+          "end": "2021-02-15T07:54:00+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee9469e9-7fb0-4992-950b-66bf35521ce5",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "ee9469e9-7fb0-4992-950b-66bf35521ce5",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office or other outpatient visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "period": {
+          "start": "2024-01-28T00:55:00+00:00",
+          "end": "2024-01-28T00:55:00+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0935ba28-dd91-454c-a901-4ef033d27569",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0935ba28-dd91-454c-a901-4ef033d27569",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office or other outpatient visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "period": {
+          "start": "2024-04-09T07:38:00+00:00",
+          "end": "2024-04-09T07:38:00+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:77d53ca3-a609-44c1-a43f-9417c4aec24b",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "77d53ca3-a609-44c1-a43f-9417c4aec24b",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "onsetDateTime": "2021-05-24",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "399211009",
+              "display": "History of myocardial infarction"
+            }
+          ],
+          "text": "History of myocardial infarction"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b2ad1042-2a12-4e5e-aed9-226e46ec786d",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b2ad1042-2a12-4e5e-aed9-226e46ec786d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "onsetDateTime": "2023-03-29",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "22298006",
+              "display": "Myocardial infarction"
+            }
+          ],
+          "text": "Myocardial infarction"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06df8f9b-be41-41a9-ad56-a6d22d7a8f47",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "06df8f9b-be41-41a9-ad56-a6d22d7a8f47",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "onsetDateTime": "2024-09-25",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "82523003",
+              "display": "Congestive rheumatic heart failure"
+            }
+          ],
+          "text": "Congestive rheumatic heart failure"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c73bd3f9-0951-4513-b819-3dd69404fa6b",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "c73bd3f9-0951-4513-b819-3dd69404fa6b",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "onsetDateTime": "2024-07-18",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "53741008",
+              "display": "Coronary arteriosclerosis"
+            }
+          ],
+          "text": "Coronary arteriosclerosis"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cf5aa592-4508-455f-bea2-612316d6229c",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cf5aa592-4508-455f-bea2-612316d6229c",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "onsetDateTime": "2024-08-02",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "233970002"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fe14b7eb-f263-476f-9321-816005b0352b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "fe14b7eb-f263-476f-9321-816005b0352b",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30313-1",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Hemoglobin [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "effectiveDateTime": "2024-03-28T14:09:00+00:00",
+        "valueQuantity": {
+          "value": 12.7,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "encounter": {
+          "reference": "Encounter/66a7308b-1ea0-4c83-9c9b-7af77314e1b9"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d3be1b1c-c18c-4831-a203-ef7b6700dfa0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d3be1b1c-c18c-4831-a203-ef7b6700dfa0",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Cholesterol [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "effectiveDateTime": "2025-08-11T01:55:00+00:00",
+        "valueQuantity": {
+          "value": 207.1,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "encounter": {
+          "reference": "Encounter/0935ba28-dd91-454c-a901-4ef033d27569"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:74779dc4-a76b-444b-9cf7-bd23fd22a0c8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "74779dc4-a76b-444b-9cf7-bd23fd22a0c8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33762-6",
+              "display": "NT-proBNP"
+            }
+          ],
+          "text": "NT-proBNP"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "effectiveDateTime": "2019-04-14T19:14:00+00:00",
+        "valueQuantity": {
+          "value": 3487.9,
+          "unit": "pg/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "pg/mL"
+        },
+        "encounter": {
+          "reference": "Encounter/66a7308b-1ea0-4c83-9c9b-7af77314e1b9"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:28424abe-2262-4595-aa28-28a0224665d4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "28424abe-2262-4595-aa28-28a0224665d4",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2571-8",
+              "display": "Triglyceride [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Triglyceride [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "effectiveDateTime": "2025-08-15T01:38:00+00:00",
+        "valueQuantity": {
+          "value": 430.3,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "encounter": {
+          "reference": "Encounter/22f046be-bb10-4d9c-8582-5820c99f674d"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:124e73f3-9dd0-493b-90e1-12c7132252e6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "124e73f3-9dd0-493b-90e1-12c7132252e6",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel with all children optional"
+            }
+          ],
+          "text": "Blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "effectiveDateTime": "2021-10-31T20:32:00+00:00",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 92,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 67,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f3c04da8-c333-4780-8eba-0299112358b8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f3c04da8-c333-4780-8eba-0299112358b8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "effectiveDateTime": "2020-02-04T19:55:00+00:00",
+        "valueQuantity": {
+          "value": 56.1,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        },
+        "encounter": {
+          "reference": "Encounter/0935ba28-dd91-454c-a901-4ef033d27569"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4280a6ef-f8c9-4da6-b530-6f57a417aff9",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "4280a6ef-f8c9-4da6-b530-6f57a417aff9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "859751",
+              "display": "Crestor (rosuvastatin)"
+            }
+          ],
+          "text": "Crestor (rosuvastatin)"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "authoredOn": "2024-02-06",
+        "requester": {
+          "display": "Dr. Nguyen"
+        },
+        "encounter": {
+          "reference": "Encounter/66a7308b-1ea0-4c83-9c9b-7af77314e1b9"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 1 tablet(s) twice daily",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ecbef352-6ee4-4ed6-af70-ffcc0e305ee1",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "ecbef352-6ee4-4ed6-af70-ffcc0e305ee1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "310798",
+              "display": "Lasix (furosemide)"
+            }
+          ],
+          "text": "Lasix (furosemide)"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "authoredOn": "2020-11-16",
+        "requester": {
+          "display": "Dr. Scott"
+        },
+        "encounter": {
+          "reference": "Encounter/0935ba28-dd91-454c-a901-4ef033d27569"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 2 tablet(s) twice daily",
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:62c85a5b-fca2-4f94-9bb9-699e4c18095d",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "62c85a5b-fca2-4f94-9bb9-699e4c18095d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "314076",
+              "display": "Lisinopril 10 MG Oral Tablet"
+            }
+          ],
+          "text": "Lisinopril 10 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "authoredOn": "2022-01-30",
+        "requester": {
+          "display": "Dr. Lopez"
+        },
+        "encounter": {
+          "reference": "Encounter/0935ba28-dd91-454c-a901-4ef033d27569"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 2 tablet(s) once daily",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5b686969-423a-4871-9569-fd68b417fb79",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "5b686969-423a-4871-9569-fd68b417fb79",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "617311",
+              "display": "Atorvastatin 20 MG Oral Tablet"
+            }
+          ],
+          "text": "Atorvastatin 20 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "authoredOn": "2020-04-06",
+        "requester": {
+          "display": "Dr. Thomas"
+        },
+        "encounter": {
+          "reference": "Encounter/0935ba28-dd91-454c-a901-4ef033d27569"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 2 tablet(s) once daily",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fda624bc-af91-4cbf-87dd-2f9965114bdd",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "fda624bc-af91-4cbf-87dd-2f9965114bdd",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "979480",
+              "display": "Losartan potassium 50 MG Oral Tablet"
+            }
+          ],
+          "text": "Losartan potassium 50 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "authoredOn": "2023-12-20",
+        "requester": {
+          "display": "Dr. Nguyen"
+        },
+        "encounter": {
+          "reference": "Encounter/66a7308b-1ea0-4c83-9c9b-7af77314e1b9"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 1 tablet(s) once daily",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:232e1a14-67f6-4d3d-9ed2-a7ac9809d0f7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "232e1a14-67f6-4d3d-9ed2-a7ac9809d0f7",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1091643",
+              "display": "Sacubitril/Valsartan 49 MG-51 MG Oral Tablet"
+            }
+          ],
+          "text": "Sacubitril/Valsartan 49 MG-51 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "authoredOn": "2023-01-16",
+        "requester": {
+          "display": "Dr. Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/ee9469e9-7fb0-4992-950b-66bf35521ce5"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 2 tablet(s) once daily",
+            "timing": {
+              "repeat": {
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:43564163-ac7a-400a-b3df-195c046d1559",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "43564163-ac7a-400a-b3df-195c046d1559",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "49727002",
+              "display": "Cough"
+            }
+          ],
+          "text": "Cough"
+        },
+        "subject": {
+          "reference": "Patient/f0e2e16c-8efd-49c0-9d38-d84a6049557d"
+        },
+        "effectiveDateTime": "2018-12-18T11:36:00+00:00",
+        "valueString": "Present"
+      }
+    }
+  ]
+}
