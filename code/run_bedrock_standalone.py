@@ -3,6 +3,8 @@
 Self-contained Bedrock runner. Downloads prompts.json and calls Claude + GPT-5.4.
 No local dependencies needed beyond boto3.
 
+IMPORTANT: Run this on EC2 in us-east-2. Both models use us-east-2.
+
 Usage:
     python3 run_bedrock_standalone.py
 """
@@ -11,7 +13,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger(__name__)
 
 MODELS = {
-    "claude": {"model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0", "region": "us-east-1"},
+    "claude": {"model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0", "region": "us-east-2"},
     "gpt54": {"model_id": "openai.gpt-5.4", "region": "us-east-2"},
 }
 
