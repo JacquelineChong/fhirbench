@@ -1,0 +1,36 @@
+{
+  "description": "630 self-contained prompts for FHIRBench Layer 1 complex patient evaluation",
+  "generation_date": "2026-06-23",
+  "patients": 35,
+  "serializers": [
+    "raw_json",
+    "key_value",
+    "narrative",
+    "markdown_table",
+    "condensed",
+    "fhir_path"
+  ],
+  "tasks": [
+    "clinical_qa",
+    "clinical_reasoning",
+    "clinical_summarization"
+  ],
+  "total_prompts": 630,
+  "complexity_distribution": {
+    "HIGHLY_COMPLEX": 144,
+    "COMPLEX": 486
+  },
+  "domain_distribution": {
+    "diabetes": 8,
+    "cardiovascular": 10,
+    "medication_interactions": 5,
+    "preventive_care": 12
+  },
+  "parts": 10,
+  "prompts_per_part": 63,
+  "models_to_evaluate": [
+    "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "openai.gpt-5.4"
+  ],
+  "usage": "python3 run_bedrock_standalone.py (requires all parts concatenated into complex_prompts_630.json)"
+}
