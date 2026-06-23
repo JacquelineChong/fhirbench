@@ -1,0 +1,1179 @@
+{
+  "resourceType": "Bundle",
+  "id": "6fed2cb2-7f31-4008-a919-66a303954ac5",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2025-09-09T13:45:00+00:00"
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:1a7d284e-86dd-4794-8e57-cb4bb3416ca2",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1a7d284e-86dd-4794-8e57-cb4bb3416ca2",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/patient",
+            "value": "1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Thomas",
+            "given": [
+              "Nancy"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1971-10-30",
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (US)"
+                }
+              ]
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(248) 532-8507",
+            "use": "home"
+          }
+        ],
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "4411 Elm Ave"
+            ],
+            "city": "Seattle",
+            "state": "WY",
+            "postalCode": "81732",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2818ddd6-3c49-42b0-9bcb-1b7100a85775",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "2818ddd6-3c49-42b0-9bcb-1b7100a85775",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office or other outpatient visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "period": {
+          "start": "2023-08-11T23:25:00+00:00",
+          "end": "2023-08-11T23:25:00+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dc4f0f91-f4c6-40a2-ac23-424dfa9faac0",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "dc4f0f91-f4c6-40a2-ac23-424dfa9faac0",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office or other outpatient visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "period": {
+          "start": "2023-11-28T05:54:00+00:00",
+          "end": "2023-11-28T05:54:00+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9140a7e5-37ff-4cf1-9d45-cc973abaf9b9",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9140a7e5-37ff-4cf1-9d45-cc973abaf9b9",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office or other outpatient visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "period": {
+          "start": "2023-12-11T19:34:00+00:00",
+          "end": "2023-12-11T19:34:00+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:78b2b998-0066-4cf2-82c7-0450a75b9232",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "78b2b998-0066-4cf2-82c7-0450a75b9232",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "99213",
+                "display": "Office or other outpatient visit"
+              }
+            ],
+            "text": "Office Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "period": {
+          "start": "2025-08-09T02:21:00+00:00",
+          "end": "2025-08-09T02:21:00+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5f4126c8-0455-41aa-99ff-9d8aa7b405d5",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "5f4126c8-0455-41aa-99ff-9d8aa7b405d5",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "inactive"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "refuted"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "onsetDateTime": "2019-04-02",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "314771006",
+              "display": "Type 2 diabetes mellitus with neuropathic arthropathy"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus with neuropathic arthropathy"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:73c58484-264b-431b-890f-e585da2a1fed",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "73c58484-264b-431b-890f-e585da2a1fed",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "onsetDateTime": "2021-04-28",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E10.9",
+              "display": "Type 1 diabetes mellitus without complications"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:48287356-e5ae-441c-9809-c7e58d6c3471",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "48287356-e5ae-441c-9809-c7e58d6c3471",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "onsetDateTime": "2020-03-24",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "368581000119106",
+              "display": "Neuropathy due to type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Neuropathy due to type 2 diabetes mellitus"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5ad6f9aa-decc-4b05-9288-778e3510433f",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "5ad6f9aa-decc-4b05-9288-778e3510433f",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "onsetDateTime": "2020-12-14",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "190330002",
+              "display": "Type 2 diabetes mellitus with hypoglycemia"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E11.311",
+              "display": "Type 2 diabetes mellitus with unspecified diabetic retinopathy with macular edema"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus with hypoglycemia"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8a744c65-87a0-4465-96b5-9e76e2750e56",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "8a744c65-87a0-4465-96b5-9e76e2750e56",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "onsetDateTime": "2022-04-27",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "4855003",
+              "display": "Diabetic retinopathy"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E10",
+              "display": "Type 1 diabetes mellitus"
+            }
+          ],
+          "text": "Diabetic retinopathy"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d0112fed-7dbd-4ea4-821e-cfbffe07d3c0",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "d0112fed-7dbd-4ea4-821e-cfbffe07d3c0",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "onsetDateTime": "2021-04-18",
+        "abatementDateTime": "2025-06-10",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "127013003",
+              "display": "Diabetic renal disease"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E11.65",
+              "display": "Type 2 diabetes mellitus with hyperglycemia"
+            }
+          ],
+          "text": "Diabetic renal disease"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:902bd34b-f844-4431-8eb5-635cdf1beb66",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "902bd34b-f844-4431-8eb5-635cdf1beb66",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2345-7",
+              "display": "Glucose [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Glucose [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "effectiveDateTime": "2025-06-27T08:01:00+00:00",
+        "valueQuantity": {
+          "value": 138.9,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "encounter": {
+          "reference": "Encounter/dc4f0f91-f4c6-40a2-ac23-424dfa9faac0"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eb1c674d-d828-48f6-bd31-9c9733ea33cb",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "eb1c674d-d828-48f6-bd31-9c9733ea33cb",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14959-1",
+              "display": "Microalbumin [Mass/volume] in Urine"
+            }
+          ],
+          "text": "Microalbumin [Mass/volume] in Urine"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "effectiveDateTime": "2020-10-01T07:28:00+00:00",
+        "valueQuantity": {
+          "value": 148.3,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "encounter": {
+          "reference": "Encounter/dc4f0f91-f4c6-40a2-ac23-424dfa9faac0"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1438de65-5cac-46f0-8af5-ea50cbe3ce13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1438de65-5cac-46f0-8af5-ea50cbe3ce13",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Cholesterol [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "effectiveDateTime": "2019-08-19T00:18:00+00:00",
+        "valueQuantity": {
+          "value": 236.6,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "encounter": {
+          "reference": "Encounter/dc4f0f91-f4c6-40a2-ac23-424dfa9faac0"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55d24250-4e82-4ded-804c-1a816864ef28",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "55d24250-4e82-4ded-804c-1a816864ef28",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Creatinine [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "effectiveDateTime": "2024-11-12T15:53:00+00:00",
+        "valueQuantity": {
+          "value": 1.1,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "encounter": {
+          "reference": "Encounter/2818ddd6-3c49-42b0-9bcb-1b7100a85775"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0b68aa82-f775-497e-89d9-f336f4dbac43",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0b68aa82-f775-497e-89d9-f336f4dbac43",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18262-6",
+              "display": "Low Density Lipoprotein Cholesterol"
+            }
+          ],
+          "text": "Low Density Lipoprotein Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "effectiveDateTime": "2022-08-16T05:54:00+00:00",
+        "valueQuantity": {
+          "value": 115.8,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "encounter": {
+          "reference": "Encounter/dc4f0f91-f4c6-40a2-ac23-424dfa9faac0"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:274fd882-43cf-4445-943f-5aaff67c08cc",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "274fd882-43cf-4445-943f-5aaff67c08cc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "261551",
+              "display": "Humalog (insulin lispro)"
+            }
+          ],
+          "text": "Humalog (insulin lispro)"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "authoredOn": "2022-08-19",
+        "requester": {
+          "display": "Dr. Lee"
+        },
+        "encounter": {
+          "reference": "Encounter/78b2b998-0066-4cf2-82c7-0450a75b9232"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 2 tablet(s) once daily",
+            "timing": {
+              "repeat": {
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8a082acd-7f04-497c-bb6f-2468bc4941d8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "8a082acd-7f04-497c-bb6f-2468bc4941d8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1598392",
+              "display": "Invokana (canagliflozin)"
+            }
+          ],
+          "text": "Invokana (canagliflozin)"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "authoredOn": "2022-10-08",
+        "requester": {
+          "display": "Dr. Wright"
+        },
+        "encounter": {
+          "reference": "Encounter/dc4f0f91-f4c6-40a2-ac23-424dfa9faac0"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 1 tablet(s) once daily",
+            "timing": {
+              "repeat": {
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:651322a3-63ac-4dd9-9fb1-9aaf352c8fd8",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "651322a3-63ac-4dd9-9fb1-9aaf352c8fd8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1243019",
+              "display": "Sitagliptin 100 MG Oral Tablet"
+            }
+          ],
+          "text": "Sitagliptin 100 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "authoredOn": "2021-03-05",
+        "requester": {
+          "display": "Dr. Hill"
+        },
+        "encounter": {
+          "reference": "Encounter/78b2b998-0066-4cf2-82c7-0450a75b9232"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 1 tablet(s) three times daily",
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b717364b-9e31-446a-b484-5adad37b77a2",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "b717364b-9e31-446a-b484-5adad37b77a2",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1670007",
+              "display": "Empagliflozin 10 MG Oral Tablet"
+            }
+          ],
+          "text": "Empagliflozin 10 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "authoredOn": "2020-08-05",
+        "requester": {
+          "display": "Dr. Robinson"
+        },
+        "encounter": {
+          "reference": "Encounter/dc4f0f91-f4c6-40a2-ac23-424dfa9faac0"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 2 tablet(s) twice daily",
+            "timing": {
+              "repeat": {
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fc68e479-df9e-471e-af07-9d9f0f9d56e7",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "fc68e479-df9e-471e-af07-9d9f0f9d56e7",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "311040",
+              "display": "Glucotrol (glipizide)"
+            }
+          ],
+          "text": "Glucotrol (glipizide)"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "authoredOn": "2021-12-02",
+        "requester": {
+          "display": "Dr. Johnson"
+        },
+        "encounter": {
+          "reference": "Encounter/78b2b998-0066-4cf2-82c7-0450a75b9232"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 2 tablet(s) three times daily",
+            "timing": {
+              "repeat": {
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:482a8d22-f2ee-4074-8b06-0fa75a78385e",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "482a8d22-f2ee-4074-8b06-0fa75a78385e",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1368384",
+              "display": "Dapagliflozin 5 MG Oral Tablet"
+            }
+          ],
+          "text": "Dapagliflozin 5 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "authoredOn": "2025-05-06",
+        "requester": {
+          "display": "Dr. Martinez"
+        },
+        "encounter": {
+          "reference": "Encounter/2818ddd6-3c49-42b0-9bcb-1b7100a85775"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 1 tablet(s) three times daily",
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:77e5a16f-3978-4042-b9bb-e3001cccb10c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "77e5a16f-3978-4042-b9bb-e3001cccb10c",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1361493",
+              "display": "Insulin glargine 100 UNT/ML Injectable Solution"
+            }
+          ],
+          "text": "Insulin glargine 100 UNT/ML Injectable Solution"
+        },
+        "subject": {
+          "reference": "Patient/1a7d284e-86dd-4794-8e57-cb4bb3416ca2"
+        },
+        "authoredOn": "2023-02-04",
+        "requester": {
+          "display": "Dr. Torres"
+        },
+        "encounter": {
+          "reference": "Encounter/2818ddd6-3c49-42b0-9bcb-1b7100a85775"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Take 2 tablet(s) three times daily",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
