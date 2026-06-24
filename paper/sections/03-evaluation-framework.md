@@ -8,8 +8,8 @@ The framework uses **three evaluation layers** of increasing rigor:
 
 | Layer | Method | Coverage | Purpose |
 |-------|--------|----------|---------|
-| **Layer 1: Automated Metrics** | Programmatic scoring | All 4,500 samples | Scalable baseline metrics |
-| **Layer 2: LLM-as-Judge** | Claude Sonnet 4.5 evaluator | All 4,500 samples | Rubric-based quality scoring robust to paraphrasing |
+| **Layer 1: Automated Metrics** | Programmatic scoring | All 9,000 samples | Scalable baseline metrics |
+| **Layer 2: LLM-as-Judge** | Claude Sonnet 4.5 evaluator | All 9,000 samples | Rubric-based quality scoring robust to paraphrasing |
 | **Layer 3: Human Evaluation** | Clinical expert review | 150 stratified samples (5%) | Ground truth calibration + inter-rater reliability |
 
 
@@ -165,7 +165,7 @@ Provide scores as JSON: {"accuracy": N, "relevance": N, "completeness": N, "safe
 |-------------------------------|-----------|
 | Not in the benchmark set as judge | Avoids self-evaluation bias (models don't judge themselves) |
 | High reasoning capability | Consistent rubric application |
-| Cost-effective at scale | ~$0.015 per evaluation × 4,500 = ~$67 |
+| Cost-effective at scale | ~$0.015 per evaluation × 9,000 = ~$135 |
 | Reproducible | Same model, temperature=0, deterministic scoring |
 
 **Note:** Claude Sonnet 4.5 IS one of the 5 benchmarked models. For evaluations where Claude is the subject model, we use GPT-5.4 as the judge instead (cross-evaluation to prevent self-bias).
@@ -236,13 +236,13 @@ The 4-dimension rubric weights (default: accuracy 30%, completeness 30%, safety 
 
 ### B. Sample Size Sensitivity
 
-Results computed at n=50 samples per condition are compared against subsampled estimates at n=25 (half the data) using bootstrap resampling:
+Results computed at n=100 patients per condition are compared against subsampled estimates at n=50 (half the data) using bootstrap resampling:
 
-- Compute metric at n=50 (full sample)
+- Compute metric at n=100 (full sample)
 - Resample n=25 (1,000 bootstrap iterations)
 - Report 95% CI width and strategy ranking stability
 
-**Criterion:** Rankings are stable if all pairwise differences that are significant at n=50 remain directionally consistent at n=25.
+**Criterion:** Rankings are stable if all pairwise differences that are significant at n=100 remain directionally consistent at n=25.
 
 ### C. Model-Specific Robustness
 
