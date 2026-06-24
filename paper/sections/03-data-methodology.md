@@ -32,7 +32,7 @@ This methodology contributes a reusable framework for future clinical AI benchma
 
 ## 3.2.2 Pipeline Validation Dataset (n=50)
 
-Prior to executing the full benchmark (4,500 Bedrock API calls, estimated cost $75–200), we constructed a minimal validation dataset of 50 idealized FHIR R4 patient bundles (approximately 12–13 per clinical domain) to verify end-to-end pipeline correctness.
+Prior to executing the full benchmark (9,000 Bedrock API calls, estimated cost $100–200), we constructed a minimal validation dataset of 50 idealized FHIR R4 patient bundles (approximately 12–13 per clinical domain) to verify end-to-end pipeline correctness.
 
 **Validation dataset characteristics:**
 - **Clean coding** — All conditions, medications, and observations use standard SNOMED CT, LOINC, and RxNorm codes without coding errors
@@ -112,6 +112,10 @@ Real clinical data contains diagnostic uncertainty that affects serialization fi
 | **Moderate** (3–4 conditions) | 40% | Primary condition + comorbidities + 3–5 medications |
 | **Complex** (5+ conditions) | 25% | Multiple interacting conditions + polypharmacy (6+ medications) |
 | **Highly complex** (7+ conditions) | 10% | Extensive medication list + drug interactions + care coordination |
+
+#### Evaluation Cohort Sampling (n=100)
+
+From the 1,000-patient pool, a stratified random sample of **100 patients** is drawn for the full benchmark evaluation. The complexity distribution is preserved at the overall cohort level (Simple 25, Moderate 40, Complex 25, Highly Complex 10). Domain representation is approximately balanced: diabetes (28%), cardiovascular (27%), preventive care (26%), medication interactions (19%). All 100 patients are evaluated under every experimental condition (6 serializers × 3 tasks × 5 models), yielding 9,000 total evaluations.
 
 ### E. Coding Variability and Errors
 
