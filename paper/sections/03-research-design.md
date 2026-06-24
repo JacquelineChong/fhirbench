@@ -14,8 +14,15 @@ The evaluation follows a fully crossed factorial design:
 | **Foundation model** | 5 | Claude Sonnet 4.5, GPT-5.4, Llama 3 70B, DeepSeek V3.2, Qwen3 32B |
 | **Clinical task type** | 3 | Clinical QA, Clinical Reasoning, Clinical Summarization |
 | **Total experimental conditions** | 90 | 6 × 5 × 3 |
-| **Samples per condition** | 50 | Drawn from 1,000-patient benchmark dataset |
-| **Total evaluations** | 4,500 | API calls to Amazon Bedrock |
+| **Evaluation cohort** | 100 | Stratified sample from 1,000-patient benchmark dataset |
+| **Prompts per model** | 1,800 | 100 patients × 6 serializers × 3 tasks |
+| **Total evaluations** | 9,000 | 1,800 × 5 models |
+
+### Sampling Design
+
+The evaluation cohort consists of 100 patients stratified-sampled from the 1,000-patient benchmark pool. Complexity distribution is applied **overall** (not per-domain): Simple 25%, Moderate 40%, Complex 25%, Highly Complex 10%. All 100 patients are evaluated under every experimental condition (fully crossed), yielding 1,800 prompts per model and 9,000 total evaluations.
+
+Domain distribution is approximately balanced: diabetes (28%), cardiovascular (27%), preventive care (26%), medication interactions (19%).
 
 ### Fixed Parameters
 
