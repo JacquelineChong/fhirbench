@@ -104,3 +104,40 @@ The preliminary findings inform several design decisions for the full 1,000-pati
 ---
 
 *Limitations.* These preliminary results should be interpreted with appropriate caution. The idealized dataset, by construction, eliminates data-quality challenges characteristic of real-world EHR data. The single task type (Clinical QA) may not generalize to other clinical reasoning modalities. The near-ceiling rubric scores indicate insufficient evaluation difficulty rather than genuine model perfection. These limitations are addressed systematically in the full benchmark design (§3.2.3–§3.2.5).
+
+
+## 4.X Model Capacity Finding: Open-Weight Model Failure on Complex Clinical Data
+
+### Observation
+
+Llama 3.1 70B consistently failed to process COMPLEX and HIGHLY_COMPLEX FHIR bundles across all serialization formats, with a 100% failure rate (630/630 prompts timed out at >60 seconds per call).
+
+| Model | COMPLEX Prompts | Success Rate | Failure Mode |
+|-------|----------------|--------------|--------------|
+| Claude Sonnet 4.5 | 630 | 100% (630/630) | — |
+| GPT-5.4 | 630 | 99.8% (629/630) | 1 timeout |
+| Qwen3 32B | 630 | 100% (630/630) | — |
+| DeepSeek V3.2 | 630 | 100% (630/630) | — |
+| **Llama 3.1 70B** | **630** | **0% (0/630)** | **Read timeout (>60s)** |
+
+### Analysis
+
+The failure is attributable to inference latency degradation at high context lengths. Our COMPLEX/HIGHLY_COMPLEX FHIR prompts contain 3,000–8,000 tokens of serialized clinical data, placing them in the regime where Llama 3.1 70B experiences 3.8× latency increases (Adams et al., 2026; MarkAICode benchmark). This is not a context *window* limitation (Llama 3.1 supports 128K tokens nominally) but an inference *throughput* limitation where the model cannot generate responses within practical time bounds.
+
+### Implications for Clinical Deployment
+
+This finding carries significant implications for production clinical AI systems:
+
+1. **Serialization strategy determines model accessibility.** For open-weight models, compact serialization formats (Clinical Template, Condensed) are not merely a quality optimization — they are a functional requirement. Without context-aware serialization, the most complex patients (who require the most clinical support) receive no AI assistance.
+
+2. **Model selection interacts with data complexity.** Frontier models (Claude, GPT-5.4) and certain open-weight models (Qwen3, DeepSeek) processed all complexity levels without issue. However, Llama 3.1 70B — despite being widely deployed in healthcare applications — failed silently on complex patients. This creates a patient safety gap: the model appears functional on simple cases but fails catastrophically on the patients who most need support.
+
+3. **Token count is not context capacity.** A model's advertised context window (128K for Llama 3.1) does not guarantee reliable inference at those lengths. Production systems must implement serialization budgets calibrated to empirical model performance, not theoretical limits.
+
+### Supporting Literature
+
+This finding aligns with:
+- LongHealth benchmark (Adams et al., 2025): open-source models show "insufficient accuracy for reliable clinical use" on documents of 5,090–6,754 words
+- EHR long-context evaluation (arXiv 2412.16178): "Most existing EHR FMs have context windows of <1K tokens, preventing them from modeling full patient EHRs"
+- Llama 3.1 70B latency benchmarks: 3.8× p95 latency increase beyond 4K context, with throughput dropping from 62 to 36 tok/s at 8K context
+
