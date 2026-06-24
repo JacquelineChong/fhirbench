@@ -191,6 +191,44 @@ MedCase-Structured (Bui Muti 2026) shows that benchmarks using plain text overes
 
 ---
 
+
+## Context Window and Inference Limitations in Clinical LLM Deployment
+
+### [36] LongHealth: A Question Answering Benchmark with Long Clinical Documents
+- **Authors:** Adams L, Busch F, Han T, et al.
+- **Venue:** Journal of Healthcare Informatics Research, 2025
+- **Relevance:** ★★★★★ (Directly relevant)
+- **Tags:** `model-evaluation`, `clinical-documents`, `context-limitations`
+- **Key Finding:** Evaluated 11 open-source LLMs (minimum 16K context) on 20 fictional patient cases (5,090–6,754 words each). All models struggled significantly on tasks requiring identification of missing information. Concluded that "current accuracy levels are insufficient for reliable clinical use, especially in scenarios requiring the identification of missing information."
+- **Connection to FHIRBench:** Directly validates our finding that open-weight models (Llama 3.1 70B) fail on complex FHIR bundles. LongHealth tests documents of similar length to our COMPLEX/HIGHLY_COMPLEX serialized records.
+- **DOI:** 10.1007/s41666-025-00204-w
+
+### [37] Evaluating Long Context Models for Clinical Prediction Tasks on EHRs
+- **Authors:** (arXiv 2412.16178)
+- **Venue:** arXiv preprint, 2024
+- **Relevance:** ★★★★☆ (Highly relevant)
+- **Tags:** `EHR`, `context-window`, `model-evaluation`
+- **Key Finding:** "Most existing EHR foundation models have context windows of <1K tokens. This prevents them from modeling full patient EHRs which can exceed 10K's of events." Longer context models improve predictive performance, but robustness to unique EHR properties remains crucial.
+- **Connection to FHIRBench:** Establishes the context window bottleneck as a known constraint. Our complex FHIR bundles (3,000–4,000+ tokens when serialized as raw JSON) exceed the practical processing capacity of models like Llama 3.1 70B.
+
+### [38] Llama 3.1 70B Inference Latency Benchmark (A100 80GB)
+- **Authors:** MarkAICode, 2026
+- **Venue:** Technical benchmark report
+- **Relevance:** ★★★★☆ (Highly relevant — infrastructure evidence)
+- **Tags:** `inference-performance`, `latency`, `context-scaling`
+- **Key Finding:** Llama 3.1 70B p95 latency increases 3.8× when context grows from 512 to 4,096 tokens (158ms → 602ms). Throughput drops from 62 tok/s to 44 tok/s. At 8K context, VRAM usage reaches 93.5% of A100 80GB capacity, leaving no room for concurrent requests.
+- **Connection to FHIRBench:** Explains our observed 60+ second timeouts for Llama on COMPLEX FHIR prompts (~4K–8K tokens). The model physically cannot process these inputs within practical time bounds, confirming that serialization strategy determines model *accessibility*, not merely accuracy.
+- **URL:** https://markaicode.com/benchmarks/ollama-llama-31-a100-80gb-latency-benchmark/
+
+### [39] Why Does the Effective Context Length of LLMs Fall Short?
+- **Authors:** (arXiv 2410.18745)
+- **Venue:** arXiv preprint, 2024
+- **Relevance:** ★★★☆☆ (Relevant context)
+- **Tags:** `context-window`, `attention-mechanism`, `theory`
+- **Key Finding:** Attributes context length limitations to "left-skewed frequency distribution of relative positions" formed during pretraining, which impedes the model's ability to effectively gather distant information — regardless of nominal context window size.
+- **Connection to FHIRBench:** Provides theoretical grounding for why Llama's 128K nominal context window does not translate to reliable processing of 4K+ token clinical inputs.
+
+
 ## Gaps Our Paper Addresses
 
 1. **No comprehensive multi-task FHIR serialization benchmark** — Pator (2026) covers only medication reconciliation
