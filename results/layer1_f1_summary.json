@@ -1,0 +1,92 @@
+{
+  "overall": {
+    "claude": 0.2221,
+    "gpt54": 0.3665,
+    "qwen": 0.3229,
+    "deepseek": 0.3542
+  },
+  "by_serializer": {
+    "raw_json": {
+      "claude": 0.1969,
+      "gpt54": 0.3815,
+      "qwen": 0.2699,
+      "deepseek": 0.3061
+    },
+    "key_value": {
+      "claude": 0.1848,
+      "gpt54": 0.3522,
+      "qwen": 0.2685,
+      "deepseek": 0.2871
+    },
+    "narrative": {
+      "claude": 0.2199,
+      "gpt54": 0.3419,
+      "qwen": 0.3158,
+      "deepseek": 0.3634
+    },
+    "markdown_table": {
+      "claude": 0.2386,
+      "gpt54": 0.3746,
+      "qwen": 0.3619,
+      "deepseek": 0.39
+    },
+    "condensed": {
+      "claude": 0.2558,
+      "gpt54": 0.3824,
+      "qwen": 0.3668,
+      "deepseek": 0.3893
+    },
+    "fhir_path": {
+      "claude": 0.2366,
+      "gpt54": 0.3666,
+      "qwen": 0.3543,
+      "deepseek": 0.3896
+    }
+  },
+  "by_complexity": {
+    "SIMPLE": {
+      "claude": 0.1757,
+      "gpt54": 0.3163,
+      "qwen": 0.3014,
+      "deepseek": 0.3384
+    },
+    "MODERATE": {
+      "claude": 0.2311,
+      "gpt54": 0.3815,
+      "qwen": 0.3294,
+      "deepseek": 0.3524
+    },
+    "COMPLEX": {
+      "claude": 0.2414,
+      "gpt54": 0.3789,
+      "qwen": 0.3248,
+      "deepseek": 0.3621
+    },
+    "HIGHLY_COMPLEX": {
+      "claude": 0.2566,
+      "gpt54": 0.4068,
+      "qwen": 0.351,
+      "deepseek": 0.3862
+    }
+  },
+  "by_task": {
+    "clinical_qa": {
+      "claude": 0.3214,
+      "gpt54": 0.5863,
+      "qwen": 0.4387,
+      "deepseek": 0.5688
+    },
+    "clinical_reasoning": {
+      "claude": 0.0184,
+      "gpt54": 0.026,
+      "qwen": 0.0161,
+      "deepseek": 0.0248
+    },
+    "clinical_summarization": {
+      "claude": 0.3265,
+      "gpt54": 0.4869,
+      "qwen": 0.5139,
+      "deepseek": 0.4688
+    }
+  }
+}
