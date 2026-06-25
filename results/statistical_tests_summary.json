@@ -1,0 +1,215 @@
+{
+  "kruskal_wallis_l1": {
+    "H": 531.0196979065723,
+    "p": 9.033345852602413e-115
+  },
+  "pairwise_mannwhitney_l1": {
+    "Claude vs GPT-5.4": {
+      "U": 1008541.5,
+      "p_raw": 2.042275568242754e-85,
+      "p_corrected": 1.2253653409456525e-84,
+      "significant": true
+    },
+    "Claude vs Qwen": {
+      "U": 1107730.0,
+      "p_raw": 9.549756489246765e-61,
+      "p_corrected": 5.729853893548059e-60,
+      "significant": true
+    },
+    "Claude vs DeepSeek": {
+      "U": 1032282.5,
+      "p_raw": 4.8701340162066466e-79,
+      "p_corrected": 2.9220804097239877e-78,
+      "significant": true
+    },
+    "GPT-5.4 vs Qwen": {
+      "U": 1807644.5,
+      "p_raw": 1.156307773389792e-09,
+      "p_corrected": 6.937846640338753e-09,
+      "significant": true
+    },
+    "GPT-5.4 vs DeepSeek": {
+      "U": 1692535.5,
+      "p_raw": 0.014358784314259033,
+      "p_corrected": 0.0861527058855542,
+      "significant": false
+    },
+    "Qwen vs DeepSeek": {
+      "U": 1503042.0,
+      "p_raw": 0.00021590510287554019,
+      "p_corrected": 0.0012954306172532411,
+      "significant": true
+    }
+  },
+  "cliffs_delta_l1": {
+    "Claude vs GPT-5.4": {
+      "delta": -0.37675101965146457,
+      "magnitude": "medium"
+    },
+    "Claude vs Qwen": {
+      "delta": -0.316216049382716,
+      "magnitude": "small"
+    },
+    "Claude vs DeepSeek": {
+      "delta": -0.3620797800024719,
+      "magnitude": "medium"
+    },
+    "GPT-5.4 vs Qwen": {
+      "delta": 0.11707112841428748,
+      "magnitude": "negligible"
+    },
+    "GPT-5.4 vs DeepSeek": {
+      "delta": 0.04710059749987936,
+      "magnitude": "negligible"
+    },
+    "Qwen vs DeepSeek": {
+      "delta": -0.07116425658138673,
+      "magnitude": "negligible"
+    }
+  },
+  "friedman_model_serializer": {
+    "chi2": 16.400000000000006,
+    "p": 0.0009387420550450383
+  },
+  "bootstrap_ci": {
+    "layer1": {
+      "Claude": {
+        "mean": 0.222089,
+        "ci_low": 0.21464764305555556,
+        "ci_high": 0.22941072499999998
+      },
+      "GPT-5.4": {
+        "mean": 0.36651318131256955,
+        "ci_low": 0.35412599555061186,
+        "ci_high": 0.3791405700778643
+      },
+      "Qwen": {
+        "mean": 0.3228857222222223,
+        "ci_low": 0.31182007916666665,
+        "ci_high": 0.3337672416666666
+      },
+      "DeepSeek": {
+        "mean": 0.3542299777530589,
+        "ci_low": 0.34245402113459394,
+        "ci_high": 0.3663568756952169
+      }
+    },
+    "layer2": {
+      "Claude": {
+        "mean": 3.8961111111111113,
+        "ci_low": 3.8305555555555557,
+        "ci_high": 3.9611111111111112
+      },
+      "GPT-5.4": {
+        "mean": 3.4017807456872564,
+        "ci_low": 3.339997217584864,
+        "ci_high": 3.4646633277685033
+      },
+      "Qwen": {
+        "mean": 3.031215161649944,
+        "ci_low": 2.96711259754738,
+        "ci_high": 3.0958890746934222
+      },
+      "DeepSeek": {
+        "mean": 3.7154788418708242,
+        "ci_low": 3.6525612472160356,
+        "ci_high": 3.777853563474387
+      }
+    }
+  },
+  "wilcoxon_serializer": {
+    "Claude": {
+      "W": 1664.5,
+      "p": 2.1673816041667843e-37,
+      "condensed_better": "Yes"
+    },
+    "GPT-5.4": {
+      "W": 15207.5,
+      "p": 0.053137459867540794,
+      "condensed_better": "Yes"
+    },
+    "Qwen": {
+      "W": 1544.0,
+      "p": 9.63929065551925e-38,
+      "condensed_better": "Yes"
+    },
+    "DeepSeek": {
+      "W": 1453.0,
+      "p": 3.250795218618064e-37,
+      "condensed_better": "Yes"
+    }
+  },
+  "kruskal_wallis_l2": {
+    "H": 451.2955968652251,
+    "p": 1.7081894947182018e-97
+  },
+  "pairwise_mannwhitney_l2": {
+    "Claude vs GPT-5.4": {
+      "U": 1989765.0,
+      "p_corrected": 4.0861561835688555e-35,
+      "cliffs_delta": 0.23030050083472453,
+      "significant": true
+    },
+    "Claude vs Qwen": {
+      "U": 2208154.5,
+      "p_corrected": 2.9965453085951042e-86,
+      "cliffs_delta": 0.3676170568561873,
+      "significant": true
+    },
+    "Claude vs DeepSeek": {
+      "U": 1763197.0,
+      "p_corrected": 3.338791040515462e-06,
+      "cliffs_delta": 0.09081724820588963,
+      "significant": true
+    },
+    "GPT-5.4 vs Qwen": {
+      "U": 1852085.0,
+      "p_corrected": 9.195769607334932e-15,
+      "cliffs_delta": 0.14900096717618674,
+      "significant": true
+    },
+    "GPT-5.4 vs DeepSeek": {
+      "U": 1400842.0,
+      "p_corrected": 5.575883842206881e-12,
+      "cliffs_delta": -0.1319100257419877,
+      "significant": true
+    },
+    "Qwen vs DeepSeek": {
+      "U": 1172075.5,
+      "p_corrected": 9.319968951426724e-48,
+      "cliffs_delta": -0.2724601058216823,
+      "significant": true
+    }
+  },
+  "ranking_reversal": {
+    "Claude vs GPT-5.4": {
+      "U": 1989765.0,
+      "p": 3.405130152974046e-36,
+      "cliffs_delta": 0.23030050083472453
+    },
+    "Claude vs Qwen": {
+      "U": 2208154.5,
+      "p": 2.49712109049592e-87,
+      "cliffs_delta": 0.3676170568561873
+    },
+    "Claude vs DeepSeek": {
+      "U": 1763197.0,
+      "p": 2.7823258670962184e-07,
+      "cliffs_delta": 0.09081724820588963
+    }
+  },
+  "rankings": {
+    "layer1": [
+      "GPT-5.4",
+      "DeepSeek",
+      "Qwen",
+      "Claude"
+    ],
+    "layer2": [
+      "Claude",
+      "DeepSeek",
+      "GPT-5.4",
+      "Qwen"
+    ]
+  }
+}
