@@ -121,9 +121,11 @@ The full benchmark evaluated **4 foundation models** across **100 stratified pat
 | 3 | Qwen3 32B | 0.323 | [0.312, 0.334] |
 | 4 | Claude Sonnet 4.5 | 0.222 | [0.215, 0.229] |
 
-The Kruskal-Wallis test confirmed significant differences between models (H = 531.0, p < 10⁻¹¹⁵). Pairwise Mann-Whitney U tests with Bonferroni correction revealed that all pairs differed significantly (p < 0.002), with one exception: GPT-5.4 vs. DeepSeek V3.2 did not reach significance after correction (p = 0.086), indicating these two models are effectively equivalent on token-overlap metrics.
+The Kruskal-Wallis test confirmed significant differences between models (H = 246.7, p = 3.4 × 10⁻⁵³; patient-level aggregation, N = 100 per model). Pairwise Mann-Whitney U tests with Bonferroni correction revealed that all pairs differed significantly (all p < 0.05), including GPT-5.4 vs. DeepSeek V3.2 (p = 0.032, Cliff's δ = 0.228).
 
-Effect sizes (Cliff's δ): Claude's deficit relative to GPT-5.4 was medium (δ = −0.38), while differences among GPT-5.4, DeepSeek, and Qwen were negligible (|δ| < 0.12).
+Effect sizes (Cliff's δ, patient-level): Claude's deficit relative to all other models is large (|δ| > 0.94), indicating near-complete separation. GPT-5.4 vs Qwen shows a large effect (δ = 0.60). GPT-5.4 vs DeepSeek is small (δ = 0.23).
+
+*Note: All statistical tests use patient-level aggregation (mean F1 per patient, N = 100 independent observations per model) to avoid pseudo-replication from the crossed design (each patient appears across 6 serializers × 3 tasks = 18 observations).*
 
 ### 4.2.2 F1 by Serialization Strategy
 
