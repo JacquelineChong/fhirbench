@@ -6,7 +6,7 @@ The 100-patient, 4-model benchmark (§4) yields four principal findings that adv
 
 ### Finding 1: Serialization Strategy Significantly Impacts Clinical AI Quality
 
-Serialization strategy significantly impacts model output across BOTH evaluation layers — but critically, the direction of impact diverges between metrics. On Layer 1 (F1 token overlap): Condensed outperforms Raw JSON for 3/4 models (patient-level Wilcoxon p < 10⁻¹⁷). On Layer 2 (Judge Accuracy): Raw JSON achieves higher scores than Condensed for 3/4 models (GPT-5.4: 4.03 vs 3.01; DeepSeek: 3.93 vs 3.47; Qwen: 3.46 vs 2.84). Only Claude shows the reverse pattern (Condensed 4.02 vs Raw JSON 3.89).
+Serialization strategy significantly impacts model output across BOTH evaluation layers — but critically, the direction of impact diverges between metrics. On Layer 1 (F1 token overlap): Condensed outperforms Raw JSON for 3/4 models (patient-level Wilcoxon p < 10⁻¹⁷). On Layer 2 (Judge Accuracy): Raw JSON significantly outperforms Condensed for 3/4 models (GPT-5.4: p = 2.0 × 10⁻¹⁵; DeepSeek: p = 3.7 × 10⁻⁷; Qwen: p = 1.2 × 10⁻¹⁰). Only Claude shows the reverse pattern (Condensed 4.02 vs Raw JSON 3.89, p = 0.066 non-significant).
 
 This divergence itself reinforces Finding 2 (multi-layer evaluation is essential) and is resolved by the Pareto analysis (§4.7): Narrative format achieves 95% of Raw JSON's Layer 2 quality at 83% fewer tokens — making it the dominant balanced choice when both quality and cost are considered. Specifically:
 
@@ -17,7 +17,7 @@ This divergence itself reinforces Finding 2 (multi-layer evaluation is essential
 3. **Concrete example:** For the same diabetic patient (Sandra Lewis, HIGHLY_COMPLEX):
    - **Raw JSON:** 3,295 tokens — includes `"resourceType": "Bundle"`, UUID references, coding system URLs, empty extensions
    - **Condensed (SOAP):** 420 tokens — `"Patient: Sandra Lewis | Diabetes mellitus, Hypertension | Metformin 500mg BID, Lisinopril 10mg QD | HbA1c 7.2%"`
-   - **Same clinical content, 7.8× fewer tokens, statistically equivalent accuracy** (L2 accuracy 3.33 vs 3.83 — a 13% reduction at 87% cost savings)
+   - **Same clinical content, 7.8× fewer tokens, comparable clinical accuracy** (cross-model L2 mean: Condensed 3.33 vs Raw JSON 3.83 — a 13% quality reduction at 87% cost savings, a tradeoff quantified in the Pareto analysis §4.7)
 
 4. **Why this matters for practitioners:** Teams currently passing raw FHIR JSON to LLMs are paying 7.5× more per API call AND getting marginally better (not dramatically better) results. The cost-quality Pareto frontier (§4.7) shows Narrative achieves 95% of Raw JSON's quality at 83% fewer tokens — making Raw JSON the dominated choice for all but the most safety-critical, low-volume use cases.
 
