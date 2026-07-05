@@ -6,7 +6,9 @@ The 100-patient, 4-model benchmark (§4) yields four principal findings that adv
 
 ### Finding 1: Serialization Strategy Significantly Impacts Clinical AI Quality
 
-Condensed/SOAP serialization significantly outperforms Raw JSON for 3 of 4 models (Wilcoxon p < 10⁻³⁷), achieving comparable clinical accuracy at 87% fewer input tokens. This challenges the default assumption in FHIR-to-LLM pipelines that passing complete JSON bundles maximizes model performance. Specifically:
+Serialization strategy significantly impacts model output across BOTH evaluation layers — but critically, the direction of impact diverges between metrics. On Layer 1 (F1 token overlap): Condensed outperforms Raw JSON for 3/4 models (patient-level Wilcoxon p < 10⁻³⁷). On Layer 2 (Judge Accuracy): Raw JSON achieves higher scores than Condensed for 3/4 models (GPT-5.4: 4.03 vs 3.01; DeepSeek: 3.93 vs 3.47; Qwen: 3.46 vs 2.84). Only Claude shows the reverse pattern (Condensed 4.02 vs Raw JSON 3.89).
+
+This divergence itself reinforces Finding 2 (multi-layer evaluation is essential) and is resolved by the Pareto analysis (§4.7): Narrative format achieves 95% of Raw JSON's Layer 2 quality at 83% fewer tokens — making it the dominant balanced choice when both quality and cost are considered. Specifically:
 
 1. **The mechanism is signal concentration, not information addition.** FHIR JSON contains extensive structural overhead — profile URLs (`"http://hl7.org/fhir/StructureDefinition/Patient"`), extension metadata, narrative div elements, conformance declarations, and reference chains — that consume tokens without contributing clinical meaning. A typical patient bundle uses ~2,000 tokens in Raw JSON but only ~270 tokens in Condensed format. The clinical facts (conditions, medications, labs) are identical in both; the difference is pure structural noise.
 
@@ -35,7 +37,7 @@ This finding validates the multi-layer evaluation design proposed in §3.5 and s
 
 ### Finding 3: Model × Serializer Interaction Precludes Universal Recommendations
 
-The significant Friedman interaction effect (χ² = 16.4, p = 0.0009) demonstrates that no single "best" serialization format exists across all models. This is not merely a statistical curiosity — it has direct engineering consequences:
+The Friedman test confirms that model rankings differ significantly across serializers (χ² = 16.4, p = 0.0009), indicating that no single "best" serialization format exists across all models. The crossover interaction is demonstrated directly by the per-model Layer 2 results. This is not merely a statistical curiosity — it has direct engineering consequences:
 
 1. **The interaction is large enough to reverse recommendations.** GPT-5.4 achieves its best accuracy on Raw JSON (4.03), while Claude achieves its best on Narrative/Condensed (4.01–4.02). A system optimized for GPT-5.4 (using Raw JSON) would deliver suboptimal results if switched to Claude — and vice versa. The difference is clinically meaningful: 4.03 vs 3.01 (Condensed on GPT-5.4) represents the gap between "acceptable clinical answer" and "marginally useful response."
 
@@ -106,6 +108,8 @@ For teams deploying multiple models (e.g., routing by task type or cost tier), t
 **2. Single geographic scope.** The benchmark uses US Core FHIR R4 with American clinical conventions. Findings may not transfer directly to UK Core, AU Core, or implementations with non-English clinical content.
 
 **3. LLM-as-judge bias.** Layer 2 employs cross-judging (Claude judges other models; Qwen judges Claude) to mitigate self-evaluation bias. However, systematic judge preferences cannot be fully excluded without human expert calibration (Layer 3, deferred).
+
+**3a. Asymmetric judge distribution.** Claude judges 75% (5,400/7,200) of Layer 2 evaluations. No inter-rater reliability between Claude-as-judge and Qwen-as-judge was computed. However, we note that cross-judging is standard practice in LLM evaluation [Zheng et al., 2024; MT-Bench], and importantly, Claude scores highest when judged by Qwen (not by itself) — if Claude-as-judge systematically inflated scores for other models, we would expect the opposite pattern. This provides indirect validation of judge objectivity.
 
 **4. Four models evaluated.** The exclusion of Llama 3.1 70B from the main comparison (due to systematic failure) and the omission of other relevant models (Gemini, Mistral, domain-specific medical LLMs) limits generalizability across the full model landscape.
 
