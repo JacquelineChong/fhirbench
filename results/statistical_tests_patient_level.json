@@ -1,0 +1,139 @@
+{
+  "analysis_level": "patient-level (N=100 per group)",
+  "correction_date": "2026-07-05",
+  "note": "All tests use patient-level aggregation to avoid pseudo-replication",
+  "l1_kruskal_wallis": {
+    "H": 246.7,
+    "p_approx": "3.4e-53",
+    "N_per_group": 100
+  },
+  "l2_kruskal_wallis": {
+    "H": 81.4,
+    "p": "1.1e-14",
+    "N_per_group": 100
+  },
+  "l2_pairwise_mannwhitney": {
+    "Claude vs GPT-5.4": {
+      "U": 6998,
+      "p_corrected": "6.2e-06",
+      "delta": 0.4,
+      "significant": true
+    },
+    "Claude vs Qwen": {
+      "U": 8092,
+      "p_corrected": "2.5e-13",
+      "delta": 0.618,
+      "significant": true
+    },
+    "Claude vs DeepSeek": {
+      "U": 6092,
+      "p_corrected": "4.5e-02",
+      "delta": 0.218,
+      "significant": true
+    },
+    "GPT-5.4 vs Qwen": {
+      "U": 6577,
+      "p_corrected": "7.0e-04",
+      "delta": 0.315,
+      "significant": true
+    },
+    "GPT-5.4 vs DeepSeek": {
+      "U": 3564,
+      "p_corrected": "2.7e-03",
+      "delta": -0.287,
+      "significant": true
+    },
+    "Qwen vs DeepSeek": {
+      "U": 2132,
+      "p_corrected": "1.4e-11",
+      "delta": -0.574,
+      "significant": true
+    }
+  },
+  "ranking_reversal": {
+    "Claude_vs_GPT54": {
+      "p": "1.0e-06",
+      "delta": 0.4
+    },
+    "Claude_vs_Qwen": {
+      "p": "4.1e-14",
+      "delta": 0.618
+    },
+    "Claude_vs_DeepSeek": {
+      "p": "7.6e-03",
+      "delta": 0.218
+    }
+  },
+  "l1_wilcoxon_condensed_vs_raw": {
+    "Claude": {
+      "p_approx": "< 10^-18",
+      "z": 8.68,
+      "N_pairs": 100,
+      "significant": true,
+      "direction": "Condensed > Raw"
+    },
+    "GPT-5.4": {
+      "p": 0.79,
+      "z": -0.26,
+      "N_pairs": 100,
+      "significant": false,
+      "direction": "No difference"
+    },
+    "Qwen": {
+      "p_approx": "< 10^-18",
+      "z": 8.65,
+      "N_pairs": 100,
+      "significant": true,
+      "direction": "Condensed > Raw"
+    },
+    "DeepSeek": {
+      "p_approx": "< 10^-17",
+      "z": 8.6,
+      "N_pairs": 100,
+      "significant": true,
+      "direction": "Condensed > Raw"
+    }
+  },
+  "l2_wilcoxon_condensed_vs_raw": {
+    "Claude": {
+      "p": 0.066,
+      "z": 1.84,
+      "N_pairs": 100,
+      "significant": false,
+      "direction": "Condensed > Raw (non-sig)"
+    },
+    "GPT-5.4": {
+      "p": "2.0e-15",
+      "z": -7.94,
+      "N_pairs": 100,
+      "significant": true,
+      "direction": "Raw > Condensed"
+    },
+    "Qwen": {
+      "p": "1.2e-10",
+      "z": -6.44,
+      "N_pairs": 100,
+      "significant": true,
+      "direction": "Raw > Condensed"
+    },
+    "DeepSeek": {
+      "p": "3.7e-07",
+      "z": -5.08,
+      "N_pairs": 100,
+      "significant": true,
+      "direction": "Raw > Condensed"
+    }
+  },
+  "l1_rankings": [
+    "GPT-5.4",
+    "DeepSeek",
+    "Qwen",
+    "Claude"
+  ],
+  "l2_rankings": [
+    "Claude",
+    "DeepSeek",
+    "GPT-5.4",
+    "Qwen"
+  ]
+}
