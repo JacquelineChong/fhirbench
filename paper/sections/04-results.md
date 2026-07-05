@@ -167,7 +167,7 @@ Counter-intuitively, F1 scores increase with patient complexity. This arises bec
 
 ### 4.3.1 Overall Model Performance
 
-| Rank | Model | Accuracy | Completeness | Safety | Relevance | Average | 95% CI |
+| Rank | Model | Accuracy | Completeness | Safety | Relevance | Average | 95% CI (Accuracy) |
 |------|-------|----------|--------------|--------|-----------|---------|--------|
 | 1 | Claude Sonnet 4.5 | 3.90 | 3.73 | 4.17 | 4.20 | 4.00 | [3.83, 4.00] |
 | 2 | DeepSeek V3.2 | 3.72 | 3.86 | 3.59 | 4.34 | 3.88 | [3.65, 3.78] |
@@ -210,7 +210,7 @@ The most significant methodological finding of this study is the **complete rank
 | Qwen3 32B | #3 | #4 (worst) |
 | DeepSeek V3.2 | #2 | #2 |
 
-The reversal is statistically significant: Claude's Layer 2 superiority over GPT-5.4 yields p = 1.0 × 10⁻⁶ (Mann-Whitney U, patient-level N = 100, Cliff's δ = 0.40). Claude also significantly outperforms Qwen (p = 4.1 × 10⁻¹⁴, δ = 0.62) and DeepSeek (p = 7.6 × 10⁻³, δ = 0.22). This finding demonstrates that:
+The reversal is statistically significant: Claude's Layer 2 superiority over GPT-5.4 yields p = 6.2 × 10⁻⁶ (Mann-Whitney U, Bonferroni-corrected, patient-level N = 100, Cliff's δ = 0.40). Claude also significantly outperforms Qwen (p = 2.5 × 10⁻¹³, δ = 0.62) and DeepSeek (p = 0.045, δ = 0.22). This finding demonstrates that:
 
 1. **Token-overlap metrics systematically penalize verbose, contextual responses** — Claude provides richer clinical explanations that a rubric-based judge scores highly, but which share fewer exact tokens with terse reference answers.
 2. **Single-metric evaluation creates misleading model rankings** — if this benchmark reported only F1, practitioners would conclude GPT-5.4 is the best clinical model. Judge evaluation reveals Claude actually provides superior clinical reasoning.
