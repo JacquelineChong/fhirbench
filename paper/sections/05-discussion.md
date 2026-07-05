@@ -6,13 +6,13 @@ The 100-patient, 4-model benchmark (§4) yields four principal findings that adv
 
 ### Finding 1: Serialization Strategy Significantly Impacts Clinical AI Quality
 
-Serialization strategy significantly impacts model output across BOTH evaluation layers — but critically, the direction of impact diverges between metrics. On Layer 1 (F1 token overlap): Condensed outperforms Raw JSON for 3/4 models (patient-level Wilcoxon p < 10⁻³⁷). On Layer 2 (Judge Accuracy): Raw JSON achieves higher scores than Condensed for 3/4 models (GPT-5.4: 4.03 vs 3.01; DeepSeek: 3.93 vs 3.47; Qwen: 3.46 vs 2.84). Only Claude shows the reverse pattern (Condensed 4.02 vs Raw JSON 3.89).
+Serialization strategy significantly impacts model output across BOTH evaluation layers — but critically, the direction of impact diverges between metrics. On Layer 1 (F1 token overlap): Condensed outperforms Raw JSON for 3/4 models (patient-level Wilcoxon p < 10⁻¹⁷). On Layer 2 (Judge Accuracy): Raw JSON achieves higher scores than Condensed for 3/4 models (GPT-5.4: 4.03 vs 3.01; DeepSeek: 3.93 vs 3.47; Qwen: 3.46 vs 2.84). Only Claude shows the reverse pattern (Condensed 4.02 vs Raw JSON 3.89).
 
 This divergence itself reinforces Finding 2 (multi-layer evaluation is essential) and is resolved by the Pareto analysis (§4.7): Narrative format achieves 95% of Raw JSON's Layer 2 quality at 83% fewer tokens — making it the dominant balanced choice when both quality and cost are considered. Specifically:
 
 1. **The mechanism is signal concentration, not information addition.** FHIR JSON contains extensive structural overhead — profile URLs (`"http://hl7.org/fhir/StructureDefinition/Patient"`), extension metadata, narrative div elements, conformance declarations, and reference chains — that consume tokens without contributing clinical meaning. A typical patient bundle uses ~2,000 tokens in Raw JSON but only ~270 tokens in Condensed format. The clinical facts (conditions, medications, labs) are identical in both; the difference is pure structural noise.
 
-2. **The effect is statistically robust and practically meaningful.** The Wilcoxon signed-rank test confirms Condensed outperforms Raw JSON for Claude (p < 10⁻³⁷), Qwen (p < 10⁻³⁸), and DeepSeek (p < 10⁻³⁷). GPT-5.4 shows a non-significant trend (p = 0.053) — suggesting frontier models with very large context windows can partially compensate for noise, but even they don't fully overcome it.
+2. **The effect is statistically robust and practically meaningful.** The Wilcoxon signed-rank test (patient-level, N = 100 pairs) confirms Condensed outperforms Raw JSON on F1 for Claude (p < 10⁻¹⁸), Qwen (p < 10⁻¹⁸), and DeepSeek (p < 10⁻¹⁷). GPT-5.4 shows no significant difference (p = 0.79) — suggesting frontier models with very large context windows can partially compensate for noise, but even they don't fully overcome it.
 
 3. **Concrete example:** For the same diabetic patient (Sandra Lewis, HIGHLY_COMPLEX):
    - **Raw JSON:** 3,295 tokens — includes `"resourceType": "Bundle"`, UUID references, coding system URLs, empty extensions
@@ -25,7 +25,7 @@ This divergence itself reinforces Finding 2 (multi-layer evaluation is essential
 
 ### Finding 2: Multi-Layer Evaluation Reveals Metric-Dependent Rankings
 
-The complete ranking reversal between Layer 1 (F1) and Layer 2 (Judge) — Claude ranks #4 on F1 but #1 on clinical quality (p < 10⁻³⁵) — is the study's most significant methodological finding. This demonstrates that:
+The complete ranking reversal between Layer 1 (F1) and Layer 2 (Judge) — Claude ranks #4 on F1 but #1 on clinical quality (p = 1.0 × 10⁻⁶, patient-level N = 100) — is the study's most significant methodological finding. This demonstrates that:
 
 1. **Token-overlap metrics systematically penalize verbose, contextual responses.** Claude provides richer clinical explanations (mean 1,705 chars vs GPT-5.4's 1,206) that contain clinically valuable information (dosage schedules, temporal context, prescriber attribution) but share fewer exact tokens with terse reference answers.
 
@@ -41,7 +41,7 @@ The Friedman test confirms that model rankings differ significantly across seria
 
 1. **The interaction is large enough to reverse recommendations.** GPT-5.4 achieves its best accuracy on Raw JSON (4.03), while Claude achieves its best on Narrative/Condensed (4.01–4.02). A system optimized for GPT-5.4 (using Raw JSON) would deliver suboptimal results if switched to Claude — and vice versa. The difference is clinically meaningful: 4.03 vs 3.01 (Condensed on GPT-5.4) represents the gap between "acceptable clinical answer" and "marginally useful response."
 
-2. **Open-weight models show dramatically stronger serialization sensitivity.** The significance level for Condensed vs Raw JSON is p < 10⁻³⁷ for Qwen and DeepSeek, but only p = 0.053 (non-significant) for GPT-5.4. This means:
+2. **Open-weight models show dramatically stronger serialization sensitivity.** The Wilcoxon significance for Condensed vs Raw JSON (F1) is p < 10⁻¹⁷ for Qwen and DeepSeek, but p = 0.79 (clearly non-significant) for GPT-5.4. This means:
    - For frontier models: serialization choice is an optimization (marginal gains)
    - For open-weight models: serialization choice is a requirement (fundamental to usability)
 
