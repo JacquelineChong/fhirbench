@@ -1,43 +1,49 @@
 # 6. Conclusion
 
-The integration of Large Language Models into clinical decision support systems requires transforming structured health data into representations that maximize model comprehension — yet no systematic guidance exists for this critical preprocessing decision.
+## Summary
 
-This paper presents FHIRBench, the first comprehensive benchmark for evaluating clinical data serialization strategies for LLMs. Through a controlled experimental design evaluating six serialization strategies across five foundation models on three clinical task types using 1,000 synthetic FHIR R4 patient records with calibrated realism parameters, we provide the most extensive empirical characterization of serialization effects on clinical AI performance to date.
+This paper presents FHIRBench, a controlled benchmark evaluating how FHIR data serialization affects clinical LLM performance. Through systematic evaluation of 4 models × 6 serializers × 3 tasks × 100 patients (7,200 evaluations per layer, patient-level statistical analysis), we provide empirical answers to questions that clinical AI teams currently resolve through ad hoc experimentation.
 
-## Key Findings
+## Principal Findings
 
-Our evaluation across 90 experimental conditions yields the following principal results:
+1. **Serialization is a first-order system design decision, not a preprocessing detail.** The choice of serialization format produces statistically significant differences on both automated metrics (F1) and clinical quality (judge rubric), with the direction of effect diverging between layers. Teams passing raw FHIR JSON to LLMs pay 7.5× more per API call while achieving only marginally better (and on F1, often worse) clinical output than Narrative or Condensed formats.
 
-1. **Serialization strategy significantly impacts model accuracy.** Performance variance of up to [TBD]% is attributable solely to format choice, with Clinical Template (SOAP) serialization achieving [TBD]× higher accuracy than the Raw JSON baseline across all evaluated models. This finding confirms and substantially extends prior observations of format sensitivity [CITE:TGZ97SRN].
+2. **Single-metric evaluation produces incorrect model selection.** The complete ranking reversal between Layer 1 and Layer 2 (Claude: #4 on F1, #1 on clinical quality; p = 1.0 × 10⁻⁶, patient-level) demonstrates that studies relying solely on token-overlap metrics may systematically recommend the wrong model for clinical deployment. Multi-layer evaluation is not optional — it is a methodological requirement.
 
-2. **Token efficiency and accuracy are positively correlated.** Contrary to expectations of an accuracy–cost tradeoff, structured serialization strategies that aggressively reduce token count simultaneously improve model performance. Clinical Template achieves [TBD]× token compression (from [TBD] to [TBD] tokens per patient) while yielding the highest accuracy scores — indicating that the serialization problem is fundamentally one of noise reduction rather than information preservation.
+3. **No universal "best" serialization format exists.** The significant Model × Serializer interaction (Friedman χ² = 16.4, p = 0.0009) means that optimal format depends on the target model. GPT-5.4 performs best on Raw JSON; Claude and open-weight models (Qwen, DeepSeek) perform best on compressed formats. Clinical systems that support model switching must implement model-aware serialization middleware.
 
-3. **Format preference is [TBD — unanimous across models / model-dependent].** [TBD: If unanimous: "The superiority of Clinical Template serialization is consistent across all five model architectures, from open-weight 32B models to frontier proprietary systems — suggesting a generalizable recommendation for practitioners." If model-dependent: "Optimal format varies by model architecture and scale, with [TBD patterns], necessitating model-specific strategy selection."]
-
-4. **Standard NLG metrics are insufficient for clinical AI evaluation.** Layer 1 (F1) and Layer 2 (rubric) scoring diverge by up to [TBD]× for the same model–format combination (Claude Sonnet 4.5: F1 = 0.087 versus rubric = 5.0), conclusively demonstrating that multi-dimensional evaluation is necessary for reliable clinical AI assessment.
+4. **Open-weight models face silent capacity failure on complex patients.** Llama 3.1 70B's 100% timeout rate on Complex/Highly Complex FHIR bundles (despite operating within its nominal 128K context window) creates a patient-safety paradox: the patients most needing AI clinical decision support are precisely those whose data exceeds practical processing capacity. Compact serialization transforms this from a functional failure into a tractable engineering problem.
 
 ## Contributions
 
-This work makes five contributions to the field:
+This work makes five contributions:
 
-1. **A systematic serialization taxonomy** — formalizing six strategies across four analytic dimensions (format, terminology resolution, granularity, context window strategy) with literature-grounded justification for each.
+1. **A two-layer evaluation methodology** demonstrating that automated metrics and clinical quality assessment produce fundamentally different conclusions about model and format performance — validating the necessity of multi-layer evaluation in clinical AI research.
 
-2. **An open-source benchmark framework** — FHIRBench provides reproducible evaluation using Synthea-generated data, enabling any researcher with an AWS account to replicate and extend our findings.
+2. **Empirical evidence of Model × Serializer interaction** — the first controlled demonstration that optimal serialization varies by model architecture at frontier scale, with practical magnitude sufficient to reverse deployment recommendations.
 
-3. **Empirical comparison across 90 conditions** — the most comprehensive evaluation of serialization effects on clinical LLM performance, spanning five architecturally diverse models and three clinically grounded task types.
+3. **A cost-quality Pareto framework** identifying Narrative as the dominant balanced choice (95% quality at 83% fewer tokens) and establishing that Key-Value and Markdown Table formats are dominated strategies that no rational deployment should select.
 
-4. **A practitioner decision framework** — mapping task characteristics, model constraints, and cost requirements to recommended serialization strategies via Pareto-optimal tradeoff analysis, reducing strategy selection from weeks of empirical testing to minutes of framework consultation.
+4. **Quantification of open-weight model capacity limits** — demonstrating that context window size alone does not predict successful processing of complex clinical data, with direct implications for patient safety in cost-optimized deployments.
 
-5. **A multi-layer evaluation methodology** — combining automated metrics, LLM-as-judge rubric scoring, and a designed (deferred) human evaluation protocol, with configurable dimension weights adaptable to deployment context.
+5. **An open-source benchmark framework** — enabling any team with cloud API access to reproduce these findings, extend to new models/formats, and calibrate serialization decisions against their specific deployment requirements.
 
-## Practical Implications
+## Practical Recommendations
 
-For health AI engineering teams, the immediate actionable recommendation is clear: replace raw FHIR JSON with structured clinical serialization (Clinical Template or Narrative format) in LLM preprocessing pipelines. Based on our findings, this substitution requires minimal implementation effort (the serialization code is publicly available) while yielding [TBD]× accuracy improvement at [TBD]× cost reduction — a rare engineering decision where both quality and cost improve simultaneously.
+For clinical AI engineering teams, the immediate actionable guidance:
 
-## Broader Significance
+| Deployment scenario | Recommended serializer | Rationale |
+|---|---|---|
+| Frontier model, quality-critical | Raw JSON (GPT-5.4) or Narrative (Claude) | Model-specific optimum |
+| Open-weight models (Qwen, DeepSeek) | Condensed or FHIRPath | Significantly outperforms Raw JSON (p < 10⁻¹⁷); enables function |
+| Cost-sensitive, high-volume | Narrative | 95% quality at 83% fewer tokens (Pareto-optimal) |
+| Open-weight with complex patients | Condensed (mandatory) | Without compression: 0% success rate |
+| Multi-model routing systems | Model-aware middleware | No single format optimizes across models |
 
-Our findings contribute to an emerging architectural debate in health informatics. The persistent need for a serialization middleware layer — with its associated token overhead, information loss risks, and model-dependent optimization — suggests that future interoperability standards may need to consider LLM comprehensibility as a first-class design requirement alongside programmatic parseability. FHIRBench provides the empirical grounding for this conversation, demonstrating both the magnitude of the serialization problem and the characteristics of formats that best serve AI consumption.
+## Limitations and Future Work
+
+The primary limitations — synthetic patient data, four evaluated models, deferred human validation (Layer 3), and asymmetric cross-judging design — are discussed in §5.3. Future work should prioritize: (1) validation on de-identified real-world FHIR data (e.g., MIMIC-IV FHIR), (2) extension to additional models as they emerge, (3) human clinician evaluation of a stratified response sample, and (4) implementation and evaluation of a production-grade adaptive serialization engine that dynamically selects format based on model, patient complexity, and task type.
 
 ## Availability
 
-FHIRBench — including all serialization implementations, evaluation harnesses, data generation scripts, benchmark results, and the practitioner decision framework — is publicly available at https://github.com/JacquelineChong/fhirbench under MIT license.
+FHIRBench — including all serialization implementations, evaluation harnesses, statistical analysis scripts, benchmark results, and the practitioner decision framework — is publicly available at https://github.com/JacquelineChong/fhirbench under MIT license.
