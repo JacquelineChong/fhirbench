@@ -125,7 +125,7 @@ The Kruskal-Wallis test confirmed significant differences between models (H = 24
 
 Effect sizes (Cliff's δ, patient-level): Claude's deficit relative to all other models is large (|δ| > 0.94), indicating near-complete separation. GPT-5.4 vs Qwen shows a large effect (δ = 0.60). GPT-5.4 vs DeepSeek is small (δ = 0.23).
 
-*Note: All statistical tests use patient-level aggregation (mean F1 per patient, N = 100 independent observations per model) to avoid pseudo-replication from the crossed design (each patient appears across 6 serializers × 3 tasks = 18 observations).*
+*Note: All statistical tests throughout §4 use patient-level aggregation (mean score per patient, N = 100 independent observations per model) to avoid pseudo-replication from the crossed design (each patient × 6 serializers × 3 tasks = 18 observations). For serializer comparisons (Wilcoxon), we average each patient's scores across 3 tasks within each serializer, yielding N = 100 paired observations. This conservative approach ensures all p-values reflect the true number of independent sampling units (patients), not the inflated count of repeated measurements.*
 
 ### 4.2.2 F1 by Serialization Strategy
 
@@ -138,9 +138,9 @@ Effect sizes (Cliff's δ, patient-level): Claude's deficit relative to all other
 | Condensed | 0.256 | 0.382 | 0.367 | 0.389 | 0.349 |
 | FHIRPath | 0.237 | 0.367 | 0.354 | 0.390 | 0.337 |
 
-**Finding:** Condensed and Markdown Table formats consistently outperform Raw JSON across all models. The Wilcoxon signed-rank test confirms Condensed significantly outperforms Raw JSON for Claude (p < 10⁻³⁷), Qwen (p < 10⁻³⁸), and DeepSeek (p < 10⁻³⁷). GPT-5.4 shows a non-significant trend in the same direction (p = 0.053).
+**Finding:** Condensed and Markdown Table formats consistently outperform Raw JSON on F1 for 3 of 4 models. The Wilcoxon signed-rank test (patient-level, N = 100 paired observations per model) confirms Condensed significantly outperforms Raw JSON for Claude (p < 10⁻¹⁸, z = 8.68), Qwen (p < 10⁻¹⁸, z = 8.65), and DeepSeek (p < 10⁻¹⁷, z = 8.60). GPT-5.4 shows no significant difference (p = 0.79), indicating that this frontier model's F1 is insensitive to serialization format — a key finding for deployment.
 
-The Friedman test confirms a significant Model × Serializer interaction (χ² = 16.4, p = 0.0009), indicating that serialization strategy effectiveness is model-dependent — a key finding for clinical deployment.
+The Friedman test confirms that model rankings differ significantly across serializers (χ² = 16.4, p = 0.0009), indicating that no single best serialization format exists — a key finding for clinical deployment.
 
 ### 4.2.3 F1 by Patient Complexity
 
@@ -174,7 +174,7 @@ Counter-intuitively, F1 scores increase with patient complexity. This arises bec
 | 3 | GPT-5.4 | 3.40 | 3.69 | 3.14 | 4.12 | 3.59 | [3.34, 3.46] |
 | 4 | Qwen3 32B | 3.03 | 3.50 | 2.68 | 3.94 | 3.29 | [2.97, 3.10] |
 
-The Kruskal-Wallis test confirmed significant differences (H = 451.3, p < 10⁻⁹⁷). All pairwise differences reached statistical significance after Bonferroni correction (all p < 10⁻⁵).
+The Kruskal-Wallis test confirmed significant differences between models (H = 81.4, p = 1.1 × 10⁻¹⁴; patient-level aggregation, N = 100 per model). All pairwise differences reached statistical significance after Bonferroni correction (all p < 0.05), with Claude vs DeepSeek being the closest pair (p = 0.045, Cliff's δ = 0.218).
 
 ### 4.3.2 Layer 2 by Serialization Strategy (Accuracy)
 
@@ -210,7 +210,7 @@ The most significant methodological finding of this study is the **complete rank
 | Qwen3 32B | #3 | #4 (worst) |
 | DeepSeek V3.2 | #2 | #2 |
 
-The reversal is statistically significant: Claude's Layer 2 superiority over GPT-5.4 yields p = 4.1 × 10⁻³⁵ (Mann-Whitney U, Cliff's δ = 0.23). This finding demonstrates that:
+The reversal is statistically significant: Claude's Layer 2 superiority over GPT-5.4 yields p = 1.0 × 10⁻⁶ (Mann-Whitney U, patient-level N = 100, Cliff's δ = 0.40). Claude also significantly outperforms Qwen (p = 4.1 × 10⁻¹⁴, δ = 0.62) and DeepSeek (p = 7.6 × 10⁻³, δ = 0.22). This finding demonstrates that:
 
 1. **Token-overlap metrics systematically penalize verbose, contextual responses** — Claude provides richer clinical explanations that a rubric-based judge scores highly, but which share fewer exact tokens with terse reference answers.
 2. **Single-metric evaluation creates misleading model rankings** — if this benchmark reported only F1, practitioners would conclude GPT-5.4 is the best clinical model. Judge evaluation reveals Claude actually provides superior clinical reasoning.
@@ -239,7 +239,7 @@ Based on combined Layer 1 and Layer 2 analysis:
 | Use Case | Recommended Serializer | Rationale |
 |----------|----------------------|-----------|
 | **Frontier models (Claude, GPT-5.4)** | Narrative or Condensed | Highest judge scores; no context limitation |
-| **Open-weight models (Qwen, DeepSeek)** | Condensed or FHIRPath | Significantly outperforms Raw JSON (p < 10⁻³⁷); compact enough for reliable processing |
+| **Open-weight models (Qwen, DeepSeek)** | Condensed or FHIRPath | Significantly outperforms Raw JSON (p < 10⁻¹⁷); compact enough for reliable processing |
 | **Models with limited context (Llama-class)** | Condensed (mandatory) | Only format enabling model function at all |
 | **When F1/token-overlap scoring is used** | Raw JSON or Key-Value | Produces terser responses that score higher on automated metrics (but lower on clinical quality) |
 
