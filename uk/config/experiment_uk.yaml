@@ -1,0 +1,40 @@
+# FHIRBench-UK Experiment Configuration
+data:
+  geography:
+    region: "UK"
+    fhir_profile: "uk-core-r4-stu3"
+    terminology_locale: "en-GB"
+    unit_system: "metric"
+    drug_naming: "dm+d"
+    coding_systems: ["ICD-10-UK", "SNOMED-CT-UK", "dm+d", "LOINC"]
+  patients:
+    total_pool: 1000
+    evaluation_cohort: 100
+    complexity_distribution:
+      simple: 25
+      moderate: 40
+      complex: 25
+      highly_complex: 10
+  uk_specific_extensions:
+    - nhs_number: true
+    - gp_practice: true
+    - ethnic_category_uk: true
+    - religion_uk: true
+    - nominated_pharmacy: true
+    - residential_status: true
+serialization:
+  strategies: [raw_json, flattened_kv, structured_markdown, narrative, clinical_template, hybrid_adaptive]
+  uk_adaptations:
+    narrative_format: "nhs_soap"
+    spelling: "en-GB"
+    date_display: "DD/MM/YYYY"
+    units: "metric_only"
+evaluation:
+  models: [claude-sonnet-4.5, gpt-5.4, qwen3-32b, deepseek-v3.2]
+  tasks: [clinical_qa, clinical_reasoning, clinical_summarization]
+  statistical:
+    aggregation: patient_level
+    n_patients: 100
+cross_national:
+  compare_with: "us-core"
+  alignment_method: "matched_complexity"
