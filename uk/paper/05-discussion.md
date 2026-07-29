@@ -63,3 +63,41 @@ Second, the development of a unified scoring framework that formally combines La
 Third, the 94% token reduction achieved by clinical templates, combined with the minimal quality impact, suggests that retrieval-augmented generation (RAG) architectures for FHIR data should prioritise concise, clinically-structured context windows over exhaustive raw data inclusion. Investigating the interaction between serialisation format, chunk size, and RAG retrieval strategies represents a natural extension with direct NHS deployment implications—particularly for integrated care systems managing longitudinal patient records spanning multiple care settings.
 
 Fourth, as NHS England progresses its Federated Data Platform and wider AI strategy, longitudinal evaluation—tracking how model performance evolves across successive model releases against a fixed benchmark—would provide procurement-relevant evidence for AI governance frameworks. FHIRBench-UK, as an open and reproducible benchmark, is positioned to serve this ongoing monitoring function.
+
+## 5.7 Practitioner Decision Framework
+
+Based on the converging evidence from two independent benchmark studies (US Core and UK Core), we propose a standardised decision framework for NHS organisations deploying LLMs against FHIR clinical data. This framework integrates the three primary decision dimensions identified in this study: clinical safety requirement, cost constraint, and throughput demand.
+
+**Decision 1: Determine clinical safety tier.**
+
+- **Tier A (Safety-critical):** Autonomous clinical decision support, medication reconciliation, A&E triage, specialist referrals where errors could directly impact patient safety.
+  - → Model: Claude Sonnet 4.5 (safety score: 4.98/5.00)
+  - → Serialiser: narrative or clinical_template (94% token reduction, minimal quality impact)
+  - → Governance: human review for any response scoring below 4.5 on automated quality check
+  - → Cost: ~$0.032/prompt (~£25 per 1,000 queries)
+
+- **Tier B (Clinician-assisted):** Discharge summary drafting, routine coding validation, population health screening where clinician review is standard workflow.
+  - → Model: DeepSeek V3.2 (quality: 4.23/5.00 at $0.005/prompt) OR GPT-5.4 (quality: 4.28/5.00 at $0.028/prompt)
+  - → Serialiser: clinical_template (lowest cost) or narrative (slight quality edge)
+  - → Governance: spot-check 5–10% of outputs against clinician assessment
+  - → Cost: ~£4–22 per 1,000 queries depending on model selection
+
+- **Tier C (Pre-screening):** Batch flagging, initial triage filtering, administrative classification where ALL outputs receive subsequent human review.
+  - → Model: Qwen3 32B (quality: 3.78/5.00 at $0.002/prompt)
+  - → Serialiser: clinical_template or structured_markdown
+  - → Governance: 100% human review mandatory; model output treated as advisory only
+  - → Cost: ~£1.50 per 1,000 queries
+
+**Decision 2: Evaluate throughput and latency requirements.**
+
+- High-throughput batch processing (>10,000 records/day): prefer Tier B or C models with clinical_template serialisation to minimise token costs and API latency.
+- Real-time clinical decision support (<5 second response): prefer Claude with narrative serialisation (shortest input tokens amongst high-quality formats, reducing time-to-first-token).
+- Mixed workloads: deploy tiered architecture with Tier C for initial filtering, escalating to Tier A for flagged cases requiring high-confidence responses.
+
+**Decision 3: Validate against local requirements.**
+
+- Run FHIRBench-UK evaluation pipeline against a representative sample of local trust data (minimum N=50 bundles) before production deployment.
+- Establish trust-specific quality thresholds calibrated against local clinical governance requirements.
+- Re-evaluate quarterly as model versions update and pricing evolves.
+
+This framework deliberately avoids recommending Llama 3.3 70B for any tier: despite its strong automated metric performance, its clinical quality scores (3.36/5.00) fall below Qwen3 at higher cost—a configuration that offers no deployment advantage in any identified use case. Organisations encountering procurement pressure to adopt open-weight models should note that Qwen3 (also open-weight) delivers superior clinical quality at lower cost within the same operational model.
