@@ -1,0 +1,11 @@
+# 6. Conclusion
+
+This study presents FHIRBench-UK, an open benchmark for evaluating large language model performance on UK Core FHIR clinical data. We assessed five models (Claude Sonnet 4.5, GPT-5.4, DeepSeek V3.2, Qwen3 32B, Llama 3.3 70B) across six serialisation formats, three clinical tasks, and 100 stratified patient bundles, producing 9,000 prompt-level evaluations scored on both token-level factual retrieval (Layer 1) and clinical quality via LLM-as-judge assessment (Layer 2).
+
+Our central finding—a complete inversion of model rankings between automated metrics and clinical quality assessment—replicates the phenomenon first identified in US Core FHIR data, confirming its generalisability across national profiles, data generation methodologies, and healthcare conventions. Llama 3.3 ranked first on token-level F1 but last on clinical quality; Claude ranked third on F1 but first on quality. This divergence, which we attribute to the “conciseness trap” mechanism, demonstrates that single-metric evaluation produces fundamentally misleading conclusions about clinical AI fitness for deployment.
+
+The serialisation format analysis reveals that clinical_template serialisation achieves 94% input token reduction compared to raw JSON with minimal quality degradation—a finding with direct cost implications for NHS trusts operating within constrained AI budgets. Combined with model-specific cost-quality analysis, this enables practical deployment at under £7 per 1,000 patient queries using mid-tier models.
+
+We propose a three-tier practitioner decision framework integrating safety requirements, cost constraints, and throughput demands, providing NHS organisations with actionable, evidence-based guidance for LLM deployment against FHIR clinical data. The framework recommends Claude for safety-critical applications, DeepSeek for cost-effective bulk processing, and Qwen for pre-screening workloads with mandatory human review.
+
+Multi-layer evaluation—combining automated metrics with clinical quality assessment—is not optional but essential for responsible clinical AI deployment. The FHIRBench-UK pipeline, decision framework, and complete evaluation dataset are available at https://github.com/JacquelineChong/fhirbench (code, uk-core branch) and archived at Zenodo (DOI: 10.5281/zenodo.XXXXX) to support reproducibility and community extension.
