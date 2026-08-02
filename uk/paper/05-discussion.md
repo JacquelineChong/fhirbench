@@ -6,7 +6,7 @@ The central contribution of this study is the demonstration that FHIR-to-text se
 
 This finding overturns two prior claims. Paper 1 (Hussain & Chong, 2025) suggested that condensed formats consistently outperform raw JSON for FHIR-based clinical tasks. Our initial Paper 2 analysis incorrectly concluded that serialiser choice "barely matters" (Layer 2 difference <0.1)—an error arising from restricting analysis to Claude alone, the model least sensitive to format variation. The complete cross-model analysis reveals a more nuanced and more useful truth: serialisation strategy is a first-order deployment variable whose optimal configuration varies by context.
 
-The mechanistic explanation for task-dependent optimality rests on the distinct information requirements of each clinical task type:
+The mechanistic explanation for task-dependent optimality rests on the distinct information requirements of each clinical task type (see Figure 4 for the empirical pattern):
 
 **Clinical QA** (factual extraction) requires precise retrieval of specific identifiers: NHS Numbers, SNOMED CT codes, dm+d medication codes, and date-stamped observations. raw_json preserves these tokens in their original form, including system URIs that serve as disambiguation context. When the task is "retrieve the patient's most recent HbA1c value and code," the model benefits from seeing the exact JSON path `{"code": {"coding": [{"system": "http://snomed.info/sct", "code": "43396009", "display": "Hemoglobin A1c"}]}}` rather than a summarised representation that may omit the system URI or conflate multiple codings.
 
