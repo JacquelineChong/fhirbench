@@ -52,7 +52,7 @@ Validation was performed programmatically using `validate_uk_core.py` with check
 
 ## 2.2 Serialisation Formats
 
-Six serialisation formats convert each FHIR Bundle JSON into text for LLM consumption. All serialisers are deterministic (same input produces identical output) and implemented as Python classes in the `serializers/` package.
+Six serialisation formats convert each FHIR Bundle JSON into text for LLM consumption. This represents the most comprehensive format comparison to date; Pator (2026) evaluated four formats on a single task, whilst our design crosses six formats with three tasks, enabling discovery of task-specific optimality. All serialisers are deterministic (same input produces identical output) and implemented as Python classes in the `serializers/` package.
 
 ### 2.2.1 raw_json
 
