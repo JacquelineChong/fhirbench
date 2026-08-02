@@ -42,7 +42,7 @@ Three task-specific patterns emerge:
 - **Clinical reasoning** (drug interactions, risk assessment): hybrid_adaptive and clinical_template outperform raw_json. Reasoning tasks benefit from semantic organisation that groups related clinical concepts, reducing the cognitive parsing required to identify relationships across dispersed JSON fields.
 - **Clinical summarisation**: structured_markdown performs comparably to raw_json whilst achieving 88% token reduction. The hierarchical formatting of markdown preserves document structure that aids coherent synthesis.
 
-This pattern replicates on the perturbed cohort: raw_json remains optimal for QA, whilst clinical_template and structured_markdown lead on reasoning and summarisation respectively (p<10⁻³¹). The stability under perturbation confirms these are genuine task–format interactions rather than data-specific artefacts.
+This pattern replicates on the perturbed cohort: raw_json remains optimal for QA, whilst clinical_template and structured_markdown lead on reasoning and summarisation respectively (p<10⁻³¹). The stability under perturbation confirms these are genuine task–format interactions rather than data-specific artefacts. Figure 4 presents the full task × serialiser quality matrix, with optimal cells highlighted.
 
 ### Context-Dependent Reversals
 
@@ -78,11 +78,11 @@ The serialiser effect is not uniform across models. Weaker models exhibit greate
 | Qwen3 32B | 0.29 | hybrid_adaptive (4.29) | flattened_kv (4.00) | 4.19 |
 | Llama 3.3 70B | 0.39 | raw_json (4.10) | flattened_kv (3.71) | 3.96 |
 
-The correlation between model overall quality and serialiser robustness is monotonic: Claude (highest quality, lowest sensitivity) through to Llama (lowest quality, highest sensitivity).
+The correlation between model overall quality and serialiser robustness is monotonic: Claude (highest quality, lowest sensitivity) through to Llama (lowest quality, highest sensitivity). Figure 2 visualises this interaction: Claude's line is nearly flat across serialisers, whilst Llama's drops steeply—demonstrating that weaker models derive the greatest benefit from optimal format selection.
 
 ## 4.4 Model Performance and the Ranking Reversal
 
-Model rankings contextualise the serialiser findings. On Layer 1 (token-level F1), Llama 3.3 ranked first (0.454) followed by Qwen3 (0.448), Claude (0.428), GPT-5.4 (0.417), and DeepSeek (0.416). On Layer 2 (clinical quality), the ranking inverted completely: Claude first (4.90), GPT-5.4 (4.80), DeepSeek (4.67), Qwen3 (4.19), Llama last (3.96). The Spearman correlation between layers was ρ = −0.90.
+Model rankings contextualise the serialiser findings. On Layer 1 (token-level F1), Llama 3.3 ranked first (0.454) followed by Qwen3 (0.448), Claude (0.428), GPT-5.4 (0.417), and DeepSeek (0.416). On Layer 2 (clinical quality), the ranking inverted completely: Claude first (4.90), GPT-5.4 (4.80), DeepSeek (4.67), Qwen3 (4.19), Llama last (3.96). The Spearman correlation between layers was ρ = −0.90 (Figure 1).
 
 This ranking reversal replicates the central finding of Paper 1 (Hussain & Chong, 2025) on US Core FHIR data. Both Layer 1 and Layer 2 rankings were preserved identically on the perturbed cohort, confirming robustness to data quality variation.
 
@@ -100,4 +100,4 @@ This stability establishes that the reported serialiser effects are intrinsic pr
 
 ## 4.6 Cost-Efficiency Implications
 
-Serialisation format provides a second cost lever beyond model selection. Narrative and clinical_template formats achieve 88–91% input token reduction with Layer 2 quality loss of only 0.06–0.11 points versus raw_json. Combining clinical_template serialisation with DeepSeek inference yields clinical quality scores of 4.58/5.00 at under £7 per 1,000 patient queries—compared to £32 per 1,000 queries for Claude with raw_json at 4.96/5.00.
+Figure 3 presents the cost-quality Pareto frontier. Serialisation format provides a second cost lever beyond model selection. Narrative and clinical_template formats achieve 88–91% input token reduction with Layer 2 quality loss of only 0.06–0.11 points versus raw_json. Combining clinical_template serialisation with DeepSeek inference yields clinical quality scores of 4.58/5.00 at under £7 per 1,000 patient queries—compared to £32 per 1,000 queries for Claude with raw_json at 4.96/5.00.
