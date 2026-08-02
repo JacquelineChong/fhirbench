@@ -162,6 +162,34 @@ All code, data, and configuration are available in the project repository:
 
 Random seeds are fixed at 42 for all stochastic operations (stratification, perturbation selection). Model temperature is 0.0 throughout. The only source of non-determinism is API-level variation in model responses at temperature 0 (which cloud providers document as occasionally producing minor token-level differences across calls).
 
-## 3.8 Ethical Considerations
+## 3.8 Cost-Efficiency Analysis Methodology
+
+The cost-efficiency analysis quantifies the quality–cost tradeoff across model and serialiser combinations using AWS Bedrock list pricing as of July 2026.
+
+### Per-Prompt Cost Calculation
+
+```
+Cost = (input_tokens / 1,000,000) × input_rate + (output_tokens / 1,000,000) × output_rate
+```
+
+### Pricing Tiers (USD per million tokens, us-east-2)
+
+| Model | Input Rate | Output Rate |
+|-------|:----------:|:-----------:|
+| Claude Sonnet 4.5 | $3.00 | $15.00 |
+| GPT-5.4 (Mantle) | $2.50 | $10.00 |
+| DeepSeek V3.2 | $0.62 | $1.85 |
+| Llama 3.3 70B | $0.72 | $0.72 |
+| Qwen3 32B | $0.20 | $0.78 |
+
+**Token usage source**: Input and output token counts are recorded per prompt from the Bedrock API response metadata (`inputTokens`, `outputTokens` fields). These are actual consumed tokens, not estimates.
+
+**Pareto frontier construction**: A model is Pareto-optimal if no other model achieves both higher Layer 2 clinical quality AND lower per-prompt cost. Models dominated on both dimensions are excluded from the efficient frontier.
+
+**Serialisation as cost lever**: Input token counts vary substantially by serialiser (raw_json mean 9,901 tokens vs clinical_template mean 942 tokens—90% reduction). Cost savings from serialisation format are computed as the difference in input cost at each model's pricing tier. For Claude (input rate $3.00/M tokens), switching from raw_json to clinical_template saves $0.027 per prompt; for Qwen ($0.20/M), the saving is $0.002 per prompt—making serialisation optimisation proportionally more impactful for expensive models.
+
+**Currency conversion**: GBP figures use the July 2026 exchange rate of $1 = £0.79 for NHS deployment cost projections.
+
+## 3.9 Ethical Considerations
 
 All patient data is fully synthetic. No real patient records were used at any stage. Generated bundles use fictitious names, addresses, and NHS Numbers that do not correspond to real individuals. NHS Numbers were generated to pass Modulus 11 validation but are drawn from number ranges not allocated to real patients. The study did not require ethics committee approval as it involves no human participants or real patient data.
