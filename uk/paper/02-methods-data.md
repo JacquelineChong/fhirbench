@@ -2,17 +2,17 @@
 
 ## 2.1 Evaluation Cohort
 
-The evaluation cohort comprises 100 UK Core FHIR R4 patient bundles, stratified-sampled from a pool of 992 generated patients. Each bundle represents a complete primary care patient record conforming to NHS England's UK Core Implementation Guide (v1.0.0), containing Patient, Condition, MedicationRequest, Observation, Organization, and Practitioner resources with appropriate inter-resource references.
+The evaluation cohort comprises 100 UK Core FHIR R4 patient bundles, stratified-sampled from a pool of 992 generated patients. Each bundle represents a complete primary care patient record conforming to NHS England's UK Core Implementation Guide (v1.0.0) [3], containing Patient, Condition, MedicationRequest, Observation, Organization, and Practitioner resources with appropriate inter-resource references.
 
 ### Generation Approach
 
-Patient bundles were generated using DeepSeek V3.2 (open-weight, 671B MoE architecture) via AWS Bedrock. We selected LLM generation over the established Synthea synthetic patient generator for seven specific reasons related to UK Core compliance:
+Patient bundles were generated using DeepSeek V3.2 [11] (open-weight, 671B MoE architecture) via AWS Bedrock. We selected LLM generation over the established Synthea synthetic patient generator [10] for seven specific reasons related to UK Core compliance:
 
-1. **dm+d medication codes**: Synthea uses US RxNorm codes. UK Core mandates Dictionary of Medicines and Devices (dm+d) codes for all MedicationRequest resources. No maintained mapping exists between RxNorm and dm+d.
+1. **dm+d medication codes**: Synthea uses US RxNorm codes. UK Core mandates Dictionary of Medicines and Devices (dm+d) [8] codes for all MedicationRequest resources. No maintained mapping exists between RxNorm and dm+d.
 2. **NHS Number format**: UK Core requires 10-digit NHS Numbers validated by the Modulus 11 check digit algorithm. Synthea generates US SSN-format identifiers.
 3. **UK Core extensions**: Mandatory extensions including `UKCore-EthnicCategory`, `UKCore-NHSNumberVerificationStatus`, and `UKCore-ResidentialStatus` have no Synthea equivalent.
 4. **GP practice registration**: UK primary care records include explicit `generalPractitioner` references with ODS codes. Synthea models US provider networks.
-5. **SNOMED CT UK Edition**: UK Core requires codes from the UK clinical extension of SNOMED CT, which includes ~50,000 additional concepts not in the International Edition.
+5. **SNOMED CT UK Edition**: UK Core requires codes from the UK clinical extension of SNOMED CT [9], which includes ~50,000 additional concepts not in the International Edition.
 6. **Metric units**: UK clinical observations use metric units exclusively (mmol/L for glucose, mmol/mol for HbA1c, mmHg for blood pressure). Synthea defaults to US conventional units for several observations.
 7. **Bundle structure conventions**: UK Core bundles follow NHS Digital's structure guidance for document bundles, with specific ordering and reference patterns.
 
@@ -52,7 +52,7 @@ Validation was performed programmatically using `validate_uk_core.py` with check
 
 ## 2.2 Serialisation Formats
 
-Six serialisation formats convert each FHIR Bundle JSON into text for LLM consumption. This represents the most comprehensive format comparison to date; Pator (2026) evaluated four formats on a single task, whilst our design crosses six formats with three tasks, enabling discovery of task-specific optimality. All serialisers are deterministic (same input produces identical output) and implemented as Python classes in the `serializers/` package.
+Six serialisation formats convert each FHIR Bundle JSON into text for LLM consumption. This represents the most comprehensive format comparison to date; Pator (2026) [5] evaluated four formats on a single task, whilst our design crosses six formats with three tasks, enabling discovery of task-specific optimality. All serialisers are deterministic (same input produces identical output) and implemented as Python classes in the `serializers/` package.
 
 ### 2.2.1 raw_json
 
