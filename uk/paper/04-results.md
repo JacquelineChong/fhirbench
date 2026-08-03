@@ -84,7 +84,7 @@ The correlation between model overall quality and serialiser robustness is monot
 
 Model rankings contextualise the serialiser findings. On Layer 1 (token-level F1), Llama 3.3 ranked first (0.454) followed by Qwen3 (0.448), Claude (0.428), GPT-5.4 (0.417), and DeepSeek (0.416). On Layer 2 (clinical quality), the ranking inverted completely: Claude first (4.90), GPT-5.4 (4.80), DeepSeek (4.67), Qwen3 (4.19), Llama last (3.96). The Spearman correlation between layers was ρ = −0.90 (Figure 1).
 
-This ranking reversal replicates the central finding of Paper 1 (Hussain & Chong, 2025) on US Core FHIR data. Both Layer 1 and Layer 2 rankings were preserved identically on the perturbed cohort, confirming robustness to data quality variation.
+This ranking reversal replicates the central finding of Paper 1 [4] on US Core FHIR data. Both Layer 1 and Layer 2 rankings were preserved identically on the perturbed cohort, confirming robustness to data quality variation.
 
 ## 4.5 Perturbation Robustness
 
